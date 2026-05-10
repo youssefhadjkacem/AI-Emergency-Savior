@@ -130,12 +130,6 @@ python fine_tune.py     # fine-tune Whisper
 
 ---
 
-## Team
-
-| Name | Role |
-|---|---|
-| Youssef Hadj Kacem | ASR / ML |
-| Mohamed Karim Moalla | Backend / Infrastructure |
 
 ---
 
