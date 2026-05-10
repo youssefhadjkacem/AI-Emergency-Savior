@@ -30,7 +30,16 @@ AI-Emergency-Savior/
 ```
 
 ---
+## Hugging Face Spaces (Backend APIs)
 
+The backend integrates serverless Hugging Face Spaces for specialized processing. These Gradio APIs handle audio transcription, computer vision, output generation, and ID extraction via simple POST requests.
+
+| Endpoint | Space URL | Purpose |
+|---|---|---|
+| `F_AUDIO_URL` | [https://youssef0081-emergency-savior-speech.hf.space/gradio_api/call/gradio_pipeline](https://youssef0081-emergency-savior-speech.hf.space/gradio_api/call/gradio_pipeline) | Speech-to-text transcription pipeline |
+| `HF_CV_URL` | [https://azizgharbi1-model-cv-pcd.hf.space/gradio_api/call/predict](https://azizgharbi1-model-cv-pcd.hf.space/gradio_api/call/predict) | Computer vision analysis |
+| `HF_OPT_URL` | [https://youssef0081-emergency-savior-output.hf.space/gradio_api/call/predict](https://youssef0081-emergency-savior-output.hf.space/gradio_api/call/predict) | Output generation |
+| `HF_ID_URL` | [https://azizgharbi1-id-card-extractor.hf.space/gradio_api/call/predict](https://azizgharbi1-id-card-extractor.hf.space/gradio_api/call/predict) | ID card extraction |
 ## Tech Stack
 
 | Layer | Technology |
