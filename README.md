@@ -130,9 +130,6 @@ python fine_tune.py     # fine-tune Whisper
 
 ---
 
-
----
-
 ## License
 
 This project is for academic and research purposes. See [LICENSE](LICENSE) for details.
