@@ -2,7 +2,7 @@
 
 # 🚨 AI Emergency Savior
 
-**Real-time AI-powered transcription and analysis of 911 emergency calls**
+
 
 [![License: Academic](https://img.shields.io/badge/License-Academic%20%2F%20Research-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
