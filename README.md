@@ -38,25 +38,20 @@
   <tr>
     <td align="center">
       <img src="1.png" alt="Operator Dashboard" width="100%" /><br/>
-     
     </td>
     <td align="center">
       <img src="2.png" alt="Transcription View" width="100%" /><br/>
-
     </td>
   </tr>
   <tr>
     <td align="center">
       <img src="3.png" alt="Call Analysis" width="100%" /><br/>
-
     </td>
     <td align="center">
       <img src="4.png" alt="ID Extraction" width="100%" /><br/>
-  
     </td>
   </tr>
 </table>
-
 ---
 
 ## 🏗️ System Architecture
