@@ -38,21 +38,21 @@
   <tr>
     <td align="center">
       <img src="1.png" alt="Operator Dashboard" width="100%" /><br/>
-      <sub><b>Operator Dashboard</b> — Live call monitoring and transcription feed</sub>
+     
     </td>
     <td align="center">
       <img src="2.png" alt="Transcription View" width="100%" /><br/>
-      <sub><b>Transcription View</b> — Real-time speech-to-text with highlighted keywords</sub>
+
     </td>
   </tr>
   <tr>
     <td align="center">
       <img src="3.png" alt="Call Analysis" width="100%" /><br/>
-      <sub><b>Call Analysis Panel</b> — AI-generated incident summary and priority scoring</sub>
+
     </td>
     <td align="center">
       <img src="4.png" alt="ID Extraction" width="100%" /><br/>
-      <sub><b>ID Extraction Module</b> — Automated caller identity verification</sub>
+  
     </td>
   </tr>
 </table>
@@ -62,7 +62,7 @@
 ## 🏗️ System Architecture
 
 <div align="center">
-  <img src="6.png" alt="System Architecture Diagram" width="85%" />
+  <img src="6.jpeg" alt="System Architecture Diagram" width="85%" />
   <br/>
   <sub><i>End-to-end architecture — from audio ingestion to operator interface</i></sub>
 </div>
