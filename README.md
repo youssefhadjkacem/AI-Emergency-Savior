@@ -1,6 +1,4 @@
-<div align="center">
 
-<img src="docs/images/logo.png" alt="AI Emergency Savior Logo" width="120" />
 
 # 🚨 AI Emergency Savior
 
