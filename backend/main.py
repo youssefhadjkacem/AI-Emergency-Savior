@@ -1,4 +1,4 @@
-import asyncio
+﻿import asyncio
 import base64
 import json
 import logging
@@ -8,6 +8,8 @@ import sys
 from fastapi import FastAPI, UploadFile, File, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import httpx
+
+from hospital import router as hospital_router  # NEW: module hôpitaux
 
 sys.path.append(os.path.dirname(__file__))
 
@@ -22,6 +24,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(hospital_router)  # NEW: monte /api/hospitals/...
 
 # ── HF Space base URLs ─────────────────────────────────────────────────────────
 HF_AUDIO_BASE = "https://youssef0081-emergency-savior-speech.hf.space/"
