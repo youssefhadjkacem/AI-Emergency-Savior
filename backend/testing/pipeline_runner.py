@@ -72,7 +72,14 @@ PROVIDER_FIELDS = ["ID", "provider_name", "specialty", "location", "quality_scor
 # Comportement d'avant correction : pas de lexique français, pas de gestion
 # de la négation, Google Translate seul, Top 3 tiré de la 1re spécialité.
 LEGACY_CONFIG = dict(use_french_lexicon=False, handle_negation=False,
-                     translation_chain=("google",), diversify_top3=False)
+                     translation_chain=("google",), diversify_top3=False,
+                     monotonic_ranking=False, use_severity=False)
+
+# État du pipeline après le premier round de corrections (français,
+# négations, Top 3) et AVANT le second (classement monotone, gravité).
+# Sert de point "avant" au second round, et fige les configurations de
+# `run_fix_evaluation.py` pour que ses chiffres restent reproductibles.
+ROUND1_CONFIG = dict(monotonic_ranking=False, use_severity=False)
 
 
 @dataclass
@@ -101,6 +108,9 @@ class StageTrace:
     # "no_symptom_translation_failed" (constantes STATUS_* de l'extracteur).
     extraction_status: Optional[str] = None
     language: Optional[str] = None
+    # Gravité estimée ({"level", "score", "reasons", "driving_symptoms"}),
+    # None si l'estimation est désactivée.
+    severity: Optional[dict] = None
 
     @property
     def predicted_specialty(self) -> Optional[str]:
@@ -174,8 +184,18 @@ class LocalPipeline:
 
     # ── Étapes ───────────────────────────────────────────────────────────────
 
-    def classify(self, symptoms: Sequence[str], age: Optional[int], urgent: bool) -> List[tuple]:
-        scores = self.scorer.score(list(symptoms), patient_age=age, is_urgent=urgent)
+    def estimate_severity(self, text: str, symptoms: Sequence[str], age: Optional[int],
+                          urgent: bool) -> Optional[dict]:
+        """Gravité estimée par le code du Space, ou None si elle est désactivée."""
+        if not self.recommender.use_severity:
+            return None
+        from src.severity import estimate_severity
+
+        return estimate_severity(text, list(symptoms), age=age, urgent=urgent)
+
+    def classify(self, symptoms: Sequence[str], age: Optional[int], urgent: bool,
+                 severity: Optional[dict] = None) -> List[tuple]:
+        scores = self.scorer.score(list(symptoms), patient_age=age, is_urgent=urgent, severity=severity)
         return self.scorer.get_top_n(scores, TOP_N_SPECIALTIES)
 
     def run(self, text: str, age: Optional[int], urgent: bool, budget: Optional[float],
@@ -203,7 +223,9 @@ class LocalPipeline:
 
         # Étape 3 — Classification de spécialité
         start = time.perf_counter()
-        top_specialties = self.classify(detected, age, urgent)
+        severity = self.estimate_severity(text, detected, age, urgent)
+        top_specialties = self.classify(detected, age, urgent, severity)
+        severity_level = severity["level"] if severity else None
         timings["classification"] = time.perf_counter() - start
 
         # Étape 4 — Optimisation multi-objectifs (comme dans predict : liste des
@@ -217,11 +239,13 @@ class LocalPipeline:
             )
             if top_specialties:
                 top_providers_df = self.provider_filter.optimize_providers_nsga(
-                    top_specialties[0][0], top_k=TOP_K_PROVIDERS, budget=budget, location=location
+                    top_specialties[0][0], top_k=TOP_K_PROVIDERS, budget=budget, location=location,
+                    severity_level=severity_level,
                 )
                 if self.recommender.diversify_top3:
                     top_providers_df = self.provider_filter.diversified_top_providers(
-                        top_specialties, top_k=TOP_K_PROVIDERS, budget=budget, location=location
+                        top_specialties, top_k=TOP_K_PROVIDERS, budget=budget, location=location,
+                        severity_level=severity_level,
                     )
         timings["optimization"] = time.perf_counter() - start
 
@@ -239,6 +263,7 @@ class LocalPipeline:
             top_specialties=[(s, float(v)) for s, v in top_specialties],
             top_providers=top_providers, timings=timings,
             extraction_status=extraction["status"], language=extraction["language"],
+            severity=severity,
         )
 
     def matches_predict(self, trace: StageTrace, age: Optional[int], budget: Optional[float],
@@ -328,6 +353,7 @@ def call_deployed_space(text: str, age: Optional[int], urgent: bool, budget: Opt
         # sinon liste vide et statut "ok" (valeurs par défaut du parseur).
         "top_providers": parsed["top_providers"],
         "extraction_status": parsed["extraction_status"],
+        "severity": parsed["severity"],
         "raw_output": raw_text,
     }
 

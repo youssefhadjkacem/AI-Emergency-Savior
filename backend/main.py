@@ -145,6 +145,9 @@ def parse_optimization_output(raw_text: str) -> dict:
         # "aucun symptôme" de "texte non analysé".
         "extraction_status":       "ok",
         "extraction_warning":      None,
+        # Gravité estimée par le Space : LOW / MEDIUM / HIGH / CRITICAL /
+        # UNKNOWN, ou None si le Space ne la renvoie pas (ancienne version).
+        "severity":                None,
         "raw_output":              raw_text,
     }
 
@@ -163,6 +166,8 @@ def parse_optimization_output(raw_text: str) -> dict:
             result["extraction_status"] = line.split(":", 1)[1].strip()
         elif line_lower.startswith("avertissement"):
             result["extraction_warning"] = line.split(":", 1)[1].strip()
+        elif line_lower.startswith("gravité estimée") or line_lower.startswith("gravite estimee"):
+            result["severity"] = line.split(":", 1)[1].strip().upper()
 
         # ── Symptoms ──────────────────────────────────────────────────────────
         elif (line_lower.startswith("symptômes détectés") or
@@ -385,6 +390,7 @@ async def analyze_full(
         "top_providers":           opt_result["top_providers"],
         "extraction_status":       opt_result["extraction_status"],
         "extraction_warning":      opt_result["extraction_warning"],
+        "severity":                opt_result["severity"],
         "optimization_raw":        opt_result["raw_output"],
         "auto_urgent":             is_urgent,
         "numeric_age_used":        numeric_age,

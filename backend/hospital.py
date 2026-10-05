@@ -93,15 +93,64 @@ def _crowding_distance(objs: np.ndarray, front: List[int]) -> dict:
     return distance
 
 
-def nsga2_rank(objs: np.ndarray) -> List[int]:
+QUALITY_WEIGHT = 3.0
+# Poids de la note dans le score de compromis, les autres critères pesant 1.
+# Même valeur et même statut que dans le Space (src/filtering.py) : un choix
+# de conception assumé — priorité clinique à la qualité de l'établissement
+# sur le coût et le délai — et non une valeur optimisée.
+
+EMERGENCY_WEIGHT_WHEN_URGENT = 2.0
+# Poids du critère "service d'urgence" quand le cas est urgent (1 sinon).
+# L'ancien code multipliait la COLONNE de l'objectif par 2, ce qui n'avait
+# aucun effet : le tri de Pareto et la crowding distance sont insensibles à
+# l'échelle d'un objectif. Le poids agit maintenant réellement.
+
+
+def _compromise_scores(objs: np.ndarray, weights: Optional[List[float]] = None) -> np.ndarray:
+    """Moyenne pondérée des objectifs, chacun ramené entre 0 (meilleure
+    valeur parmi les candidats) et 1 (pire valeur). Plus bas = meilleur."""
+    low, high = objs.min(axis=0), objs.max(axis=0)
+    span = high - low
+    span[span == 0] = 1.0
+    w = np.ones(objs.shape[1]) if weights is None else np.asarray(weights, dtype=float)
+    return ((objs - low) / span) @ w / w.sum()
+
+
+def nsga2_rank(objs: np.ndarray, weights: Optional[List[float]] = None,
+               within_front: str = "compromise") -> List[int]:
+    """
+    Classe par front de Pareto, puis à l'intérieur de chaque front.
+
+    DÉFAUT CORRIGÉ (le même que dans le Space, src/nsga2.py). À l'intérieur
+    d'un front, l'ancien tri utilisait la crowding distance, qui vaut
+    l'infini aux DEUX extrémités de chaque objectif : devenir le pire sur un
+    critère faisait monter. Mesuré sur hospitals_test.json : un coût
+    multiplié par 10 améliorait le rang dans 16 essais sur 136, un délai
+    porté à un an dans 29.
+
+    Maintenant, à l'intérieur d'un front, tri par `_compromise_scores`
+    croissant ; la crowding distance ne départage plus que les scores
+    rigoureusement égaux. Dégrader un établissement sur un critère, toutes
+    choses égales par ailleurs, ne peut plus améliorer son rang.
+
+    `within_front="crowding"` : ancien comportement, conservé pour mesurer
+    l'avant / après.
+    """
     objs = np.asarray(objs, dtype=float)
     fronts = _fast_non_dominated_sort(objs)
 
     ranked: List[int] = []
+    if within_front == "crowding":
+        for front in fronts:
+            distances = _crowding_distance(objs, front)
+            front_sorted = sorted(front, key=lambda i: -distances[i])
+            ranked.extend(front_sorted)
+        return ranked
+
+    scores = _compromise_scores(objs, weights)
     for front in fronts:
         distances = _crowding_distance(objs, front)
-        front_sorted = sorted(front, key=lambda i: -distances[i])
-        ranked.extend(front_sorted)
+        ranked.extend(sorted(front, key=lambda i: (round(float(scores[i]), 12), -distances[i], i)))
 
     return ranked
 
@@ -123,6 +172,8 @@ class HospitalFilter:
     def __init__(self, hospitals_file: str):
         self.is_ready = False
         self.df_hospitals: Optional[pd.DataFrame] = None
+        # "compromise" (défaut) ou "crowding" (ancien tri) — voir nsga2_rank.
+        self.ranking_mode = "compromise"
 
         try:
             with open(hospitals_file, "r", encoding="utf-8") as f:
@@ -190,7 +241,8 @@ class HospitalFilter:
           4. Lits disponibles     (max)  <- statique pour l'instant
           5. Localisation         (min distance, 0 si même ville)
           6. CNAM                 (max)
-          7. Service d'urgence    (max, pondéré x2 si is_urgent)
+          7. Service d'urgence    (max, poids 2 si is_urgent)
+        La note (critère 1) a un poids 3, les autres un poids 1.
         """
         filtered = self.filter_by_specialty_name(specialty_name)
         if filtered.empty:
@@ -214,15 +266,18 @@ class HospitalFilter:
 
         obj_cnam = -df_opt["accepts_cnam"].fillna(0).values
 
-        emergency_weight = 2.0 if is_urgent else 1.0
-        obj_emergency = -df_opt["has_emergency"].fillna(0).values * emergency_weight
+        obj_emergency = -df_opt["has_emergency"].fillna(0).values
 
         objs = np.column_stack([
             obj_quality, obj_cost, obj_wait, obj_beds, obj_loc, obj_cnam, obj_emergency,
         ])
 
+        # Poids des 7 critères, dans l'ordre de `objs`.
+        weights = [QUALITY_WEIGHT, 1.0, 1.0, 1.0, 1.0, 1.0,
+                   EMERGENCY_WEIGHT_WHEN_URGENT if is_urgent else 1.0]
+
         try:
-            ranked_indices = nsga2_rank(objs)
+            ranked_indices = nsga2_rank(objs, weights=weights, within_front=self.ranking_mode)
             df_opt = df_opt.iloc[ranked_indices]
         except Exception as e:
             print(f"[HospitalFilter] Erreur NSGA-II : {e}")

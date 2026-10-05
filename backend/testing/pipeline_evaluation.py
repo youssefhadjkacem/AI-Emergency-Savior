@@ -159,6 +159,59 @@ def provider_coverage(expected: str, top_providers: Sequence[dict]) -> dict:
 
 
 # ═════════════════════════════════════════════════════════════════════════
+# Gravité
+# ═════════════════════════════════════════════════════════════════════════
+
+SEVERITY_LEVELS = ["LOW", "MEDIUM", "HIGH", "CRITICAL"]
+SEVERITY_UNKNOWN = "UNKNOWN"
+
+
+def severity_metrics(pairs: Sequence[tuple]) -> dict:
+    """`pairs` : [(niveau attendu, niveau estimé)].
+
+    Les niveaux étant ordonnés, trois mesures en plus de l'exactitude :
+      - `within_one_level` : estimation exacte ou voisine d'un cran ;
+      - `under_triage`     : estimation PLUS BASSE que l'attendu. C'est
+        l'erreur dangereuse (un cas grave pris pour bénin) ;
+      - `over_triage`      : estimation plus haute que l'attendu.
+    Une estimation UNKNOWN (aucun indice dans le texte) est comptée comme
+    une erreur, à part : ni sous-estimation ni surestimation.
+    """
+    rank = {level: i for i, level in enumerate(SEVERITY_LEVELS)}
+    columns = SEVERITY_LEVELS + [SEVERITY_UNKNOWN]
+    matrix = {e: {c: 0 for c in columns} for e in SEVERITY_LEVELS}
+    exact = within_one = under = over = unknown = 0
+    for expected, predicted in pairs:
+        matrix[expected][predicted] += 1
+        if predicted == SEVERITY_UNKNOWN:
+            unknown += 1
+            continue
+        gap = rank[predicted] - rank[expected]
+        exact += gap == 0
+        within_one += abs(gap) <= 1
+        under += gap < 0
+        over += gap > 0
+    n = len(pairs)
+    per_level = {}
+    for level in SEVERITY_LEVELS:
+        support = sum(matrix[level].values())
+        predicted_as = sum(matrix[e][level] for e in SEVERITY_LEVELS)
+        tp = matrix[level][level]
+        precision, recall, f1 = _prf(tp, predicted_as - tp, support - tp)
+        per_level[level] = {"support": support, "precision": precision, "recall": recall, "f1": f1}
+    return {
+        "n_cases": n,
+        "accuracy": exact / n if n else None,
+        "within_one_level": within_one / n if n else None,
+        "under_triage": under,
+        "over_triage": over,
+        "unknown": unknown,
+        "per_level": per_level,
+        "confusion_matrix": matrix,
+    }
+
+
+# ═════════════════════════════════════════════════════════════════════════
 # Latence
 # ═════════════════════════════════════════════════════════════════════════
 

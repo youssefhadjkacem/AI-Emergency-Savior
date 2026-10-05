@@ -1,0 +1,2329 @@
+{
+  "generated_at": "2026-10-05T09:10:00.916387+00:00",
+  "note": "Mesures locales, hors ligne. Rien n'est deploye. Chantier 1 : seul le tri des prestataires change (gravite desactivee des deux cotes). Chantier 2 : seule la gravite change (tri monotone actif des deux cotes).",
+  "chantier1_ranking": {
+    "before": {
+      "ranking_mode": "knn_density",
+      "summary": {
+        "n_specialties": 22,
+        "mean_first_front_share": 0.6663730576722048,
+        "min_first_front_share": 0.4444444444444444,
+        "mean_first_front_points_with_infinite_density": 6.636363636363637,
+        "min_first_front_points_with_infinite_density": 4,
+        "default_top1_is_highest_quality": 22,
+        "mean_providers_in_city": 3.9545454545454546,
+        "top3_changed_when_location_given": 10,
+        "mean_top3_in_city_without_location": 0.6363636363636364,
+        "mean_top3_in_city_with_location": 0.8636363636363636,
+        "top3_changed_when_budget_given": 6,
+        "mean_gap_to_budget_all_providers": 20.629229360350642,
+        "mean_gap_to_budget_top3_without_budget": 32.42424242424242,
+        "mean_gap_to_budget_top3_with_budget": 32.34848484848485,
+        "default_top3_slots": 66,
+        "default_top3_slots_worst_on_a_criterion": 29,
+        "specialties_with_a_worst_provider_in_default_top3": 19
+      },
+      "single_provider_perturbations": {
+        "moved_to_patient_city": {
+          "n_trials": 417,
+          "improved": 254,
+          "unchanged": 146,
+          "worsened": 17,
+          "improved_rate": 0.6091127098321343,
+          "worsened_rate": 0.0407673860911271,
+          "in_top_k_before": 47,
+          "in_top_k_after": 88,
+          "mean_rank_before": 12.93285371702638,
+          "mean_rank_after": 8.081534772182254
+        },
+        "cost_set_to_budget": {
+          "n_trials": 461,
+          "improved": 311,
+          "unchanged": 138,
+          "worsened": 12,
+          "improved_rate": 0.6746203904555315,
+          "worsened_rate": 0.026030368763557483,
+          "in_top_k_before": 64,
+          "in_top_k_after": 142,
+          "mean_rank_before": 12.327548806941431,
+          "mean_rank_after": 5.702819956616052
+        },
+        "cost_degraded": {
+          "n_trials": 504,
+          "improved": 144,
+          "unchanged": 174,
+          "worsened": 186,
+          "improved_rate": 0.2857142857142857,
+          "worsened_rate": 0.36904761904761907,
+          "in_top_k_before": 66,
+          "in_top_k_after": 117,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 13.257936507936508
+        },
+        "quality_degraded": {
+          "n_trials": 504,
+          "improved": 65,
+          "unchanged": 79,
+          "worsened": 360,
+          "improved_rate": 0.12896825396825398,
+          "worsened_rate": 0.7142857142857143,
+          "in_top_k_before": 66,
+          "in_top_k_after": 6,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 18.02777777777778
+        },
+        "wait_degraded": {
+          "n_trials": 504,
+          "improved": 214,
+          "unchanged": 221,
+          "worsened": 69,
+          "improved_rate": 0.4246031746031746,
+          "worsened_rate": 0.13690476190476192,
+          "in_top_k_before": 66,
+          "in_top_k_after": 119,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 10.174603174603174
+        },
+        "quality_improved": {
+          "n_trials": 504,
+          "improved": 482,
+          "unchanged": 22,
+          "worsened": 0,
+          "improved_rate": 0.9563492063492064,
+          "worsened_rate": 0.0,
+          "in_top_k_before": 66,
+          "in_top_k_after": 504,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 1
+        }
+      },
+      "moved_away_from_patient_city": {
+        "n_trials": 87,
+        "improved": 4,
+        "unchanged": 31,
+        "worsened": 52,
+        "improved_rate": 0.04597701149425287,
+        "worsened_rate": 0.5977011494252874,
+        "in_top_k_before": 19,
+        "in_top_k_after": 11,
+        "mean_rank_before": 8.241379310344827,
+        "mean_rank_after": 13.425287356321839
+      },
+      "price_sweep": {
+        "factors": [
+          1.0,
+          1.2,
+          1.5,
+          2.0,
+          3.0,
+          5.0,
+          10.0
+        ],
+        "providers": 504,
+        "providers_with_a_rank_improvement_when_price_rises": 175,
+        "rank_improvements_when_price_rises": 209,
+        "providers_better_ranked_at_10x_than_at_real_price": 144,
+        "examples": [
+          {
+            "provider_id": "D00033",
+            "specialty": "Cardiologist",
+            "base_cost": 115.0,
+            "rank_by_factor": {
+              "1.0": 10,
+              "1.2": 3,
+              "1.5": 3,
+              "2.0": 3,
+              "3.0": 3,
+              "5.0": 3,
+              "10.0": 3
+            }
+          },
+          {
+            "provider_id": "D00031",
+            "specialty": "Cardiologist",
+            "base_cost": 120.0,
+            "rank_by_factor": {
+              "1.0": 9,
+              "1.2": 3,
+              "1.5": 3,
+              "2.0": 3,
+              "3.0": 3,
+              "5.0": 3,
+              "10.0": 3
+            }
+          },
+          {
+            "provider_id": "D00043",
+            "specialty": "Cardiologist",
+            "base_cost": 110.0,
+            "rank_by_factor": {
+              "1.0": 13,
+              "1.2": 9,
+              "1.5": 3,
+              "2.0": 3,
+              "3.0": 3,
+              "5.0": 3,
+              "10.0": 3
+            }
+          },
+          {
+            "provider_id": "D00026",
+            "specialty": "Cardiologist",
+            "base_cost": 125.0,
+            "rank_by_factor": {
+              "1.0": 21,
+              "1.2": 16,
+              "1.5": 16,
+              "2.0": 16,
+              "3.0": 16,
+              "5.0": 16,
+              "10.0": 16
+            }
+          },
+          {
+            "provider_id": "D00032",
+            "specialty": "Cardiologist",
+            "base_cost": 100.0,
+            "rank_by_factor": {
+              "1.0": 11,
+              "1.2": 9,
+              "1.5": 3,
+              "2.0": 3,
+              "3.0": 3,
+              "5.0": 3,
+              "10.0": 3
+            }
+          }
+        ]
+      }
+    },
+    "after": {
+      "ranking_mode": "compromise",
+      "summary": {
+        "n_specialties": 22,
+        "mean_first_front_share": 0.6663730576722048,
+        "min_first_front_share": 0.4444444444444444,
+        "mean_first_front_points_with_infinite_density": 6.636363636363637,
+        "min_first_front_points_with_infinite_density": 4,
+        "default_top1_is_highest_quality": 4,
+        "mean_providers_in_city": 3.9545454545454546,
+        "top3_changed_when_location_given": 20,
+        "mean_top3_in_city_without_location": 0.5,
+        "mean_top3_in_city_with_location": 1.4545454545454546,
+        "top3_changed_when_budget_given": 4,
+        "mean_gap_to_budget_all_providers": 20.629229360350642,
+        "mean_gap_to_budget_top3_without_budget": 26.363636363636363,
+        "mean_gap_to_budget_top3_with_budget": 25.984848484848484,
+        "default_top3_slots": 66,
+        "default_top3_slots_worst_on_a_criterion": 7,
+        "specialties_with_a_worst_provider_in_default_top3": 7
+      },
+      "single_provider_perturbations": {
+        "moved_to_patient_city": {
+          "n_trials": 417,
+          "improved": 401,
+          "unchanged": 16,
+          "worsened": 0,
+          "improved_rate": 0.9616306954436451,
+          "worsened_rate": 0.0,
+          "in_top_k_before": 34,
+          "in_top_k_after": 120,
+          "mean_rank_before": 13.124700239808153,
+          "mean_rank_after": 7.5443645083932855
+        },
+        "cost_set_to_budget": {
+          "n_trials": 461,
+          "improved": 368,
+          "unchanged": 93,
+          "worsened": 0,
+          "improved_rate": 0.7982646420824295,
+          "worsened_rate": 0.0,
+          "in_top_k_before": 62,
+          "in_top_k_after": 132,
+          "mean_rank_before": 12.121475054229935,
+          "mean_rank_after": 7.835140997830803
+        },
+        "cost_degraded": {
+          "n_trials": 504,
+          "improved": 0,
+          "unchanged": 50,
+          "worsened": 454,
+          "improved_rate": 0.0,
+          "worsened_rate": 0.9007936507936508,
+          "in_top_k_before": 66,
+          "in_top_k_after": 15,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 17.041666666666668
+        },
+        "quality_degraded": {
+          "n_trials": 504,
+          "improved": 0,
+          "unchanged": 37,
+          "worsened": 467,
+          "improved_rate": 0.0,
+          "worsened_rate": 0.9265873015873016,
+          "in_top_k_before": 66,
+          "in_top_k_after": 0,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 20.900793650793652
+        },
+        "wait_degraded": {
+          "n_trials": 504,
+          "improved": 0,
+          "unchanged": 67,
+          "worsened": 437,
+          "improved_rate": 0.0,
+          "worsened_rate": 0.8670634920634921,
+          "in_top_k_before": 66,
+          "in_top_k_after": 12,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 16.055555555555557
+        },
+        "quality_improved": {
+          "n_trials": 504,
+          "improved": 474,
+          "unchanged": 30,
+          "worsened": 0,
+          "improved_rate": 0.9404761904761905,
+          "worsened_rate": 0.0,
+          "in_top_k_before": 66,
+          "in_top_k_after": 369,
+          "mean_rank_before": 12.123015873015873,
+          "mean_rank_after": 2.892857142857143
+        }
+      },
+      "moved_away_from_patient_city": {
+        "n_trials": 87,
+        "improved": 0,
+        "unchanged": 4,
+        "worsened": 83,
+        "improved_rate": 0.0,
+        "worsened_rate": 0.9540229885057471,
+        "in_top_k_before": 32,
+        "in_top_k_after": 3,
+        "mean_rank_before": 7.32183908045977,
+        "mean_rank_after": 13.413793103448276
+      },
+      "price_sweep": {
+        "factors": [
+          1.0,
+          1.2,
+          1.5,
+          2.0,
+          3.0,
+          5.0,
+          10.0
+        ],
+        "providers": 504,
+        "providers_with_a_rank_improvement_when_price_rises": 0,
+        "rank_improvements_when_price_rises": 0,
+        "providers_better_ranked_at_10x_than_at_real_price": 0,
+        "examples": []
+      }
+    }
+  },
+  "chantier2_severity": {
+    "severity_quality": {
+      "severity_cases": {
+        "n_cases": 24,
+        "accuracy": 0.6666666666666666,
+        "within_one_level": 0.8333333333333334,
+        "under_triage": 3,
+        "over_triage": 2,
+        "unknown": 3,
+        "per_level": {
+          "LOW": {
+            "support": 6,
+            "precision": 0.8333333333333334,
+            "recall": 0.8333333333333334,
+            "f1": 0.8333333333333334
+          },
+          "MEDIUM": {
+            "support": 6,
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "f1": 0.7692307692307692
+          },
+          "HIGH": {
+            "support": 6,
+            "precision": 1.0,
+            "recall": 0.16666666666666666,
+            "f1": 0.2857142857142857
+          },
+          "CRITICAL": {
+            "support": 6,
+            "precision": 0.7142857142857143,
+            "recall": 0.8333333333333334,
+            "f1": 0.7692307692307692
+          }
+        },
+        "confusion_matrix": {
+          "LOW": {
+            "LOW": 5,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 1
+          },
+          "MEDIUM": {
+            "LOW": 1,
+            "MEDIUM": 5,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 0
+          },
+          "HIGH": {
+            "LOW": 0,
+            "MEDIUM": 1,
+            "HIGH": 1,
+            "CRITICAL": 2,
+            "UNKNOWN": 2
+          },
+          "CRITICAL": {
+            "LOW": 0,
+            "MEDIUM": 1,
+            "HIGH": 0,
+            "CRITICAL": 5,
+            "UNKNOWN": 0
+          }
+        },
+        "per_case": {
+          "S01": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "continuous_sneezing",
+              "runny_nose"
+            ],
+            "text": "J'ai le nez qui coule et j'éternue depuis deux jours, rien de grave, je voudrais juste un conseil."
+          },
+          "S02": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « for a few months » (-1)"
+            ],
+            "symptoms": [
+              "dry_skin",
+              "itching"
+            ],
+            "text": "I have had dry, itchy skin on my hands for a few months, it is annoying but not painful."
+          },
+          "S03": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « depuis plusieurs mois » (-1)"
+            ],
+            "symptoms": [
+              "acne"
+            ],
+            "text": "J'ai des boutons d'acné sur le front depuis plusieurs mois et j'aimerais voir quelqu'un."
+          },
+          "S04": {
+            "expected": "LOW",
+            "estimated": "UNKNOWN",
+            "score": -1,
+            "reasons": [
+              "ancienneté : « for years » (-1)",
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My knee is a little stiff in the morning, it has been like that for years."
+          },
+          "S05": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "fatigue",
+              "sleep_disturbance"
+            ],
+            "text": "Je suis un peu fatigué ces temps-ci et je dors mal, sans autre problème."
+          },
+          "S06": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "throat_irritation"
+            ],
+            "text": "I have a sore throat and a blocked nose since yesterday, no fever."
+          },
+          "S07": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : diarrhoea, high_fever, vomiting"
+            ],
+            "symptoms": [
+              "diarrhoea",
+              "high_fever",
+              "vomiting"
+            ],
+            "text": "J'ai de la fièvre depuis hier avec des vomissements et la diarrhée, je n'arrive pas à manger."
+          },
+          "S08": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : abdominal_pain, stomach_pain"
+            ],
+            "symptoms": [
+              "abdominal_pain",
+              "stomach_pain"
+            ],
+            "text": "I have had a bad stomach pain since this morning and I threw up twice."
+          },
+          "S09": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : dizziness, palpitations"
+            ],
+            "symptoms": [
+              "dizziness",
+              "palpitations"
+            ],
+            "text": "J'ai des vertiges quand je me lève et des palpitations depuis deux jours."
+          },
+          "S10": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever"
+            ],
+            "symptoms": [
+              "back_pain",
+              "high_fever"
+            ],
+            "text": "It burns when I urinate and I have had pain in my lower back since last night, with a fever."
+          },
+          "S11": {
+            "expected": "MEDIUM",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "painful_walking"
+            ],
+            "text": "Je me suis tordu la cheville en courant, elle est gonflée et j'ai du mal à marcher."
+          },
+          "S12": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever"
+            ],
+            "symptoms": [
+              "fatigue",
+              "high_fever"
+            ],
+            "text": "My daughter has had a high fever and an earache since last night and she is very tired."
+          },
+          "S13": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : blood_in_sputum, breathlessness, hemoptysis",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "blood_in_sputum",
+              "breathlessness",
+              "hemoptysis",
+              "phlegm"
+            ],
+            "text": "Je crache du sang depuis ce matin et je suis essoufflé."
+          },
+          "S14": {
+            "expected": "HIGH",
+            "estimated": "MEDIUM",
+            "score": 3,
+            "reasons": [
+              "symptôme de gravité modérée : eye_pain",
+              "début brutal : « suddenly » (+1)"
+            ],
+            "symptoms": [
+              "eye_pain",
+              "visual_disturbances"
+            ],
+            "text": "I suddenly lost the vision in my left eye an hour ago."
+          },
+          "S15": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : hematuria, renal_colic",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « atroce » (+1)"
+            ],
+            "symptoms": [
+              "flank_pain",
+              "hematuria",
+              "renal_colic"
+            ],
+            "text": "J'ai une douleur atroce dans le côté qui descend vers l'aine et il y a du sang dans mes urines."
+          },
+          "S16": {
+            "expected": "HIGH",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My father is seeing things that are not there and he is convinced we want to poison him."
+          },
+          "S17": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : febrile_seizures, seizures",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "âge vulnérable : 2 ans (+1)"
+            ],
+            "symptoms": [
+              "febrile_seizures",
+              "high_fever",
+              "seizures"
+            ],
+            "text": "Mon fils de deux ans a fait une convulsion avec de la fièvre tout à l'heure, il va mieux maintenant."
+          },
+          "S18": {
+            "expected": "HIGH",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My skin and eyes turned yellow this week and my stools are black."
+          },
+          "S19": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "formulation d'urgence vitale : « ne respire plus »",
+              "appel à l'aide : « venez vite » (+1)"
+            ],
+            "symptoms": [],
+            "text": "Mon père ne respire plus et il ne répond plus, venez vite !"
+          },
+          "S20": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "formulation d'urgence vitale : « not breathing »",
+              "appel à l'aide : « ambulance » (+1)"
+            ],
+            "symptoms": [],
+            "text": "My wife collapsed, she is unconscious and not breathing, please send an ambulance."
+          },
+          "S21": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 8,
+            "reasons": [
+              "symptôme critique : facial_drooping",
+              "début brutal : « d un seul coup » (+1)",
+              "âge vulnérable : 77 ans (+1)"
+            ],
+            "symptoms": [
+              "facial_drooping",
+              "speech_difficulty"
+            ],
+            "text": "Ma mère a la bouche de travers d'un seul coup, elle n'arrive plus à parler et son bras droit ne bouge plus."
+          },
+          "S22": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "symptôme de gravité élevée : chest_pain, left_arm_pain",
+              "combinaison critique : douleur thoracique avec signe associé (suspicion de syndrome coronarien)",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "chest_pain",
+              "left_arm_pain",
+              "sweating"
+            ],
+            "text": "I have a crushing pain in my chest going down my left arm, I am sweating and I feel like I am going to die."
+          },
+          "S23": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme critique : suicidal_thoughts",
+              "formulation d'urgence vitale : « avale plein de medicaments »"
+            ],
+            "symptoms": [
+              "suicidal_thoughts"
+            ],
+            "text": "Mon frère a avalé plein de médicaments, il dit qu'il veut en finir."
+          },
+          "S24": {
+            "expected": "CRITICAL",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : vomiting"
+            ],
+            "symptoms": [
+              "vomiting"
+            ],
+            "text": "He is vomiting blood and he is very confused, he does not know where he is."
+          }
+        }
+      },
+      "severity_cases_fr": {
+        "n_cases": 12,
+        "accuracy": 0.75,
+        "within_one_level": 1.0,
+        "under_triage": 1,
+        "over_triage": 2,
+        "unknown": 0,
+        "per_level": {
+          "LOW": {
+            "support": 3,
+            "precision": 0.75,
+            "recall": 1.0,
+            "f1": 0.8571428571428571
+          },
+          "MEDIUM": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          },
+          "HIGH": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "CRITICAL": {
+            "support": 3,
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.7499999999999999
+          }
+        },
+        "confusion_matrix": {
+          "LOW": {
+            "LOW": 3,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 0
+          },
+          "MEDIUM": {
+            "LOW": 1,
+            "MEDIUM": 2,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 0
+          },
+          "HIGH": {
+            "LOW": 0,
+            "MEDIUM": 0,
+            "HIGH": 1,
+            "CRITICAL": 2,
+            "UNKNOWN": 0
+          },
+          "CRITICAL": {
+            "LOW": 0,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 3,
+            "UNKNOWN": 0
+          }
+        },
+        "per_case": {
+          "S01": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "continuous_sneezing",
+              "runny_nose"
+            ],
+            "text": "J'ai le nez qui coule et j'éternue depuis deux jours, rien de grave, je voudrais juste un conseil."
+          },
+          "S03": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « depuis plusieurs mois » (-1)"
+            ],
+            "symptoms": [
+              "acne"
+            ],
+            "text": "J'ai des boutons d'acné sur le front depuis plusieurs mois et j'aimerais voir quelqu'un."
+          },
+          "S05": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "fatigue",
+              "sleep_disturbance"
+            ],
+            "text": "Je suis un peu fatigué ces temps-ci et je dors mal, sans autre problème."
+          },
+          "S07": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : diarrhoea, high_fever, vomiting"
+            ],
+            "symptoms": [
+              "diarrhoea",
+              "high_fever",
+              "vomiting"
+            ],
+            "text": "J'ai de la fièvre depuis hier avec des vomissements et la diarrhée, je n'arrive pas à manger."
+          },
+          "S09": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : dizziness, palpitations"
+            ],
+            "symptoms": [
+              "dizziness",
+              "palpitations"
+            ],
+            "text": "J'ai des vertiges quand je me lève et des palpitations depuis deux jours."
+          },
+          "S11": {
+            "expected": "MEDIUM",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "painful_walking"
+            ],
+            "text": "Je me suis tordu la cheville en courant, elle est gonflée et j'ai du mal à marcher."
+          },
+          "S13": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : blood_in_sputum, breathlessness, hemoptysis",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "blood_in_sputum",
+              "breathlessness",
+              "hemoptysis",
+              "phlegm"
+            ],
+            "text": "Je crache du sang depuis ce matin et je suis essoufflé."
+          },
+          "S15": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : hematuria, renal_colic",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « atroce » (+1)"
+            ],
+            "symptoms": [
+              "flank_pain",
+              "hematuria",
+              "renal_colic"
+            ],
+            "text": "J'ai une douleur atroce dans le côté qui descend vers l'aine et il y a du sang dans mes urines."
+          },
+          "S17": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : febrile_seizures, seizures",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "âge vulnérable : 2 ans (+1)"
+            ],
+            "symptoms": [
+              "febrile_seizures",
+              "high_fever",
+              "seizures"
+            ],
+            "text": "Mon fils de deux ans a fait une convulsion avec de la fièvre tout à l'heure, il va mieux maintenant."
+          },
+          "S19": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "formulation d'urgence vitale : « ne respire plus »",
+              "appel à l'aide : « venez vite » (+1)"
+            ],
+            "symptoms": [],
+            "text": "Mon père ne respire plus et il ne répond plus, venez vite !"
+          },
+          "S21": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 8,
+            "reasons": [
+              "symptôme critique : facial_drooping",
+              "début brutal : « d un seul coup » (+1)",
+              "âge vulnérable : 77 ans (+1)"
+            ],
+            "symptoms": [
+              "facial_drooping",
+              "speech_difficulty"
+            ],
+            "text": "Ma mère a la bouche de travers d'un seul coup, elle n'arrive plus à parler et son bras droit ne bouge plus."
+          },
+          "S23": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme critique : suicidal_thoughts",
+              "formulation d'urgence vitale : « avale plein de medicaments »"
+            ],
+            "symptoms": [
+              "suicidal_thoughts"
+            ],
+            "text": "Mon frère a avalé plein de médicaments, il dit qu'il veut en finir."
+          }
+        }
+      },
+      "severity_cases_en": {
+        "n_cases": 12,
+        "accuracy": 0.5833333333333334,
+        "within_one_level": 0.6666666666666666,
+        "under_triage": 2,
+        "over_triage": 0,
+        "unknown": 3,
+        "per_level": {
+          "LOW": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          },
+          "MEDIUM": {
+            "support": 3,
+            "precision": 0.6,
+            "recall": 1.0,
+            "f1": 0.7499999999999999
+          },
+          "HIGH": {
+            "support": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": null
+          },
+          "CRITICAL": {
+            "support": 3,
+            "precision": 1.0,
+            "recall": 0.6666666666666666,
+            "f1": 0.8
+          }
+        },
+        "confusion_matrix": {
+          "LOW": {
+            "LOW": 2,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 1
+          },
+          "MEDIUM": {
+            "LOW": 0,
+            "MEDIUM": 3,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 0
+          },
+          "HIGH": {
+            "LOW": 0,
+            "MEDIUM": 1,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 2
+          },
+          "CRITICAL": {
+            "LOW": 0,
+            "MEDIUM": 1,
+            "HIGH": 0,
+            "CRITICAL": 2,
+            "UNKNOWN": 0
+          }
+        },
+        "per_case": {
+          "S02": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « for a few months » (-1)"
+            ],
+            "symptoms": [
+              "dry_skin",
+              "itching"
+            ],
+            "text": "I have had dry, itchy skin on my hands for a few months, it is annoying but not painful."
+          },
+          "S04": {
+            "expected": "LOW",
+            "estimated": "UNKNOWN",
+            "score": -1,
+            "reasons": [
+              "ancienneté : « for years » (-1)",
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My knee is a little stiff in the morning, it has been like that for years."
+          },
+          "S06": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "throat_irritation"
+            ],
+            "text": "I have a sore throat and a blocked nose since yesterday, no fever."
+          },
+          "S08": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : abdominal_pain, stomach_pain"
+            ],
+            "symptoms": [
+              "abdominal_pain",
+              "stomach_pain"
+            ],
+            "text": "I have had a bad stomach pain since this morning and I threw up twice."
+          },
+          "S10": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever"
+            ],
+            "symptoms": [
+              "back_pain",
+              "high_fever"
+            ],
+            "text": "It burns when I urinate and I have had pain in my lower back since last night, with a fever."
+          },
+          "S12": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever"
+            ],
+            "symptoms": [
+              "fatigue",
+              "high_fever"
+            ],
+            "text": "My daughter has had a high fever and an earache since last night and she is very tired."
+          },
+          "S14": {
+            "expected": "HIGH",
+            "estimated": "MEDIUM",
+            "score": 3,
+            "reasons": [
+              "symptôme de gravité modérée : eye_pain",
+              "début brutal : « suddenly » (+1)"
+            ],
+            "symptoms": [
+              "eye_pain",
+              "visual_disturbances"
+            ],
+            "text": "I suddenly lost the vision in my left eye an hour ago."
+          },
+          "S16": {
+            "expected": "HIGH",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My father is seeing things that are not there and he is convinced we want to poison him."
+          },
+          "S18": {
+            "expected": "HIGH",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My skin and eyes turned yellow this week and my stools are black."
+          },
+          "S20": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "formulation d'urgence vitale : « not breathing »",
+              "appel à l'aide : « ambulance » (+1)"
+            ],
+            "symptoms": [],
+            "text": "My wife collapsed, she is unconscious and not breathing, please send an ambulance."
+          },
+          "S22": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "symptôme de gravité élevée : chest_pain, left_arm_pain",
+              "combinaison critique : douleur thoracique avec signe associé (suspicion de syndrome coronarien)",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "chest_pain",
+              "left_arm_pain",
+              "sweating"
+            ],
+            "text": "I have a crushing pain in my chest going down my left arm, I am sweating and I feel like I am going to die."
+          },
+          "S24": {
+            "expected": "CRITICAL",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : vomiting"
+            ],
+            "symptoms": [
+              "vomiting"
+            ],
+            "text": "He is vomiting blood and he is very confused, he does not know where he is."
+          }
+        }
+      },
+      "original_29_fr": {
+        "n_cases": 29,
+        "accuracy": 0.6551724137931034,
+        "within_one_level": 0.9655172413793104,
+        "under_triage": 0,
+        "over_triage": 10,
+        "unknown": 0,
+        "per_level": {
+          "LOW": {
+            "support": 7,
+            "precision": 1.0,
+            "recall": 0.8571428571428571,
+            "f1": 0.923076923076923
+          },
+          "MEDIUM": {
+            "support": 11,
+            "precision": 0.875,
+            "recall": 0.6363636363636364,
+            "f1": 0.7368421052631579
+          },
+          "HIGH": {
+            "support": 9,
+            "precision": 0.5714285714285714,
+            "recall": 0.4444444444444444,
+            "f1": 0.5
+          },
+          "CRITICAL": {
+            "support": 2,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          }
+        },
+        "confusion_matrix": {
+          "LOW": {
+            "LOW": 6,
+            "MEDIUM": 1,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 0
+          },
+          "MEDIUM": {
+            "LOW": 0,
+            "MEDIUM": 7,
+            "HIGH": 3,
+            "CRITICAL": 1,
+            "UNKNOWN": 0
+          },
+          "HIGH": {
+            "LOW": 0,
+            "MEDIUM": 0,
+            "HIGH": 4,
+            "CRITICAL": 5,
+            "UNKNOWN": 0
+          },
+          "CRITICAL": {
+            "LOW": 0,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 2,
+            "UNKNOWN": 0
+          }
+        },
+        "per_case": {
+          "C01": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "blackheads",
+              "blister",
+              "itching",
+              "pus_filled_pimples",
+              "skin_peeling"
+            ],
+            "text": "Depuis deux semaines j'ai des boutons remplis de pus sur le visage et dans le dos, avec des points noirs et quelques cloques. Ça me démange beaucoup et la peau pèle."
+          },
+          "C02": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « chaque printemps » (-1)"
+            ],
+            "symptoms": [
+              "congestion",
+              "continuous_sneezing",
+              "itching",
+              "runny_nose",
+              "seasonal_symptoms",
+              "watering_from_eyes"
+            ],
+            "text": "Chaque printemps c'est pareil : j'éternue toute la journée, j'ai le nez qui coule, les yeux qui pleurent et qui grattent, et le nez bouché la nuit."
+          },
+          "C03": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : spinning_movements, unsteadiness"
+            ],
+            "symptoms": [
+              "loss_of_smell",
+              "spinning_movements",
+              "throat_irritation",
+              "unsteadiness"
+            ],
+            "text": "Depuis trois jours la pièce tourne dès que je me lève, je ne tiens pas bien debout, j'ai la gorge irritée et j'ai perdu l'odorat."
+          },
+          "C04": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 8,
+            "reasons": [
+              "symptôme de gravité élevée : chest_pain, chest_tightness, irregular_heartbeat, left_arm_pain",
+              "combinaison critique : douleur thoracique avec signe associé (suspicion de syndrome coronarien)",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « tres forte » (+1)"
+            ],
+            "symptoms": [
+              "chest_pain",
+              "chest_tightness",
+              "irregular_heartbeat",
+              "left_arm_pain",
+              "sweating"
+            ],
+            "text": "Mon mari a une douleur très forte dans la poitrine depuis vingt minutes, ça lui serre comme un étau et ça descend dans le bras gauche. Il transpire beaucoup et il dit que son cœur bat de façon irrégulière."
+          },
+          "C05": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : blood_in_sputum, breathlessness",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "blood_in_sputum",
+              "breathlessness",
+              "chronic_cough",
+              "cough",
+              "high_fever",
+              "phlegm",
+              "rusty_sputum",
+              "shortness_of_breath_on_exertion",
+              "wheezing"
+            ],
+            "text": "Mon père tousse depuis des semaines, et depuis ce matin il a la respiration qui siffle et il crache des glaires couleur rouille avec un peu de sang. Il est essoufflé rien qu'en allant aux toilettes et il a de la fièvre."
+          },
+          "C06": {
+            "expected": "MEDIUM",
+            "estimated": "HIGH",
+            "score": 4,
+            "reasons": [
+              "symptôme de gravité élevée : prolonged_bleeding"
+            ],
+            "symptoms": [
+              "bruising",
+              "easy_bleeding",
+              "easy_bruising",
+              "fatigue",
+              "pallor",
+              "petechiae",
+              "prolonged_bleeding"
+            ],
+            "text": "Je fais des bleus au moindre choc, mes gencives saignent longtemps quand je me brosse les dents, des petits points rouges sont apparus sur mes jambes et je suis très pâle et fatigué."
+          },
+          "C07": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "cramps",
+              "prominent_veins_on_calf",
+              "swollen_blood_vessels",
+              "swollen_legs"
+            ],
+            "text": "J'ai les jambes lourdes et gonflées le soir, de grosses veines tordues sur les mollets et des crampes la nuit."
+          },
+          "C08": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : diarrhoea, stomach_pain, vomiting"
+            ],
+            "symptoms": [
+              "cramps",
+              "diarrhoea",
+              "nausea",
+              "stomach_pain",
+              "vomiting"
+            ],
+            "text": "Depuis hier soir j'ai très mal à l'estomac avec des crampes, j'ai vomi trois fois et j'ai la diarrhée. J'ai tout le temps la nausée et je ne garde rien."
+          },
+          "C09": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : yellowing_of_eyes, yellowish_skin",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "dark_urine",
+              "fatigue",
+              "history_of_alcohol_consumption",
+              "swelling_of_stomach",
+              "yellowing_of_eyes",
+              "yellowish_skin"
+            ],
+            "text": "Mon frère a les yeux et la peau qui sont devenus jaunes ces derniers jours, ses urines sont très foncées et son ventre est gonflé. Il boit beaucoup d'alcool et il est épuisé."
+          },
+          "C10": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : lymphadenopathy, night_sweats_drenching, unexplained_weight_loss"
+            ],
+            "symptoms": [
+              "fatigue",
+              "fatigue_severe",
+              "lymphadenopathy",
+              "night_sweats",
+              "night_sweats_drenching",
+              "sweating",
+              "unexplained_weight_loss",
+              "weight_loss"
+            ],
+            "text": "J'ai perdu douze kilos en trois mois sans faire de régime, je me réveille trempé de sueur la nuit, je suis épuisé en permanence et j'ai trouvé des boules dures dans le cou et sous le bras."
+          },
+          "C11": {
+            "expected": "MEDIUM",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : febrile_seizures, seizures",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "âge vulnérable : 3 ans (+1)"
+            ],
+            "symptoms": [
+              "abdominal_pain",
+              "excessive_crying",
+              "febrile_seizures",
+              "high_fever",
+              "loss_of_appetite",
+              "seizures"
+            ],
+            "text": "Mon fils de trois ans a une forte fièvre et il a fait une convulsion avec la fièvre cette nuit. Il a mal au ventre, il pleure tout le temps et il refuse de manger."
+          },
+          "C12": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme critique : altered_sensorium, facial_drooping, slurred_speech, weakness_of_one_body_side"
+            ],
+            "symptoms": [
+              "altered_sensorium",
+              "facial_drooping",
+              "slurred_speech",
+              "weakness_of_one_body_side"
+            ],
+            "text": "Ma mère n'arrive plus à bouger le bras droit ni la jambe droite d'un seul coup, un côté de son visage tombe et elle parle de façon pâteuse. Elle a l'air confuse et ne me reconnaît pas."
+          },
+          "C13": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 4,
+            "reasons": [
+              "symptôme de gravité élevée : vision_loss"
+            ],
+            "symptoms": [
+              "flashing_lights",
+              "floaters",
+              "vision_loss"
+            ],
+            "text": "Depuis ce matin je vois des éclairs lumineux et des points noirs qui flottent dans l'œil droit, puis une ombre a recouvert une partie de ma vue. Maintenant je ne vois presque plus de cet œil et il me fait mal."
+          },
+          "C14": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme critique : suicidal_thoughts",
+              "formulation d'urgence vitale : « veut en finir »"
+            ],
+            "symptoms": [
+              "hallucinations",
+              "panic_attacks",
+              "sleep_disturbance",
+              "suicidal_thoughts"
+            ],
+            "text": "Ma sœur ne dort plus depuis des jours, elle entend des voix qui n'existent pas et elle est persuadée que les voisins l'espionnent. Elle a fait des crises de panique et elle dit qu'elle veut en finir avec la vie."
+          },
+          "C15": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « depuis plusieurs mois » (-1)"
+            ],
+            "symptoms": [
+              "joint_pain",
+              "joint_stiffness",
+              "morning_stiffness",
+              "swelling_joints"
+            ],
+            "text": "Tous les matins j'ai les doigts et les genoux raides pendant plus d'une heure, les articulations sont gonflées et douloureuses, et ça empire depuis plusieurs mois."
+          },
+          "C16": {
+            "expected": "MEDIUM",
+            "estimated": "HIGH",
+            "score": 4,
+            "reasons": [
+              "symptôme de gravité élevée : bone_deformity"
+            ],
+            "symptoms": [
+              "bone_deformity",
+              "joint_stiffness",
+              "limited_range_of_motion",
+              "muscle_spasm"
+            ],
+            "text": "Je suis tombé de moto hier. Mon poignet est déformé et je n'arrive plus à le bouger, l'articulation est complètement raide et j'ai des spasmes musculaires dans l'avant-bras."
+          },
+          "C17": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : high_fever_spiking, rash_spreading",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « violents » (+1)"
+            ],
+            "symptoms": [
+              "chills",
+              "high_fever",
+              "high_fever_spiking",
+              "lymph_node_swelling",
+              "rash_spreading",
+              "rigors",
+              "shivering",
+              "skin_rash",
+              "swelled_lymph_nodes",
+              "travel_history"
+            ],
+            "text": "Je suis rentré d'un voyage en Afrique subsaharienne il y a dix jours. Depuis j'ai des accès de fièvre très élevée avec des frissons violents, des ganglions gonflés dans le cou et une éruption qui s'étend sur tout le corps."
+          },
+          "C18": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : excessive_thirst, irregular_sugar_level"
+            ],
+            "symptoms": [
+              "excessive_hunger",
+              "excessive_thirst",
+              "frequent_urination",
+              "irregular_sugar_level",
+              "polyuria",
+              "polyuria_nocturia",
+              "weight_loss"
+            ],
+            "text": "J'ai soif tout le temps, j'urine très souvent même la nuit, j'ai toujours faim mais j'ai maigri. Mes mesures de glycémie partent dans tous les sens."
+          },
+          "C19": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : menorrhagia, pelvic_pain"
+            ],
+            "symptoms": [
+              "dysmenorrhea",
+              "menorrhagia",
+              "pelvic_pain",
+              "vaginal_discharge"
+            ],
+            "text": "J'ai des règles très douloureuses avec des saignements abondants, des douleurs dans le bas-ventre et le bassin, et des pertes vaginales inhabituelles depuis une semaine."
+          },
+          "C20": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité élevée : hematuria, renal_colic",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « atroce » (+1)"
+            ],
+            "symptoms": [
+              "burning_micturition",
+              "dysuria",
+              "flank_pain",
+              "hematuria",
+              "renal_colic"
+            ],
+            "text": "J'ai une douleur atroce dans le côté qui vient par vagues et qui descend vers l'aine, ça brûle quand j'urine et il y a du sang dans mes urines."
+          },
+          "C21": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : decreased_urine_output, oliguria",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "ankle_swelling",
+              "decreased_urine_output",
+              "frothy_urine",
+              "hypertension_renal",
+              "oliguria",
+              "periorbital_edema",
+              "puffy_face_and_eyes",
+              "swelling_joints"
+            ],
+            "text": "Depuis une semaine j'urine très peu et c'est mousseux. J'ai le visage bouffi autour des yeux le matin, les chevilles gonflées et une tension très élevée."
+          },
+          "C22": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever, vomiting"
+            ],
+            "symptoms": [
+              "headache",
+              "high_fever",
+              "malaise",
+              "muscle_pain",
+              "pain_behind_the_eyes",
+              "vomiting"
+            ],
+            "text": "J'ai une forte fièvre depuis quatre jours avec un gros mal de tête, une douleur derrière les yeux, je vomis et je me sens mal partout avec des courbatures."
+          },
+          "A01": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "symptôme de gravité élevée : breathlessness, chest_pain, pleuritic_chest_pain",
+              "combinaison critique : douleur thoracique avec signe associé (suspicion de syndrome coronarien)",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "breathlessness",
+              "chest_pain",
+              "cough",
+              "fast_heart_rate",
+              "palpitations",
+              "pleuritic_chest_pain"
+            ],
+            "text": "J'ai une douleur dans la poitrine quand j'inspire à fond et je suis essoufflé, avec une toux sèche depuis hier. Mon cœur bat très vite."
+          },
+          "A02": {
+            "expected": "MEDIUM",
+            "estimated": "HIGH",
+            "score": 4,
+            "reasons": [
+              "symptôme de gravité élevée : yellowing_of_eyes"
+            ],
+            "symptoms": [
+              "abdominal_pain",
+              "loss_of_appetite",
+              "nausea",
+              "vomiting",
+              "yellowing_of_eyes"
+            ],
+            "text": "J'ai mal en haut à droite du ventre, des nausées et des vomissements, je n'ai plus d'appétit, et ma femme trouve que mes yeux sont un peu jaunes."
+          },
+          "A03": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "symptôme de gravité élevée : diplopia, double_vision",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « violent » (+1)",
+              "début brutal : « d un seul coup » (+1)"
+            ],
+            "symptoms": [
+              "diplopia",
+              "double_vision",
+              "headache",
+              "numbness_tingling"
+            ],
+            "text": "Je vois double d'un seul coup et j'ai un mal de tête violent, avec des engourdissements et des fourmillements dans la main gauche."
+          },
+          "A04": {
+            "expected": "LOW",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : pelvic_pain"
+            ],
+            "symptoms": [
+              "bladder_discomfort",
+              "burning_micturition",
+              "continuous_feel_of_urine",
+              "dysuria",
+              "pelvic_pain"
+            ],
+            "text": "Ça me brûle quand j'urine, j'ai tout le temps envie d'y aller, avec une gêne dans la vessie et une douleur dans le bas du bassin."
+          },
+          "A05": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "hip_joint_pain",
+              "joint_stiffness",
+              "knee_pain",
+              "limping",
+              "painful_walking",
+              "swelling_joints"
+            ],
+            "text": "J'ai mal au genou et à la hanche quand je marche et je boite, le genou est gonflé et raide, surtout après être resté assis longtemps."
+          },
+          "R01": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "congestion",
+              "throat_irritation"
+            ],
+            "text": "J'ai mal à la gorge et le nez bouché depuis deux jours, mais je n'ai pas de fièvre, pas de toux et aucune douleur dans la poitrine."
+          },
+          "R02": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "appel à l'aide : « envoyez quelqu un » (+1)"
+            ],
+            "symptoms": [
+              "malaise"
+            ],
+            "text": "Je ne me sens vraiment pas bien, je me sens bizarre et j'ai mal partout, envoyez quelqu'un s'il vous plaît."
+          }
+        }
+      },
+      "original_29_en": {
+        "n_cases": 29,
+        "accuracy": 0.4482758620689655,
+        "within_one_level": 0.7241379310344828,
+        "under_triage": 7,
+        "over_triage": 3,
+        "unknown": 6,
+        "per_level": {
+          "LOW": {
+            "support": 7,
+            "precision": 0.4444444444444444,
+            "recall": 0.5714285714285714,
+            "f1": 0.5
+          },
+          "MEDIUM": {
+            "support": 11,
+            "precision": 0.7142857142857143,
+            "recall": 0.45454545454545453,
+            "f1": 0.5555555555555556
+          },
+          "HIGH": {
+            "support": 9,
+            "precision": 0.6666666666666666,
+            "recall": 0.2222222222222222,
+            "f1": 0.3333333333333333
+          },
+          "CRITICAL": {
+            "support": 2,
+            "precision": 0.5,
+            "recall": 1.0,
+            "f1": 0.6666666666666666
+          }
+        },
+        "confusion_matrix": {
+          "LOW": {
+            "LOW": 4,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 0,
+            "UNKNOWN": 3
+          },
+          "MEDIUM": {
+            "LOW": 3,
+            "MEDIUM": 5,
+            "HIGH": 1,
+            "CRITICAL": 0,
+            "UNKNOWN": 2
+          },
+          "HIGH": {
+            "LOW": 2,
+            "MEDIUM": 2,
+            "HIGH": 2,
+            "CRITICAL": 2,
+            "UNKNOWN": 1
+          },
+          "CRITICAL": {
+            "LOW": 0,
+            "MEDIUM": 0,
+            "HIGH": 0,
+            "CRITICAL": 2,
+            "UNKNOWN": 0
+          }
+        },
+        "per_case": {
+          "C01": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "blackheads",
+              "blister",
+              "skin_peeling"
+            ],
+            "text": "For two weeks I have had pimples full of pus on my face and back, with blackheads and a few blisters. It itches a lot and the skin is peeling."
+          },
+          "C02": {
+            "expected": "LOW",
+            "estimated": "UNKNOWN",
+            "score": -1,
+            "reasons": [
+              "ancienneté : « every spring » (-1)",
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "Every spring it is the same thing: I sneeze all day, my nose runs, my eyes water and itch, and my nose is blocked at night."
+          },
+          "C03": {
+            "expected": "MEDIUM",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "For three days the room has been spinning whenever I stand up, I feel unsteady on my feet, my throat is irritated and I have lost my sense of smell."
+          },
+          "C04": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 8,
+            "reasons": [
+              "symptôme de gravité élevée : chest_pain, left_arm_pain",
+              "combinaison critique : douleur thoracique avec signe associé (suspicion de syndrome coronarien)",
+              "plusieurs symptômes de gravité élevée (+1)",
+              "intensité : « very strong » (+1)"
+            ],
+            "symptoms": [
+              "chest_pain",
+              "left_arm_pain",
+              "sweating"
+            ],
+            "text": "My husband has had a very strong pain in his chest for twenty minutes, it feels tight like a vise and it goes down his left arm. He is sweating a lot and he says his heart is beating irregularly."
+          },
+          "C05": {
+            "expected": "HIGH",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever, wheezing"
+            ],
+            "symptoms": [
+              "cough",
+              "high_fever",
+              "phlegm",
+              "wheezing"
+            ],
+            "text": "My father has been coughing for weeks, and since this morning he is wheezing and coughing up rust-colored phlegm with a little blood. He gets out of breath just walking to the bathroom and he has a fever."
+          },
+          "C06": {
+            "expected": "MEDIUM",
+            "estimated": "LOW",
+            "score": 0,
+            "reasons": [
+              "symptômes bénins uniquement",
+              "ancienneté : « for a long time » (-1)"
+            ],
+            "symptoms": [
+              "fatigue"
+            ],
+            "text": "I bruise at the slightest bump, my gums bleed for a long time when I brush my teeth, small red dots have appeared on my legs and I am very pale and tired."
+          },
+          "C07": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "cramps",
+              "swollen_legs"
+            ],
+            "text": "My legs are heavy and swollen in the evening, I have big twisted veins on my calves and cramps at night."
+          },
+          "C08": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : abdominal_pain, diarrhoea, stomach_pain"
+            ],
+            "symptoms": [
+              "abdominal_pain",
+              "cramps",
+              "diarrhoea",
+              "stomach_pain"
+            ],
+            "text": "Since last night I have had strong stomach pain with cramps, I vomited three times and I have diarrhea. I feel nauseous all the time and I cannot keep anything down."
+          },
+          "C09": {
+            "expected": "HIGH",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : dark_urine"
+            ],
+            "symptoms": [
+              "dark_urine",
+              "fatigue",
+              "yellow_urine"
+            ],
+            "text": "My brother's eyes and skin have turned yellow over the last few days, his urine is very dark and his belly is swollen. He drinks a lot of alcohol and he is exhausted."
+          },
+          "C10": {
+            "expected": "MEDIUM",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "fatigue",
+              "sweating"
+            ],
+            "text": "I have lost twelve kilos in three months without dieting, I wake up drenched in sweat at night, I am exhausted all the time and I found hard lumps in my neck and under my arm."
+          },
+          "C11": {
+            "expected": "MEDIUM",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : seizures",
+              "âge vulnérable : 3 ans (+1)"
+            ],
+            "symptoms": [
+              "abdominal_pain",
+              "belly_pain",
+              "high_fever",
+              "seizures"
+            ],
+            "text": "My three-year-old son has a high fever and he had a seizure with the fever last night. He has belly pain, he cries all the time and he refuses to eat."
+          },
+          "C12": {
+            "expected": "CRITICAL",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "symptôme critique : slurred_speech",
+              "début brutal : « suddenly » (+1)"
+            ],
+            "symptoms": [
+              "slurred_speech"
+            ],
+            "text": "My mother suddenly cannot move her right arm and right leg, one side of her face is drooping and her speech is slurred. She seems confused and does not recognize me."
+          },
+          "C13": {
+            "expected": "HIGH",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "Since this morning I have been seeing flashes of light and black floating spots in my right eye, then a shadow covered part of my sight. Now I can hardly see with that eye and it hurts."
+          },
+          "C14": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 6,
+            "reasons": [
+              "symptôme de gravité modérée : panic_attacks",
+              "formulation d'urgence vitale : « end her life »"
+            ],
+            "symptoms": [
+              "panic_attacks"
+            ],
+            "text": "My sister has not slept for days, she hears voices that are not there and she is convinced the neighbors are spying on her. She has had panic attacks and she says she wants to end her life."
+          },
+          "C15": {
+            "expected": "LOW",
+            "estimated": "UNKNOWN",
+            "score": -1,
+            "reasons": [
+              "ancienneté : « for several months » (-1)",
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "Every morning my fingers and knees are stiff for more than an hour, the joints are swollen and painful, and it has been getting worse for several months."
+          },
+          "C16": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : muscle_spasm"
+            ],
+            "symptoms": [
+              "muscle_spasm"
+            ],
+            "text": "I fell off my motorbike yesterday. My wrist is deformed and I cannot move it, the joint is completely stiff and I have muscle spasms in my forearm."
+          },
+          "C17": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 5,
+            "reasons": [
+              "symptôme de gravité élevée : rash_spreading",
+              "intensité : « violent » (+1)"
+            ],
+            "symptoms": [
+              "high_fever",
+              "rash_spreading",
+              "shivering",
+              "swelled_lymph_nodes"
+            ],
+            "text": "I returned from a trip to sub-Saharan Africa ten days ago. Since then I have had bouts of very high fever with violent shivering, swollen lymph nodes in my neck and a rash that is spreading all over my body."
+          },
+          "C18": {
+            "expected": "MEDIUM",
+            "estimated": "UNKNOWN",
+            "score": 0,
+            "reasons": [
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "I am thirsty all the time, I urinate very often even at night, I am always hungry but I have lost weight. My blood sugar readings are all over the place."
+          },
+          "C19": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : easy_bleeding"
+            ],
+            "symptoms": [
+              "belly_pain",
+              "easy_bleeding",
+              "vaginal_discharge"
+            ],
+            "text": "I have very painful periods with heavy bleeding, pain in my lower belly and pelvis, and an unusual vaginal discharge for a week."
+          },
+          "C20": {
+            "expected": "HIGH",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "intensité : « terrible » (+1)"
+            ],
+            "symptoms": [],
+            "text": "I have a terrible pain in my side that comes in waves and goes down to the groin, it burns when I urinate and there is blood in my urine."
+          },
+          "C21": {
+            "expected": "HIGH",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "puffy_face_and_eyes"
+            ],
+            "text": "For a week I have been passing very little urine and it is foamy. My face is puffy around the eyes in the morning, my ankles are swollen and my blood pressure is very high."
+          },
+          "C22": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : high_fever, vomiting"
+            ],
+            "symptoms": [
+              "headache",
+              "high_fever",
+              "vomiting"
+            ],
+            "text": "I have had a high fever for four days with a bad headache, pain behind my eyes, I am vomiting and I feel unwell all over with aching muscles."
+          },
+          "A01": {
+            "expected": "HIGH",
+            "estimated": "CRITICAL",
+            "score": 7,
+            "reasons": [
+              "symptôme de gravité élevée : breathlessness, chest_pain",
+              "combinaison critique : douleur thoracique avec signe associé (suspicion de syndrome coronarien)",
+              "plusieurs symptômes de gravité élevée (+1)"
+            ],
+            "symptoms": [
+              "breathlessness",
+              "chest_pain",
+              "cough"
+            ],
+            "text": "I have chest pain when I breathe in deeply and I am short of breath, with a dry cough since yesterday. My heart is beating very fast."
+          },
+          "A02": {
+            "expected": "MEDIUM",
+            "estimated": "MEDIUM",
+            "score": 2,
+            "reasons": [
+              "symptôme de gravité modérée : vomiting"
+            ],
+            "symptoms": [
+              "belly_pain",
+              "nausea",
+              "vomiting"
+            ],
+            "text": "I have pain in the upper right of my belly, nausea and vomiting, I have no appetite, and my wife says my eyes look a little yellow."
+          },
+          "A03": {
+            "expected": "HIGH",
+            "estimated": "HIGH",
+            "score": 4,
+            "reasons": [
+              "symptôme de gravité modérée : numbness_tingling",
+              "intensité : « violent » (+1)",
+              "début brutal : « suddenly » (+1)"
+            ],
+            "symptoms": [
+              "headache",
+              "numbness_tingling"
+            ],
+            "text": "I suddenly see double and I have a violent headache, with numbness and tingling in my left hand."
+          },
+          "A04": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "bladder_discomfort"
+            ],
+            "text": "It burns when I urinate, I constantly feel like I need to go, with discomfort in my bladder and pain in my lower pelvis."
+          },
+          "A05": {
+            "expected": "LOW",
+            "estimated": "UNKNOWN",
+            "score": -1,
+            "reasons": [
+              "ancienneté : « for a long time » (-1)",
+              "aucun symptôme reconnu ni indice de gravité dans le texte"
+            ],
+            "symptoms": [],
+            "text": "My knee and my hip hurt when I walk and I limp, the knee is swollen and stiff, especially after sitting for a long time."
+          },
+          "R01": {
+            "expected": "LOW",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "symptômes bénins uniquement"
+            ],
+            "symptoms": [
+              "throat_irritation"
+            ],
+            "text": "I have had a sore throat and a blocked nose for two days, but I have no fever, no cough and no chest pain."
+          },
+          "R02": {
+            "expected": "MEDIUM",
+            "estimated": "LOW",
+            "score": 1,
+            "reasons": [
+              "appel à l'aide : « send someone » (+1)"
+            ],
+            "symptoms": [],
+            "text": "I really do not feel well, I feel strange and I hurt everywhere, please send someone."
+          }
+        }
+      }
+    },
+    "pipeline_effect": {
+      "en": {
+        "before": {
+          "top1_strict_accuracy": 0.4482758620689655,
+          "top1_lenient_accuracy": 0.5172413793103449,
+          "top3_coverage": 0.5862068965517241,
+          "provider_top1_coverage": 0.4482758620689655,
+          "provider_top3_coverage": 0.5862068965517241,
+          "no_prediction": 8,
+          "staged_equals_real_predict": true
+        },
+        "after": {
+          "top1_strict_accuracy": 0.4482758620689655,
+          "top1_lenient_accuracy": 0.5172413793103449,
+          "top3_coverage": 0.5862068965517241,
+          "provider_top1_coverage": 0.4482758620689655,
+          "provider_top3_coverage": 0.5862068965517241,
+          "no_prediction": 8,
+          "staged_equals_real_predict": true
+        },
+        "cases_where_top1_changes": {},
+        "estimated_levels": {
+          "C01": "LOW",
+          "C02": "UNKNOWN",
+          "C03": "UNKNOWN",
+          "C04": "CRITICAL",
+          "C05": "HIGH",
+          "C06": "LOW",
+          "C07": "LOW",
+          "C08": "MEDIUM",
+          "C09": "HIGH",
+          "C10": "LOW",
+          "C11": "HIGH",
+          "C12": "CRITICAL",
+          "C13": "HIGH",
+          "C14": "CRITICAL",
+          "C15": "UNKNOWN",
+          "C16": "MEDIUM",
+          "C17": "HIGH",
+          "C18": "UNKNOWN",
+          "C19": "MEDIUM",
+          "C20": "HIGH",
+          "C21": "HIGH",
+          "C22": "MEDIUM",
+          "A01": "CRITICAL",
+          "A02": "MEDIUM",
+          "A03": "HIGH",
+          "A04": "LOW",
+          "A05": "UNKNOWN",
+          "R01": "LOW",
+          "R02": "LOW"
+        }
+      },
+      "fr": {
+        "before": {
+          "top1_strict_accuracy": 0.8275862068965517,
+          "top1_lenient_accuracy": 0.9310344827586207,
+          "top3_coverage": 1.0,
+          "provider_top1_coverage": 0.8275862068965517,
+          "provider_top3_coverage": 1.0,
+          "no_prediction": 0,
+          "staged_equals_real_predict": true
+        },
+        "after": {
+          "top1_strict_accuracy": 0.8275862068965517,
+          "top1_lenient_accuracy": 0.9310344827586207,
+          "top3_coverage": 1.0,
+          "provider_top1_coverage": 0.8275862068965517,
+          "provider_top3_coverage": 1.0,
+          "no_prediction": 0,
+          "staged_equals_real_predict": true
+        },
+        "cases_where_top1_changes": {},
+        "estimated_levels": {
+          "C01": "LOW",
+          "C02": "LOW",
+          "C03": "MEDIUM",
+          "C04": "CRITICAL",
+          "C05": "HIGH",
+          "C06": "HIGH",
+          "C07": "LOW",
+          "C08": "MEDIUM",
+          "C09": "HIGH",
+          "C10": "MEDIUM",
+          "C11": "CRITICAL",
+          "C12": "CRITICAL",
+          "C13": "HIGH",
+          "C14": "CRITICAL",
+          "C15": "LOW",
+          "C16": "HIGH",
+          "C17": "CRITICAL",
+          "C18": "MEDIUM",
+          "C19": "MEDIUM",
+          "C20": "CRITICAL",
+          "C21": "HIGH",
+          "C22": "MEDIUM",
+          "A01": "CRITICAL",
+          "A02": "HIGH",
+          "A03": "CRITICAL",
+          "A04": "MEDIUM",
+          "A05": "LOW",
+          "R01": "LOW",
+          "R02": "MEDIUM"
+        }
+      },
+      "heldout": {
+        "before": {
+          "top1_strict_accuracy": 0.8333333333333334,
+          "top1_lenient_accuracy": 0.8333333333333334,
+          "top3_coverage": 1.0,
+          "provider_top1_coverage": 0.8333333333333334,
+          "provider_top3_coverage": 1.0,
+          "no_prediction": 0,
+          "staged_equals_real_predict": true
+        },
+        "after": {
+          "top1_strict_accuracy": 0.8333333333333334,
+          "top1_lenient_accuracy": 0.8333333333333334,
+          "top3_coverage": 1.0,
+          "provider_top1_coverage": 0.8333333333333334,
+          "provider_top3_coverage": 1.0,
+          "no_prediction": 0,
+          "staged_equals_real_predict": true
+        },
+        "cases_where_top1_changes": {},
+        "estimated_levels": {
+          "H01": "LOW",
+          "H02": "LOW",
+          "H03": "LOW",
+          "H04": "HIGH",
+          "H05": "HIGH",
+          "H06": "MEDIUM",
+          "H07": "LOW",
+          "H08": "HIGH",
+          "H09": "HIGH",
+          "H10": "MEDIUM",
+          "H11": "MEDIUM",
+          "H12": "HIGH",
+          "H13": "LOW",
+          "H14": "MEDIUM",
+          "H15": "LOW",
+          "H16": "MEDIUM",
+          "H17": "HIGH",
+          "H18": "LOW",
+          "H19": "LOW",
+          "H20": "HIGH",
+          "H21": "HIGH",
+          "H22": "MEDIUM",
+          "H23": "LOW",
+          "H24": "MEDIUM"
+        }
+      }
+    },
+    "ranking_effect_by_level": {
+      "MEDIUM": {
+        "mean_wait_days_top3": 31.62121212121212,
+        "mean_providers_in_city_top3": 1.4545454545454546,
+        "mean_quality_top3": 8.225757575757576,
+        "mean_cost_top3": 96.06060606060606
+      },
+      "HIGH": {
+        "mean_wait_days_top3": 30.954545454545453,
+        "mean_providers_in_city_top3": 2.090909090909091,
+        "mean_quality_top3": 7.8106060606060606,
+        "mean_cost_top3": 92.57575757575758
+      },
+      "CRITICAL": {
+        "mean_wait_days_top3": 30.12121212121212,
+        "mean_providers_in_city_top3": 2.3636363636363638,
+        "mean_quality_top3": 7.368181818181818,
+        "mean_cost_top3": 88.18181818181819
+      }
+    }
+  }
+}

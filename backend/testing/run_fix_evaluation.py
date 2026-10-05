@@ -58,7 +58,8 @@ import httpx
 from . import pipeline_evaluation as ev
 from .heldout_cases_fr import HELDOUT_CASES
 from .pipeline_cases import CASES, PipelineCase
-from .pipeline_runner import (LEGACY_CONFIG, REMOTE_TIMEOUT, SPACE_DIR, LocalPipeline, call_deployed_space)
+from .pipeline_runner import (LEGACY_CONFIG, REMOTE_TIMEOUT, ROUND1_CONFIG, SPACE_DIR, LocalPipeline,
+                              call_deployed_space)
 
 OFFLINE = ()  # aucune chaîne de traduction
 LIVE_CHAIN = ("google", "mymemory")
@@ -106,6 +107,7 @@ def evaluate(pipeline: LocalPipeline, cases: List[PipelineCase], language: str, 
                               for p in trace.top_providers],
             "extraction_status": trace.extraction_status,
             "language": trace.language,
+            "severity": trace.severity,
             "translation": ({"ok": trace.translation.ok, "provider": trace.translation.provider,
                              "error": trace.translation.error, "output": trace.translation.output}
                             if trace.translation else None),
@@ -145,7 +147,10 @@ def main() -> None:
     results: Dict[str, Dict[str, dict]] = {}
     branches = None
     for name, options in CONFIGS.items():
-        pipeline = LocalPipeline(**options)
+        # Ce script mesure le PREMIER round de corrections : le second
+        # (classement monotone, gravité) est désactivé partout, pour que les
+        # chiffres restent ceux de fix_report.md. Voir run_round2_evaluation.py.
+        pipeline = LocalPipeline(**{**ROUND1_CONFIG, **options})
         branches = branches or pipeline.branch_by_specialty()
         results[name] = {dataset: evaluate(pipeline, cases, language, branches)
                          for dataset, (cases, language) in DATASETS.items()}
