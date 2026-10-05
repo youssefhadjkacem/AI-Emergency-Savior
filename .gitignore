@@ -1,0 +1,9 @@
+# Caches Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Clones locaux des Spaces Hugging Face (depots git a part entiere,
+# versionnes sur huggingface.co). backend/testing lit
+# spaces_src/emergency-savior-output pour ses tests.
+spaces_src/

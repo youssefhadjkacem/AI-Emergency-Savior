@@ -1,0 +1,278 @@
+{
+  "generated_at": "2026-08-29T17:00:00+00:00",
+  "note": "Reconstruction fidele du rapport ORIGINAL (avant les 2 corrections : bug de cle de dedoublonnage + retuning/remplacement du detecteur d'anomalie), a partir des matrices de confusion exactes de la session precedente. evaluation_report_v1.json (sauve par erreur en cours de session) ne capture qu'un etat intermediaire (dedup deja corrige, anomalie pas encore) -- ce fichier v0 est le vrai point de depart.",
+  "primary_seed": 7,
+  "seeds_evaluated": [
+    7,
+    1,
+    42
+  ],
+  "n_events": 1200,
+  "n_providers": 6,
+  "reports_by_seed": {
+    "7": {
+      "confusion_matrix": {
+        "normal": {
+          "accepted": 731,
+          "deduplicated": 21,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 41
+        },
+        "injected_duplicate": {
+          "accepted": 1,
+          "deduplicated": 177,
+          "unconfirmed": 1,
+          "quarantined_anomaly": 1
+        },
+        "injected_unconfirmed": {
+          "accepted": 0,
+          "deduplicated": 19,
+          "unconfirmed": 184,
+          "quarantined_anomaly": 0
+        },
+        "injected_stale": {
+          "accepted": 6,
+          "deduplicated": 12,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 0
+        },
+        "injected_anomaly": {
+          "accepted": 3,
+          "deduplicated": 1,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 2
+        }
+      },
+      "categories": {
+        "normal": {
+          "support": 793,
+          "true_positives": 731,
+          "false_positives": 10,
+          "false_negatives": 62,
+          "precision": 0.9865047233468286,
+          "recall": 0.9218158890290038,
+          "f1": 0.953063885267275
+        },
+        "injected_duplicate": {
+          "support": 180,
+          "true_positives": 177,
+          "false_positives": 53,
+          "false_negatives": 3,
+          "precision": 0.7695652173913043,
+          "recall": 0.9833333333333333,
+          "f1": 0.8634146341463416
+        },
+        "injected_unconfirmed": {
+          "support": 203,
+          "true_positives": 184,
+          "false_positives": 1,
+          "false_negatives": 19,
+          "precision": 0.9945945945945946,
+          "recall": 0.9064039408866995,
+          "f1": 0.9484536082474228
+        },
+        "injected_anomaly": {
+          "support": 6,
+          "true_positives": 2,
+          "false_positives": 42,
+          "false_negatives": 4,
+          "precision": 0.045454545454545456,
+          "recall": 0.3333333333333333,
+          "f1": 0.08
+        },
+        "injected_stale": {
+          "support": 18,
+          "true_positives": 12,
+          "false_positives": 447,
+          "false_negatives": 6,
+          "precision": 0.026143790849673203,
+          "recall": 0.6666666666666666,
+          "f1": 0.05031446540880503,
+          "note": "Pas de statut de rejet dédié dans le pipeline actuel : la péremption est gérée implicitement par la décroissance temporelle de l'EWMA (poids ewma_weight_applied), pas par une règle de rejet explicite. La précision/le rappel ci-dessus utilisent 'statut != accepted' comme proxy de détection, ce qui est peu informatif ici (un event périmé accepté n'est pas forcément un échec : sa CONTRIBUTION peut avoir été neutralisée). Voir 'suppression_rate' pour la métrique pertinente.",
+          "suppression_rate": 1.0,
+          "suppressed_count": 6,
+          "evaluable_count": 6
+        }
+      },
+      "seed": 7,
+      "n_events": 1200,
+      "n_providers": 6
+    },
+    "1": {
+      "confusion_matrix": {
+        "normal": {
+          "accepted": 706,
+          "deduplicated": 23,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 50
+        },
+        "injected_duplicate": {
+          "accepted": 4,
+          "deduplicated": 172,
+          "unconfirmed": 3,
+          "quarantined_anomaly": 0
+        },
+        "injected_unconfirmed": {
+          "accepted": 0,
+          "deduplicated": 17,
+          "unconfirmed": 194,
+          "quarantined_anomaly": 0
+        },
+        "injected_stale": {
+          "accepted": 13,
+          "deduplicated": 9,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 1
+        },
+        "injected_anomaly": {
+          "accepted": 2,
+          "deduplicated": 5,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 1
+        }
+      },
+      "categories": {
+        "normal": {
+          "support": 779,
+          "true_positives": 706,
+          "false_positives": 19,
+          "false_negatives": 73,
+          "precision": 0.9737931034482759,
+          "recall": 0.9062901155327343,
+          "f1": 0.9388297872340425
+        },
+        "injected_duplicate": {
+          "support": 179,
+          "true_positives": 172,
+          "false_positives": 54,
+          "false_negatives": 7,
+          "precision": 0.7610619469026548,
+          "recall": 0.9608938547486033,
+          "f1": 0.8493827160493826
+        },
+        "injected_unconfirmed": {
+          "support": 211,
+          "true_positives": 194,
+          "false_positives": 3,
+          "false_negatives": 17,
+          "precision": 0.9847715736040609,
+          "recall": 0.919431279620853,
+          "f1": 0.9509803921568627
+        },
+        "injected_anomaly": {
+          "support": 8,
+          "true_positives": 1,
+          "false_positives": 51,
+          "false_negatives": 7,
+          "precision": 0.019230769230769232,
+          "recall": 0.125,
+          "f1": 0.03333333333333334
+        },
+        "injected_stale": {
+          "support": 23,
+          "true_positives": 10,
+          "false_positives": 465,
+          "false_negatives": 13,
+          "precision": 0.021052631578947368,
+          "recall": 0.43478260869565216,
+          "f1": 0.040160642570281124,
+          "note": "Pas de statut de rejet dédié dans le pipeline actuel : la péremption est gérée implicitement par la décroissance temporelle de l'EWMA (poids ewma_weight_applied), pas par une règle de rejet explicite. La précision/le rappel ci-dessus utilisent 'statut != accepted' comme proxy de détection, ce qui est peu informatif ici (un event périmé accepté n'est pas forcément un échec : sa CONTRIBUTION peut avoir été neutralisée). Voir 'suppression_rate' pour la métrique pertinente.",
+          "suppression_rate": 1.0,
+          "suppressed_count": 13,
+          "evaluable_count": 13
+        }
+      },
+      "seed": 1,
+      "n_events": 1200,
+      "n_providers": 6
+    },
+    "42": {
+      "confusion_matrix": {
+        "normal": {
+          "accepted": 754,
+          "deduplicated": 26,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 53
+        },
+        "injected_duplicate": {
+          "accepted": 1,
+          "deduplicated": 153,
+          "unconfirmed": 1,
+          "quarantined_anomaly": 0
+        },
+        "injected_unconfirmed": {
+          "accepted": 0,
+          "deduplicated": 16,
+          "unconfirmed": 164,
+          "quarantined_anomaly": 0
+        },
+        "injected_stale": {
+          "accepted": 9,
+          "deduplicated": 11,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 3
+        },
+        "injected_anomaly": {
+          "accepted": 5,
+          "deduplicated": 2,
+          "unconfirmed": 0,
+          "quarantined_anomaly": 2
+        }
+      },
+      "categories": {
+        "normal": {
+          "support": 833,
+          "true_positives": 754,
+          "false_positives": 15,
+          "false_negatives": 79,
+          "precision": 0.9804941482444733,
+          "recall": 0.9051620648259304,
+          "f1": 0.9413233458177278
+        },
+        "injected_duplicate": {
+          "support": 155,
+          "true_positives": 153,
+          "false_positives": 55,
+          "false_negatives": 2,
+          "precision": 0.7355769230769231,
+          "recall": 0.9870967741935484,
+          "f1": 0.8429752066115702
+        },
+        "injected_unconfirmed": {
+          "support": 180,
+          "true_positives": 164,
+          "false_positives": 1,
+          "false_negatives": 16,
+          "precision": 0.9939393939393939,
+          "recall": 0.9111111111111111,
+          "f1": 0.9507246376811593
+        },
+        "injected_anomaly": {
+          "support": 9,
+          "true_positives": 2,
+          "false_positives": 56,
+          "false_negatives": 7,
+          "precision": 0.034482758620689655,
+          "recall": 0.2222222222222222,
+          "f1": 0.05970149253731343
+        },
+        "injected_stale": {
+          "support": 23,
+          "true_positives": 14,
+          "false_positives": 417,
+          "false_negatives": 9,
+          "precision": 0.03248259860788863,
+          "recall": 0.6086956521739131,
+          "f1": 0.06167400881057269,
+          "note": "Pas de statut de rejet dédié dans le pipeline actuel : la péremption est gérée implicitement par la décroissance temporelle de l'EWMA (poids ewma_weight_applied), pas par une règle de rejet explicite. La précision/le rappel ci-dessus utilisent 'statut != accepted' comme proxy de détection, ce qui est peu informatif ici (un event périmé accepté n'est pas forcément un échec : sa CONTRIBUTION peut avoir été neutralisée). Voir 'suppression_rate' pour la métrique pertinente.",
+          "suppression_rate": 1.0,
+          "suppressed_count": 9,
+          "evaluable_count": 9
+        }
+      },
+      "seed": 42,
+      "n_events": 1200,
+      "n_providers": 6
+    }
+  }
+}

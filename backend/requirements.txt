@@ -4,3 +4,9 @@ httpx
 python-multipart
 numpy
 pandas
+river
+pytest
+openpyxl
+deep-translator
+fuzzywuzzy
+python-Levenshtein

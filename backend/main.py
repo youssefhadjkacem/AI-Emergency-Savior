@@ -138,6 +138,13 @@ def parse_optimization_output(raw_text: str) -> dict:
         "detected_symptoms":       [],
         "recommended_specialties": [],
         "best_provider":           None,
+        # Top 3 complet : [{"name", "specialty", "location"}], dans l'ordre.
+        "top_providers":           [],
+        # Statut d'extraction renvoyé par le Space quand il n'est pas "ok"
+        # (ex. "no_symptom_translation_failed") : permet de distinguer
+        # "aucun symptôme" de "texte non analysé".
+        "extraction_status":       "ok",
+        "extraction_warning":      None,
         "raw_output":              raw_text,
     }
 
@@ -151,8 +158,14 @@ def parse_optimization_output(raw_text: str) -> dict:
 
         line_lower = line.lower()
 
+        # ── Extraction status ─────────────────────────────────────────────────
+        if line_lower.startswith("statut extraction"):
+            result["extraction_status"] = line.split(":", 1)[1].strip()
+        elif line_lower.startswith("avertissement"):
+            result["extraction_warning"] = line.split(":", 1)[1].strip()
+
         # ── Symptoms ──────────────────────────────────────────────────────────
-        if (line_lower.startswith("symptômes détectés") or
+        elif (line_lower.startswith("symptômes détectés") or
                 line_lower.startswith("symptomes détectés") or
                 line_lower.startswith("symptomes detectes") or
                 line_lower.startswith("detected symptoms")):
@@ -188,6 +201,14 @@ def parse_optimization_output(raw_text: str) -> dict:
             parts = line.split(":", 1)
             if len(parts) > 1 and parts[1].strip():
                 result["best_provider"] = parts[1].strip()
+
+        # ── Top 3 — lines like: "1. Dr. X | Cardiologist | Tunis" ────────────
+        elif line[0].isdigit() and "." in line[:3] and "|" in line:
+            fields = [f.strip() for f in line.split(".", 1)[1].split("|")]
+            if len(fields) == 3:
+                result["top_providers"].append(
+                    {"name": fields[0], "specialty": fields[1], "location": fields[2]}
+                )
 
     return result
 
@@ -361,6 +382,9 @@ async def analyze_full(
         "detected_symptoms":       opt_result["detected_symptoms"],
         "recommended_specialties": opt_result["recommended_specialties"],
         "best_provider":           opt_result["best_provider"],
+        "top_providers":           opt_result["top_providers"],
+        "extraction_status":       opt_result["extraction_status"],
+        "extraction_warning":      opt_result["extraction_warning"],
         "optimization_raw":        opt_result["raw_output"],
         "auto_urgent":             is_urgent,
         "numeric_age_used":        numeric_age,

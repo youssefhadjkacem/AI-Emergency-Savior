@@ -1,0 +1,1483 @@
+{
+  "generated_at": "2026-10-02T06:00:50.399348+00:00",
+  "note": "Grille evaluee sur les seeds de reglage uniquement ; les seeds d'evaluation (7, 1, 42) ne sont pas utilises ici. Critere : F1 episode moyen sur les deux profils (series poolees sur les seeds), puis delai moyen le plus court.",
+  "tuning_seeds": [
+    100,
+    101,
+    102
+  ],
+  "algorithms": {
+    "adwin": {
+      "selected": {
+        "delta": 1e-12,
+        "clock": 1
+      },
+      "grid": [
+        {
+          "params": {
+            "delta": 1e-12,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "false_positive_rate": 0.0,
+              "false_alarms": 1,
+              "false_alarms_per_1000_points": 0.02647183396865735,
+              "mean_detection_delay": 63.71666666666667
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 24.966666666666665
+            }
+          },
+          "mean_f1": 0.9958677685950413,
+          "mean_delay": 44.34166666666667
+        },
+        {
+          "params": {
+            "delta": 1e-10,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9523809523809523,
+              "recall": 1.0,
+              "f1": 0.975609756097561,
+              "false_positive_rate": 0.0,
+              "false_alarms": 3,
+              "false_alarms_per_1000_points": 0.07941550190597205,
+              "mean_detection_delay": 57.55
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 21.466666666666665
+            }
+          },
+          "mean_f1": 0.9878048780487805,
+          "mean_delay": 39.50833333333333
+        },
+        {
+          "params": {
+            "delta": 1e-08,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.7317073170731707,
+              "recall": 1.0,
+              "f1": 0.8450704225352113,
+              "false_positive_rate": 0.06666666666666667,
+              "false_alarms": 22,
+              "false_alarms_per_1000_points": 0.5823803473104616,
+              "mean_detection_delay": 50.9
+            },
+            "abrupt": {
+              "precision": 0.9375,
+              "recall": 1.0,
+              "f1": 0.967741935483871,
+              "false_positive_rate": 0.06666666666666667,
+              "false_alarms": 4,
+              "false_alarms_per_1000_points": 0.09225092250922509,
+              "mean_detection_delay": 18.2
+            }
+          },
+          "mean_f1": 0.9064061790095411,
+          "mean_delay": 34.55
+        },
+        {
+          "params": {
+            "delta": 1e-15,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 72.71666666666667
+            },
+            "abrupt": {
+              "precision": 0.7833333333333333,
+              "recall": 0.7833333333333333,
+              "f1": 0.7833333333333333,
+              "false_positive_rate": 0.0,
+              "false_alarms": 13,
+              "false_alarms_per_1000_points": 0.29981549815498154,
+              "mean_detection_delay": 28.93617021276596
+            }
+          },
+          "mean_f1": 0.8916666666666666,
+          "mean_delay": 50.82641843971631
+        },
+        {
+          "params": {
+            "delta": 1e-06,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.5217391304347826,
+              "recall": 1.0,
+              "f1": 0.6857142857142856,
+              "false_positive_rate": 0.31666666666666665,
+              "false_alarms": 55,
+              "false_alarms_per_1000_points": 1.4559508682761542,
+              "mean_detection_delay": 43.25
+            },
+            "abrupt": {
+              "precision": 0.7407407407407407,
+              "recall": 1.0,
+              "f1": 0.851063829787234,
+              "false_positive_rate": 0.31666666666666665,
+              "false_alarms": 21,
+              "false_alarms_per_1000_points": 0.4843173431734317,
+              "mean_detection_delay": 15.1
+            }
+          },
+          "mean_f1": 0.7683890577507598,
+          "mean_delay": 29.175
+        },
+        {
+          "params": {
+            "delta": 1e-08,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.8823529411764706,
+              "recall": 1.0,
+              "f1": 0.9375,
+              "false_positive_rate": 0.06666666666666667,
+              "false_alarms": 8,
+              "false_alarms_per_1000_points": 0.2117746717492588,
+              "mean_detection_delay": 64.28333333333333
+            },
+            "abrupt": {
+              "precision": 0.53125,
+              "recall": 0.5666666666666667,
+              "f1": 0.5483870967741935,
+              "false_positive_rate": 0.06666666666666667,
+              "false_alarms": 30,
+              "false_alarms_per_1000_points": 0.6918819188191881,
+              "mean_detection_delay": 24.294117647058822
+            }
+          },
+          "mean_f1": 0.7429435483870968,
+          "mean_delay": 44.28872549019608
+        },
+        {
+          "params": {
+            "delta": 1e-10,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "false_positive_rate": 0.0,
+              "false_alarms": 1,
+              "false_alarms_per_1000_points": 0.02647183396865735,
+              "mean_detection_delay": 73.88333333333334
+            },
+            "abrupt": {
+              "precision": 0.4166666666666667,
+              "recall": 0.4166666666666667,
+              "f1": 0.4166666666666667,
+              "false_positive_rate": 0.0,
+              "false_alarms": 35,
+              "false_alarms_per_1000_points": 0.8071955719557196,
+              "mean_detection_delay": 26.6
+            }
+          },
+          "mean_f1": 0.7042011019283747,
+          "mean_delay": 50.241666666666674
+        },
+        {
+          "params": {
+            "delta": 1e-06,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.7058823529411765,
+              "recall": 1.0,
+              "f1": 0.8275862068965517,
+              "false_positive_rate": 0.16666666666666666,
+              "false_alarms": 25,
+              "false_alarms_per_1000_points": 0.6617958492164338,
+              "mean_detection_delay": 61.083333333333336
+            },
+            "abrupt": {
+              "precision": 0.5211267605633803,
+              "recall": 0.6166666666666667,
+              "f1": 0.564885496183206,
+              "false_positive_rate": 0.16666666666666666,
+              "false_alarms": 34,
+              "false_alarms_per_1000_points": 0.7841328413284133,
+              "mean_detection_delay": 23.864864864864863
+            }
+          },
+          "mean_f1": 0.6962358515398789,
+          "mean_delay": 42.4740990990991
+        },
+        {
+          "params": {
+            "delta": 1e-12,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 80.81666666666666
+            },
+            "abrupt": {
+              "precision": 0.2833333333333333,
+              "recall": 0.2833333333333333,
+              "f1": 0.2833333333333333,
+              "false_positive_rate": 0.0,
+              "false_alarms": 43,
+              "false_alarms_per_1000_points": 0.9916974169741697,
+              "mean_detection_delay": 28.941176470588236
+            }
+          },
+          "mean_f1": 0.6416666666666666,
+          "mean_delay": 54.87892156862745
+        },
+        {
+          "params": {
+            "delta": 0.0001,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.45112781954887216,
+              "recall": 1.0,
+              "f1": 0.6217616580310881,
+              "false_positive_rate": 0.65,
+              "false_alarms": 73,
+              "false_alarms_per_1000_points": 1.9324438797119865,
+              "mean_detection_delay": 38.25
+            },
+            "abrupt": {
+              "precision": 0.4222222222222222,
+              "recall": 0.95,
+              "f1": 0.5846153846153845,
+              "false_positive_rate": 0.65,
+              "false_alarms": 78,
+              "false_alarms_per_1000_points": 1.7988929889298892,
+              "mean_detection_delay": 13.052631578947368
+            }
+          },
+          "mean_f1": 0.6031885213232363,
+          "mean_delay": 25.651315789473685
+        },
+        {
+          "params": {
+            "delta": 1e-15,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 88.28333333333333
+            },
+            "abrupt": {
+              "precision": 0.1,
+              "recall": 0.1,
+              "f1": 0.10000000000000002,
+              "false_positive_rate": 0.0,
+              "false_alarms": 54,
+              "false_alarms_per_1000_points": 1.2453874538745386,
+              "mean_detection_delay": 32
+            }
+          },
+          "mean_f1": 0.55,
+          "mean_delay": 60.141666666666666
+        },
+        {
+          "params": {
+            "delta": 0.0001,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.45112781954887216,
+              "recall": 1.0,
+              "f1": 0.6217616580310881,
+              "false_positive_rate": 0.5666666666666667,
+              "false_alarms": 73,
+              "false_alarms_per_1000_points": 1.9324438797119865,
+              "mean_detection_delay": 52.55
+            },
+            "abrupt": {
+              "precision": 0.3486238532110092,
+              "recall": 0.6333333333333333,
+              "f1": 0.4497041420118343,
+              "false_positive_rate": 0.5666666666666667,
+              "false_alarms": 71,
+              "false_alarms_per_1000_points": 1.6374538745387455,
+              "mean_detection_delay": 23
+            }
+          },
+          "mean_f1": 0.5357329000214612,
+          "mean_delay": 37.775
+        },
+        {
+          "params": {
+            "delta": 1e-20,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 88.43333333333334
+            },
+            "abrupt": {
+              "precision": 0.05,
+              "recall": 0.05,
+              "f1": 0.05000000000000001,
+              "false_positive_rate": 0.0,
+              "false_alarms": 57,
+              "false_alarms_per_1000_points": 1.3145756457564575,
+              "mean_detection_delay": 32
+            }
+          },
+          "mean_f1": 0.525,
+          "mean_delay": 60.21666666666667
+        },
+        {
+          "params": {
+            "delta": 1e-20,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.95,
+              "recall": 0.95,
+              "f1": 0.9500000000000001,
+              "false_positive_rate": 0.0,
+              "false_alarms": 3,
+              "false_alarms_per_1000_points": 0.07941550190597205,
+              "mean_detection_delay": 101.71929824561404
+            },
+            "abrupt": {
+              "precision": 0.016666666666666666,
+              "recall": 0.016666666666666666,
+              "f1": 0.016666666666666666,
+              "false_positive_rate": 0.0,
+              "false_alarms": 59,
+              "false_alarms_per_1000_points": 1.3607011070110702,
+              "mean_detection_delay": 31
+            }
+          },
+          "mean_f1": 0.4833333333333334,
+          "mean_delay": 66.35964912280701
+        },
+        {
+          "params": {
+            "delta": 0.002,
+            "clock": 32
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.33707865168539325,
+              "recall": 1.0,
+              "f1": 0.5042016806722689,
+              "false_positive_rate": 0.8833333333333333,
+              "false_alarms": 118,
+              "false_alarms_per_1000_points": 3.1236764083015673,
+              "mean_detection_delay": 47.21666666666667
+            },
+            "abrupt": {
+              "precision": 0.22905027932960895,
+              "recall": 0.6833333333333333,
+              "f1": 0.34309623430962344,
+              "false_positive_rate": 0.8833333333333333,
+              "false_alarms": 138,
+              "false_alarms_per_1000_points": 3.1826568265682655,
+              "mean_detection_delay": 21.048780487804876
+            }
+          },
+          "mean_f1": 0.42364895749094617,
+          "mean_delay": 34.13272357723577
+        },
+        {
+          "params": {
+            "delta": 0.002,
+            "clock": 1
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.28708133971291866,
+              "recall": 1.0,
+              "f1": 0.44609665427509293,
+              "false_positive_rate": 0.9333333333333333,
+              "false_alarms": 149,
+              "false_alarms_per_1000_points": 3.944303261329945,
+              "mean_detection_delay": 34.233333333333334
+            },
+            "abrupt": {
+              "precision": 0.24568965517241378,
+              "recall": 0.95,
+              "f1": 0.3904109589041096,
+              "false_positive_rate": 0.9333333333333333,
+              "false_alarms": 175,
+              "false_alarms_per_1000_points": 4.035977859778598,
+              "mean_detection_delay": 11.947368421052632
+            }
+          },
+          "mean_f1": 0.41825380658960126,
+          "mean_delay": 23.090350877192982
+        }
+      ]
+    },
+    "page_hinkley": {
+      "selected": {
+        "delta": 1.5,
+        "threshold": 10.0
+      },
+      "grid": [
+        {
+          "params": {
+            "delta": 1.5,
+            "threshold": 10.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 55
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 11.1
+            }
+          },
+          "mean_f1": 1.0,
+          "mean_delay": 33.05
+        },
+        {
+          "params": {
+            "delta": 1.0,
+            "threshold": 50.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 72.65
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 22.933333333333334
+            }
+          },
+          "mean_f1": 1.0,
+          "mean_delay": 47.79166666666667
+        },
+        {
+          "params": {
+            "delta": 1.5,
+            "threshold": 35.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 76.2
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 21.166666666666668
+            }
+          },
+          "mean_f1": 1.0,
+          "mean_delay": 48.68333333333334
+        },
+        {
+          "params": {
+            "delta": 1.5,
+            "threshold": 20.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "false_positive_rate": 0.0,
+              "false_alarms": 1,
+              "false_alarms_per_1000_points": 0.02647183396865735,
+              "mean_detection_delay": 65.38333333333334
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 15.433333333333334
+            }
+          },
+          "mean_f1": 0.9958677685950413,
+          "mean_delay": 40.40833333333334
+        },
+        {
+          "params": {
+            "delta": 1.0,
+            "threshold": 35.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "false_positive_rate": 0.0,
+              "false_alarms": 1,
+              "false_alarms_per_1000_points": 0.02647183396865735,
+              "mean_detection_delay": 64.46666666666667
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 18.2
+            }
+          },
+          "mean_f1": 0.9958677685950413,
+          "mean_delay": 41.333333333333336
+        },
+        {
+          "params": {
+            "delta": 0.5,
+            "threshold": 50.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9230769230769231,
+              "recall": 1.0,
+              "f1": 0.9600000000000001,
+              "false_positive_rate": 0.0,
+              "false_alarms": 5,
+              "false_alarms_per_1000_points": 0.13235916984328674,
+              "mean_detection_delay": 61
+            },
+            "abrupt": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 19.7
+            }
+          },
+          "mean_f1": 0.98,
+          "mean_delay": 40.35
+        },
+        {
+          "params": {
+            "delta": 1.5,
+            "threshold": 5.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9230769230769231,
+              "recall": 1.0,
+              "f1": 0.9600000000000001,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 5,
+              "false_alarms_per_1000_points": 0.13235916984328674,
+              "mean_detection_delay": 48.9
+            },
+            "abrupt": {
+              "precision": 0.967741935483871,
+              "recall": 1.0,
+              "f1": 0.9836065573770492,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 2,
+              "false_alarms_per_1000_points": 0.046125461254612546,
+              "mean_detection_delay": 8.45
+            }
+          },
+          "mean_f1": 0.9718032786885247,
+          "mean_delay": 28.674999999999997
+        },
+        {
+          "params": {
+            "delta": 1.0,
+            "threshold": 20.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.8955223880597015,
+              "recall": 1.0,
+              "f1": 0.9448818897637796,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 7,
+              "false_alarms_per_1000_points": 0.18530283778060144,
+              "mean_detection_delay": 54.43333333333333
+            },
+            "abrupt": {
+              "precision": 0.9836065573770492,
+              "recall": 1.0,
+              "f1": 0.9917355371900827,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 1,
+              "false_alarms_per_1000_points": 0.023062730627306273,
+              "mean_detection_delay": 13.25
+            }
+          },
+          "mean_f1": 0.9683087134769311,
+          "mean_delay": 33.84166666666667
+        },
+        {
+          "params": {
+            "delta": 0.25,
+            "threshold": 80.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.9230769230769231,
+              "recall": 1.0,
+              "f1": 0.9600000000000001,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 5,
+              "false_alarms_per_1000_points": 0.13235916984328674,
+              "mean_detection_delay": 66.36666666666666
+            },
+            "abrupt": {
+              "precision": 0.9672131147540983,
+              "recall": 0.9833333333333333,
+              "f1": 0.9752066115702478,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 2,
+              "false_alarms_per_1000_points": 0.046125461254612546,
+              "mean_detection_delay": 24.47457627118644
+            }
+          },
+          "mean_f1": 0.9676033057851239,
+          "mean_delay": 45.42062146892655
+        },
+        {
+          "params": {
+            "delta": 0.5,
+            "threshold": 80.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 74.11666666666666
+            },
+            "abrupt": {
+              "precision": 0.9333333333333333,
+              "recall": 0.9333333333333333,
+              "f1": 0.9333333333333333,
+              "false_positive_rate": 0.0,
+              "false_alarms": 4,
+              "false_alarms_per_1000_points": 0.09225092250922509,
+              "mean_detection_delay": 27.107142857142858
+            }
+          },
+          "mean_f1": 0.9666666666666667,
+          "mean_delay": 50.61190476190476
+        },
+        {
+          "params": {
+            "delta": 1.5,
+            "threshold": 50.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 84.83333333333333
+            },
+            "abrupt": {
+              "precision": 0.9166666666666666,
+              "recall": 0.9166666666666666,
+              "f1": 0.9166666666666666,
+              "false_positive_rate": 0.0,
+              "false_alarms": 5,
+              "false_alarms_per_1000_points": 0.11531365313653137,
+              "mean_detection_delay": 25.618181818181817
+            }
+          },
+          "mean_f1": 0.9583333333333333,
+          "mean_delay": 55.22575757575757
+        },
+        {
+          "params": {
+            "delta": 1.0,
+            "threshold": 10.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.8695652173913043,
+              "recall": 1.0,
+              "f1": 0.9302325581395349,
+              "false_positive_rate": 0.03333333333333333,
+              "false_alarms": 9,
+              "false_alarms_per_1000_points": 0.23824650571791614,
+              "mean_detection_delay": 45.11666666666667
+            },
+            "abrupt": {
+              "precision": 0.9230769230769231,
+              "recall": 1.0,
+              "f1": 0.9600000000000001,
+              "false_positive_rate": 0.03333333333333333,
+              "false_alarms": 5,
+              "false_alarms_per_1000_points": 0.11531365313653137,
+              "mean_detection_delay": 9.45
+            }
+          },
+          "mean_f1": 0.9451162790697675,
+          "mean_delay": 27.28333333333333
+        },
+        {
+          "params": {
+            "delta": 0.5,
+            "threshold": 35.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.759493670886076,
+              "recall": 1.0,
+              "f1": 0.8633093525179857,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 19,
+              "false_alarms_per_1000_points": 0.5029648454044896,
+              "mean_detection_delay": 53.5
+            },
+            "abrupt": {
+              "precision": 0.967741935483871,
+              "recall": 1.0,
+              "f1": 0.9836065573770492,
+              "false_positive_rate": 0.016666666666666666,
+              "false_alarms": 2,
+              "false_alarms_per_1000_points": 0.046125461254612546,
+              "mean_detection_delay": 15.733333333333333
+            }
+          },
+          "mean_f1": 0.9234579549475175,
+          "mean_delay": 34.61666666666667
+        },
+        {
+          "params": {
+            "delta": 0.1,
+            "threshold": 80.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "false_positive_rate": 0.03333333333333333,
+              "false_alarms": 20,
+              "false_alarms_per_1000_points": 0.529436679373147,
+              "mean_detection_delay": 60.45
+            },
+            "abrupt": {
+              "precision": 0.921875,
+              "recall": 0.9833333333333333,
+              "f1": 0.9516129032258064,
+              "false_positive_rate": 0.03333333333333333,
+              "false_alarms": 5,
+              "false_alarms_per_1000_points": 0.11531365313653137,
+              "mean_detection_delay": 22
+            }
+          },
+          "mean_f1": 0.9043778801843317,
+          "mean_delay": 41.225
+        },
+        {
+          "params": {
+            "delta": 0.25,
+            "threshold": 50.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.6896551724137931,
+              "recall": 1.0,
+              "f1": 0.8163265306122449,
+              "false_positive_rate": 0.03333333333333333,
+              "false_alarms": 27,
+              "false_alarms_per_1000_points": 0.7147395171537484,
+              "mean_detection_delay": 53.96666666666667
+            },
+            "abrupt": {
+              "precision": 0.9375,
+              "recall": 1.0,
+              "f1": 0.967741935483871,
+              "false_positive_rate": 0.03333333333333333,
+              "false_alarms": 4,
+              "false_alarms_per_1000_points": 0.09225092250922509,
+              "mean_detection_delay": 17.5
+            }
+          },
+          "mean_f1": 0.892034233048058,
+          "mean_delay": 35.733333333333334
+        },
+        {
+          "params": {
+            "delta": 0.5,
+            "threshold": 20.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.75,
+              "recall": 1.0,
+              "f1": 0.8571428571428571,
+              "false_positive_rate": 0.11666666666666667,
+              "false_alarms": 20,
+              "false_alarms_per_1000_points": 0.529436679373147,
+              "mean_detection_delay": 42.86666666666667
+            },
+            "abrupt": {
+              "precision": 0.8,
+              "recall": 1.0,
+              "f1": 0.888888888888889,
+              "false_positive_rate": 0.11666666666666667,
+              "false_alarms": 15,
+              "false_alarms_per_1000_points": 0.3459409594095941,
+              "mean_detection_delay": 11.15
+            }
+          },
+          "mean_f1": 0.873015873015873,
+          "mean_delay": 27.008333333333333
+        },
+        {
+          "params": {
+            "delta": 0.005,
+            "threshold": 80.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.6666666666666666,
+              "recall": 1.0,
+              "f1": 0.8,
+              "false_positive_rate": 0.11666666666666667,
+              "false_alarms": 30,
+              "false_alarms_per_1000_points": 0.7941550190597204,
+              "mean_detection_delay": 55.75
+            },
+            "abrupt": {
+              "precision": 0.8333333333333334,
+              "recall": 1.0,
+              "f1": 0.9090909090909091,
+              "false_positive_rate": 0.11666666666666667,
+              "false_alarms": 12,
+              "false_alarms_per_1000_points": 0.2767527675276753,
+              "mean_detection_delay": 20.733333333333334
+            }
+          },
+          "mean_f1": 0.8545454545454545,
+          "mean_delay": 38.24166666666667
+        },
+        {
+          "params": {
+            "delta": 0.25,
+            "threshold": 35.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.6382978723404256,
+              "recall": 1.0,
+              "f1": 0.7792207792207793,
+              "false_positive_rate": 0.18333333333333332,
+              "false_alarms": 34,
+              "false_alarms_per_1000_points": 0.9000423549343498,
+              "mean_detection_delay": 46.25
+            },
+            "abrupt": {
+              "precision": 0.7317073170731707,
+              "recall": 1.0,
+              "f1": 0.8450704225352113,
+              "false_positive_rate": 0.18333333333333332,
+              "false_alarms": 22,
+              "false_alarms_per_1000_points": 0.507380073800738,
+              "mean_detection_delay": 13.85
+            }
+          },
+          "mean_f1": 0.8121456008779953,
+          "mean_delay": 30.05
+        },
+        {
+          "params": {
+            "delta": 1.0,
+            "threshold": 80.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 86.4
+            },
+            "abrupt": {
+              "precision": 0.6166666666666667,
+              "recall": 0.6166666666666667,
+              "f1": 0.6166666666666667,
+              "false_positive_rate": 0.0,
+              "false_alarms": 23,
+              "false_alarms_per_1000_points": 0.5304428044280443,
+              "mean_detection_delay": 28.64864864864865
+            }
+          },
+          "mean_f1": 0.8083333333333333,
+          "mean_delay": 57.524324324324326
+        },
+        {
+          "params": {
+            "delta": 1.0,
+            "threshold": 5.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.6593406593406593,
+              "recall": 1.0,
+              "f1": 0.794701986754967,
+              "false_positive_rate": 0.21666666666666667,
+              "false_alarms": 31,
+              "false_alarms_per_1000_points": 0.8206268530283778,
+              "mean_detection_delay": 38.766666666666666
+            },
+            "abrupt": {
+              "precision": 0.6593406593406593,
+              "recall": 1.0,
+              "f1": 0.794701986754967,
+              "false_positive_rate": 0.21666666666666667,
+              "false_alarms": 31,
+              "false_alarms_per_1000_points": 0.7149446494464945,
+              "mean_detection_delay": 7.066666666666666
+            }
+          },
+          "mean_f1": 0.794701986754967,
+          "mean_delay": 22.916666666666664
+        },
+        {
+          "params": {
+            "delta": 0.1,
+            "threshold": 50.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.5825242718446602,
+              "recall": 1.0,
+              "f1": 0.7361963190184049,
+              "false_positive_rate": 0.21666666666666667,
+              "false_alarms": 43,
+              "false_alarms_per_1000_points": 1.138288860652266,
+              "mean_detection_delay": 46.95
+            },
+            "abrupt": {
+              "precision": 0.7058823529411765,
+              "recall": 1.0,
+              "f1": 0.8275862068965517,
+              "false_positive_rate": 0.21666666666666667,
+              "false_alarms": 25,
+              "false_alarms_per_1000_points": 0.5765682656826568,
+              "mean_detection_delay": 15.316666666666666
+            }
+          },
+          "mean_f1": 0.7818912629574784,
+          "mean_delay": 31.133333333333333
+        },
+        {
+          "params": {
+            "delta": 1.5,
+            "threshold": 80.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 1.0,
+              "recall": 1.0,
+              "f1": 1.0,
+              "false_positive_rate": 0.0,
+              "false_alarms": 0,
+              "false_alarms_per_1000_points": 0.0,
+              "mean_detection_delay": 98.8
+            },
+            "abrupt": {
+              "precision": 0.35,
+              "recall": 0.35,
+              "f1": 0.35,
+              "false_positive_rate": 0.0,
+              "false_alarms": 39,
+              "false_alarms_per_1000_points": 0.8994464944649446,
+              "mean_detection_delay": 29.666666666666668
+            }
+          },
+          "mean_f1": 0.675,
+          "mean_delay": 64.23333333333333
+        },
+        {
+          "params": {
+            "delta": 0.1,
+            "threshold": 35.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.4918032786885246,
+              "recall": 1.0,
+              "f1": 0.6593406593406593,
+              "false_positive_rate": 0.5166666666666667,
+              "false_alarms": 62,
+              "false_alarms_per_1000_points": 1.6412537060567556,
+              "mean_detection_delay": 40.516666666666666
+            },
+            "abrupt": {
+              "precision": 0.46511627906976744,
+              "recall": 1.0,
+              "f1": 0.6349206349206349,
+              "false_positive_rate": 0.5166666666666667,
+              "false_alarms": 69,
+              "false_alarms_per_1000_points": 1.5913284132841328,
+              "mean_detection_delay": 13.1
+            }
+          },
+          "mean_f1": 0.647130647130647,
+          "mean_delay": 26.808333333333334
+        },
+        {
+          "params": {
+            "delta": 0.005,
+            "threshold": 50.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.4580152671755725,
+              "recall": 1.0,
+              "f1": 0.6282722513089005,
+              "false_positive_rate": 0.55,
+              "false_alarms": 71,
+              "false_alarms_per_1000_points": 1.8795002117746717,
+              "mean_detection_delay": 42.233333333333334
+            },
+            "abrupt": {
+              "precision": 0.48360655737704916,
+              "recall": 0.9833333333333333,
+              "f1": 0.6483516483516484,
+              "false_positive_rate": 0.55,
+              "false_alarms": 63,
+              "false_alarms_per_1000_points": 1.4529520295202951,
+              "mean_detection_delay": 14.389830508474576
+            }
+          },
+          "mean_f1": 0.6383119498302745,
+          "mean_delay": 28.311581920903954
+        },
+        {
+          "params": {
+            "delta": 0.25,
+            "threshold": 20.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.4316546762589928,
+              "recall": 1.0,
+              "f1": 0.6030150753768844,
+              "false_positive_rate": 0.6166666666666667,
+              "false_alarms": 79,
+              "false_alarms_per_1000_points": 2.0912748835239303,
+              "mean_detection_delay": 37.43333333333333
+            },
+            "abrupt": {
+              "precision": 0.3821656050955414,
+              "recall": 1.0,
+              "f1": 0.5529953917050692,
+              "false_positive_rate": 0.6166666666666667,
+              "false_alarms": 97,
+              "false_alarms_per_1000_points": 2.2370848708487086,
+              "mean_detection_delay": 10.483333333333333
+            }
+          },
+          "mean_f1": 0.5780052335409768,
+          "mean_delay": 23.958333333333332
+        },
+        {
+          "params": {
+            "delta": 0.5,
+            "threshold": 10.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.425531914893617,
+              "recall": 1.0,
+              "f1": 0.5970149253731344,
+              "false_positive_rate": 0.55,
+              "false_alarms": 81,
+              "false_alarms_per_1000_points": 2.144218551461245,
+              "mean_detection_delay": 33.3
+            },
+            "abrupt": {
+              "precision": 0.37735849056603776,
+              "recall": 1.0,
+              "f1": 0.5479452054794521,
+              "false_positive_rate": 0.55,
+              "false_alarms": 99,
+              "false_alarms_per_1000_points": 2.2832103321033212,
+              "mean_detection_delay": 8.166666666666666
+            }
+          },
+          "mean_f1": 0.5724800654262933,
+          "mean_delay": 20.73333333333333
+        },
+        {
+          "params": {
+            "delta": 0.005,
+            "threshold": 35.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.3333333333333333,
+              "recall": 1.0,
+              "f1": 0.5,
+              "false_positive_rate": 0.9333333333333333,
+              "false_alarms": 120,
+              "false_alarms_per_1000_points": 3.1766200762388817,
+              "mean_detection_delay": 37.85
+            },
+            "abrupt": {
+              "precision": 0.3,
+              "recall": 1.0,
+              "f1": 0.4615384615384615,
+              "false_positive_rate": 0.9333333333333333,
+              "false_alarms": 140,
+              "false_alarms_per_1000_points": 3.2287822878228782,
+              "mean_detection_delay": 11.9
+            }
+          },
+          "mean_f1": 0.4807692307692307,
+          "mean_delay": 24.875
+        },
+        {
+          "params": {
+            "delta": 0.1,
+            "threshold": 20.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.23809523809523808,
+              "recall": 1.0,
+              "f1": 0.3846153846153846,
+              "false_positive_rate": 0.95,
+              "false_alarms": 192,
+              "false_alarms_per_1000_points": 5.082592121982211,
+              "mean_detection_delay": 32.61666666666667
+            },
+            "abrupt": {
+              "precision": 0.2097902097902098,
+              "recall": 1.0,
+              "f1": 0.3468208092485549,
+              "false_positive_rate": 0.95,
+              "false_alarms": 226,
+              "false_alarms_per_1000_points": 5.212177121771218,
+              "mean_detection_delay": 10
+            }
+          },
+          "mean_f1": 0.36571809693196977,
+          "mean_delay": 21.308333333333334
+        },
+        {
+          "params": {
+            "delta": 0.5,
+            "threshold": 5.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.20270270270270271,
+              "recall": 1.0,
+              "f1": 0.3370786516853933,
+              "false_positive_rate": 0.9,
+              "false_alarms": 236,
+              "false_alarms_per_1000_points": 6.247352816603135,
+              "mean_detection_delay": 27.283333333333335
+            },
+            "abrupt": {
+              "precision": 0.17094017094017094,
+              "recall": 1.0,
+              "f1": 0.291970802919708,
+              "false_positive_rate": 0.9,
+              "false_alarms": 291,
+              "false_alarms_per_1000_points": 6.711254612546125,
+              "mean_detection_delay": 7.983333333333333
+            }
+          },
+          "mean_f1": 0.31452472730255066,
+          "mean_delay": 17.633333333333333
+        },
+        {
+          "params": {
+            "delta": 0.25,
+            "threshold": 10.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.18691588785046728,
+              "recall": 1.0,
+              "f1": 0.31496062992125984,
+              "false_positive_rate": 0.95,
+              "false_alarms": 261,
+              "false_alarms_per_1000_points": 6.9091486658195675,
+              "mean_detection_delay": 27.216666666666665
+            },
+            "abrupt": {
+              "precision": 0.15789473684210525,
+              "recall": 1.0,
+              "f1": 0.2727272727272727,
+              "false_positive_rate": 0.95,
+              "false_alarms": 320,
+              "false_alarms_per_1000_points": 7.380073800738008,
+              "mean_detection_delay": 8.916666666666666
+            }
+          },
+          "mean_f1": 0.2938439513242663,
+          "mean_delay": 18.066666666666666
+        },
+        {
+          "params": {
+            "delta": 0.005,
+            "threshold": 20.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.16997167138810199,
+              "recall": 1.0,
+              "f1": 0.2905569007263923,
+              "false_positive_rate": 1.0,
+              "false_alarms": 293,
+              "false_alarms_per_1000_points": 7.756247352816603,
+              "mean_detection_delay": 28.016666666666666
+            },
+            "abrupt": {
+              "precision": 0.1466992665036675,
+              "recall": 1.0,
+              "f1": 0.255863539445629,
+              "false_positive_rate": 1.0,
+              "false_alarms": 349,
+              "false_alarms_per_1000_points": 8.04889298892989,
+              "mean_detection_delay": 9.566666666666666
+            }
+          },
+          "mean_f1": 0.27321022008601065,
+          "mean_delay": 18.791666666666664
+        },
+        {
+          "params": {
+            "delta": 0.1,
+            "threshold": 10.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.11049723756906077,
+              "recall": 1.0,
+              "f1": 0.19900497512437812,
+              "false_positive_rate": 1.0,
+              "false_alarms": 483,
+              "false_alarms_per_1000_points": 12.785895806861499,
+              "mean_detection_delay": 22.9
+            },
+            "abrupt": {
+              "precision": 0.0947867298578199,
+              "recall": 1.0,
+              "f1": 0.17316017316017313,
+              "false_positive_rate": 1.0,
+              "false_alarms": 573,
+              "false_alarms_per_1000_points": 13.214944649446494,
+              "mean_detection_delay": 10.516666666666667
+            }
+          },
+          "mean_f1": 0.18608257414227564,
+          "mean_delay": 16.708333333333332
+        },
+        {
+          "params": {
+            "delta": 0.25,
+            "threshold": 5.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.096,
+              "recall": 1.0,
+              "f1": 0.1751824817518248,
+              "false_positive_rate": 1.0,
+              "false_alarms": 565,
+              "false_alarms_per_1000_points": 14.956586192291402,
+              "mean_detection_delay": 22.183333333333334
+            },
+            "abrupt": {
+              "precision": 0.08207934336525308,
+              "recall": 1.0,
+              "f1": 0.15170670037926673,
+              "false_positive_rate": 1.0,
+              "false_alarms": 671,
+              "false_alarms_per_1000_points": 15.47509225092251,
+              "mean_detection_delay": 10.583333333333334
+            }
+          },
+          "mean_f1": 0.16344459106554576,
+          "mean_delay": 16.383333333333333
+        },
+        {
+          "params": {
+            "delta": 0.005,
+            "threshold": 10.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.08275862068965517,
+              "recall": 1.0,
+              "f1": 0.15286624203821655,
+              "false_positive_rate": 1.0,
+              "false_alarms": 665,
+              "false_alarms_per_1000_points": 17.603769589157135,
+              "mean_detection_delay": 21.05
+            },
+            "abrupt": {
+              "precision": 0.0711743772241993,
+              "recall": 1.0,
+              "f1": 0.132890365448505,
+              "false_positive_rate": 1.0,
+              "false_alarms": 783,
+              "false_alarms_per_1000_points": 18.05811808118081,
+              "mean_detection_delay": 11.133333333333333
+            }
+          },
+          "mean_f1": 0.14287830374336077,
+          "mean_delay": 16.09166666666667
+        },
+        {
+          "params": {
+            "delta": 0.1,
+            "threshold": 5.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.0683371298405467,
+              "recall": 1.0,
+              "f1": 0.1279317697228145,
+              "false_positive_rate": 1.0,
+              "false_alarms": 818,
+              "false_alarms_per_1000_points": 21.65396018636171,
+              "mean_detection_delay": 19.233333333333334
+            },
+            "abrupt": {
+              "precision": 0.05934718100890208,
+              "recall": 1.0,
+              "f1": 0.11204481792717087,
+              "false_positive_rate": 1.0,
+              "false_alarms": 951,
+              "false_alarms_per_1000_points": 21.932656826568266,
+              "mean_detection_delay": 11.083333333333334
+            }
+          },
+          "mean_f1": 0.11998829382499268,
+          "mean_delay": 15.158333333333335
+        },
+        {
+          "params": {
+            "delta": 0.005,
+            "threshold": 5.0
+          },
+          "by_drift_type": {
+            "gradual": {
+              "precision": 0.056074766355140186,
+              "recall": 1.0,
+              "f1": 0.10619469026548672,
+              "false_positive_rate": 1.0,
+              "false_alarms": 1010,
+              "false_alarms_per_1000_points": 26.73655230834392,
+              "mean_detection_delay": 15.233333333333333
+            },
+            "abrupt": {
+              "precision": 0.048859934853420196,
+              "recall": 1.0,
+              "f1": 0.09316770186335403,
+              "false_positive_rate": 1.0,
+              "false_alarms": 1168,
+              "false_alarms_per_1000_points": 26.937269372693727,
+              "mean_detection_delay": 12.15
+            }
+          },
+          "mean_f1": 0.09968119606442039,
+          "mean_delay": 13.691666666666666
+        }
+      ]
+    }
+  }
+}
