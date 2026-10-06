@@ -10,3 +10,4 @@ openpyxl
 deep-translator
 fuzzywuzzy
 python-Levenshtein
+matplotlib

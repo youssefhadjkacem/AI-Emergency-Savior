@@ -1,0 +1,252 @@
+{
+  "generated_at": "2026-10-06T06:26:44.898964+00:00",
+  "note": "Verification ponctuelle du round 2 en production. Script hors depot (non versionne) : classement = Top 3 du Space (deployed_evaluation_report.json) contre le code local du round 2 ; gravite = 24 cas de severity_cases.py envoyes au Space, urgent=False, sans ville ni budget.",
+  "ranking_top3_production_vs_local_round2": {
+    "en": {
+      "cases_compared": 29,
+      "same_three_providers_same_order": 29,
+      "differing": {}
+    },
+    "fr": {
+      "cases_compared": 29,
+      "same_three_providers_same_order": 29,
+      "differing": {}
+    },
+    "heldout": {
+      "cases_compared": 24,
+      "same_three_providers_same_order": 24,
+      "differing": {}
+    }
+  },
+  "severity_production": {
+    "per_case": {
+      "S01": {
+        "language": "fr",
+        "expected": "LOW",
+        "local": "LOW",
+        "production": "LOW",
+        "ok": true,
+        "seconds": 0.47968609999952605,
+        "error": null
+      },
+      "S02": {
+        "language": "en",
+        "expected": "LOW",
+        "local": "LOW",
+        "production": "LOW",
+        "ok": true,
+        "seconds": 0.4679055000015069,
+        "error": null
+      },
+      "S03": {
+        "language": "fr",
+        "expected": "LOW",
+        "local": "LOW",
+        "production": "LOW",
+        "ok": true,
+        "seconds": 0.43038030000025174,
+        "error": null
+      },
+      "S04": {
+        "language": "en",
+        "expected": "LOW",
+        "local": "UNKNOWN",
+        "production": "UNKNOWN",
+        "ok": true,
+        "seconds": 0.4553740000046673,
+        "error": null
+      },
+      "S05": {
+        "language": "fr",
+        "expected": "LOW",
+        "local": "LOW",
+        "production": "LOW",
+        "ok": true,
+        "seconds": 0.45254169999680016,
+        "error": null
+      },
+      "S06": {
+        "language": "en",
+        "expected": "LOW",
+        "local": "LOW",
+        "production": "LOW",
+        "ok": true,
+        "seconds": 0.4360661999962758,
+        "error": null
+      },
+      "S07": {
+        "language": "fr",
+        "expected": "MEDIUM",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.474953099997947,
+        "error": null
+      },
+      "S08": {
+        "language": "en",
+        "expected": "MEDIUM",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.46680360000027576,
+        "error": null
+      },
+      "S09": {
+        "language": "fr",
+        "expected": "MEDIUM",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.45216339999751654,
+        "error": null
+      },
+      "S10": {
+        "language": "en",
+        "expected": "MEDIUM",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.4559975000011036,
+        "error": null
+      },
+      "S11": {
+        "language": "fr",
+        "expected": "MEDIUM",
+        "local": "LOW",
+        "production": "LOW",
+        "ok": true,
+        "seconds": 0.4743990999995731,
+        "error": null
+      },
+      "S12": {
+        "language": "en",
+        "expected": "MEDIUM",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.43391390000033425,
+        "error": null
+      },
+      "S13": {
+        "language": "fr",
+        "expected": "HIGH",
+        "local": "HIGH",
+        "production": "HIGH",
+        "ok": true,
+        "seconds": 0.44881750000058673,
+        "error": null
+      },
+      "S14": {
+        "language": "en",
+        "expected": "HIGH",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.4832527999969898,
+        "error": null
+      },
+      "S15": {
+        "language": "fr",
+        "expected": "HIGH",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 0.4583351999972365,
+        "error": null
+      },
+      "S16": {
+        "language": "en",
+        "expected": "HIGH",
+        "local": "UNKNOWN",
+        "production": "UNKNOWN",
+        "ok": true,
+        "seconds": 0.4443403999975999,
+        "error": null
+      },
+      "S17": {
+        "language": "fr",
+        "expected": "HIGH",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 0.43418019999808166,
+        "error": null
+      },
+      "S18": {
+        "language": "en",
+        "expected": "HIGH",
+        "local": "UNKNOWN",
+        "production": "UNKNOWN",
+        "ok": true,
+        "seconds": 0.429943800001638,
+        "error": null
+      },
+      "S19": {
+        "language": "fr",
+        "expected": "CRITICAL",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 2.299770500001614,
+        "error": null
+      },
+      "S20": {
+        "language": "en",
+        "expected": "CRITICAL",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 0.44334820000221953,
+        "error": null
+      },
+      "S21": {
+        "language": "fr",
+        "expected": "CRITICAL",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 0.46369099999719765,
+        "error": null
+      },
+      "S22": {
+        "language": "en",
+        "expected": "CRITICAL",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 0.4967677000022377,
+        "error": null
+      },
+      "S23": {
+        "language": "fr",
+        "expected": "CRITICAL",
+        "local": "CRITICAL",
+        "production": "CRITICAL",
+        "ok": true,
+        "seconds": 0.44192630000179633,
+        "error": null
+      },
+      "S24": {
+        "language": "en",
+        "expected": "CRITICAL",
+        "local": "MEDIUM",
+        "production": "MEDIUM",
+        "ok": true,
+        "seconds": 0.44224450000183424,
+        "error": null
+      }
+    },
+    "calls": 24,
+    "responses_ok": 24,
+    "identical_to_local": 24,
+    "exact_vs_annotation": 16,
+    "production_values_seen": [
+      "CRITICAL",
+      "HIGH",
+      "LOW",
+      "MEDIUM",
+      "UNKNOWN"
+    ]
+  }
+}

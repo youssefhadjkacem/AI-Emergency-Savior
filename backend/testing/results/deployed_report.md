@@ -2,7 +2,9 @@
 
 Suite de `fix_report.md`. Les chiffres de ce rapport-là venaient du code exécuté en local ; ceux-ci viennent uniquement du Space en ligne `youssef0081/emergency-savior-output`, après déploiement des six fichiers corrigés.
 
-Chiffres issus de `deployed_evaluation_report.json`. Pour les reproduire, depuis `backend/` :
+> **Mise à jour du 6 octobre 2026.** Le round 2 (classement corrigé, gravité) a été déployé puis réévalué en production : voir la section 7. Les sections 1 à 6 décrivent la mesure du round 1 ; leurs chiffres sont conservés dans `deployed_evaluation_report_round1.json`, car `deployed_evaluation_report.json` a été régénéré.
+
+Chiffres des sections 1 à 6 issus de `deployed_evaluation_report_round1.json`. Pour les reproduire, depuis `backend/` :
 
 ```
 python -m testing.run_deployed_evaluation
@@ -94,3 +96,68 @@ Le deuxième texte illustre aussi une limite déjà connue du lexique : « patra
 Les chiffres déjà rapportés n'ont pas à être modifiés. Paragraphe à ajouter :
 
 > Les corrections ont été déployées sur le service en ligne, puis réévaluées en conditions réelles en interrogeant uniquement ce service : 82 requêtes (29 cas en anglais, 29 en français, 24 du jeu de contrôle français), espacées d'une seconde. Le service a répondu aux 82 requêtes, et chaque réponse est identique au résultat obtenu localement (symptômes extraits, spécialités et scores, prestataires recommandés). Les métriques en production sont donc celles du tableau précédent, dont une exactitude Top-1 de 83,3 % sur le jeu de contrôle français et de 44,8 % en anglais. La latence de bout en bout, réseau compris, est de 411 à 458 ms en moyenne selon le jeu (P95 de 480 à 658 ms). Un texte français dans lequel le lexique ne reconnaît aucun symptôme déclenche un appel à un service de traduction externe ; ce chemin, non sollicité par les cas de test, a pris environ 3 secondes lors de nos essais et dépend d'un service gratuit à quota limité.
+
+## 7. Round 2 en production (6 octobre 2026)
+
+Après le dépôt des six fichiers du round 2 sur le Space (classement monotone avec poids 3 sur la note, niveaux de gravité), la même évaluation a été relancée. Chiffres issus de `deployed_evaluation_report.json` (régénéré) et de `deployed_round2_check.json`.
+
+**Conclusion.** Le round 2 tourne en production et donne les résultats du code local : mêmes trois prestataires sur 82 cas sur 82, même niveau de gravité sur 24 cas sur 24. Top-1 et Top-3 n'ont pas bougé.
+
+### 7.1 Classification et extraction : inchangées
+
+82 appels, 82 réponses, aucune nouvelle tentative, 106 secondes.
+
+| Mesure | Anglais (29) | Français (29) | Contrôle FR (24) |
+|---|---|---|---|
+| Top-1 strict | 44,8 % | 82,8 % | 83,3 % |
+| Top-1 large | 51,7 % | 93,1 % | 83,3 % |
+| Top-3 spécialités | 58,6 % | 100 % | 100 % |
+| Spécialité attendue parmi les 3 prestataires | 58,6 % | 100 % | 100 % |
+| Extraction : précision | 0,800 | 0,928 | 0,939 |
+| Extraction : rappel | 0,274 | 0,973 | 0,697 |
+| Cas sans prédiction | 8 | 0 | 0 |
+
+Ce sont exactement les chiffres du round 1 (section 3).
+
+### 7.2 Classement des prestataires : celui du round 2
+
+`run_deployed_evaluation.py` compare le Space à la référence locale du round 1 (`fix_evaluation_report.json`). Il signale donc des prestataires différents dans les 74 réponses qui en contiennent (21 en anglais, 29 et 24 en français) : c'est l'effet attendu du nouveau classement. Les symptômes et le statut d'extraction sont identiques dans les 82 cas.
+
+Pour vérifier que ces prestataires sont bien ceux du round 2, les 82 cas ont été rejoués sur le code local du round 2 (clone du Space, synchronisé avec le dépôt distant) :
+
+| Jeu | Cas | Mêmes trois prestataires, dans le même ordre |
+|---|---|---|
+| Anglais | 29 | 29 |
+| Français | 29 | 29 |
+| Contrôle français | 24 | 24 |
+
+L'ordre des trois spécialités est le même qu'au round 1 dans 77 cas sur 82 ; dans les 5 autres, seules la deuxième ou la troisième place changent. Les scores bougent de quelques dixièmes dans 23 cas, sous l'effet du bonus de gravité.
+
+### 7.3 Gravité
+
+Les 24 cas de `severity_cases.py` ont été envoyés au Space (sans drapeau d'urgence, sans ville ni budget).
+
+| | Cas | Identique au local | Exact contre l'annotation |
+|---|---|---|---|
+| Tous | 24 | 24 | 16 (66,7 %) |
+| Français | 12 | 12 | 9 (75,0 %) |
+| Anglais | 12 | 12 | 7 (58,3 %) |
+
+Ce sont les chiffres de `round2_final_report.md`. Quand le niveau est `UNKNOWN`, le Space n'affiche pas de ligne de gravité ; cette absence est comptée comme `UNKNOWN`.
+
+### 7.4 Latence
+
+| Jeu | Appels | Moyenne | Médiane | P95 | Maximum |
+|---|---|---|---|---|---|
+| Anglais | 29 | 326 ms | 261 ms | 356 ms | 1 957 ms |
+| Français | 29 | 290 ms | 224 ms | 229 ms | 2 147 ms |
+| Contrôle français | 24 | 226 ms | 222 ms | 246 ms | 264 ms |
+
+Une seule exécution, un autre jour que celle du round 1 : la baisse par rapport aux 411-458 ms de la section 3 n'est pas une comparaison contrôlée.
+
+### 7.5 Réserves
+
+1. `deployed_round2_check.json` vient d'un script ponctuel qui n'est pas dans le dépôt. Pour le refaire : rejouer les cas avec `LocalPipeline()` et comparer à `deployed_evaluation_report.json` ; envoyer `SEVERITY_CASES` avec `call_deployed_space`.
+2. Les tests de monotonie du classement (coût multiplié par 10, etc.) ne peuvent pas être faits contre le Space, qui n'accepte pas de base modifiée. Ils reposent sur l'identité du code et des Top 3.
+3. Les réserves de la section 5 restent entières.
+

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-10-06T06:25:52.334886+00:00",
+  "generated_at": "2026-10-05T08:14:28.407788+00:00",
   "note": "Toutes les mesures viennent du Space deploye ; le pipeline n'a pas ete execute en local. Reference locale : fix_evaluation_report.json, configuration 'after_default' (genere le 2026-10-05T06:01:46.380191+00:00).",
   "space_url": "https://youssef0081-emergency-savior-output.hf.space/gradio_api/call/predict",
   "seconds_between_calls": 1.0,
-  "total_seconds": 105.83285000000615,
+  "total_seconds": 117.81471109998529,
   "summary": {
     "en": {
       "n_cases": 29,
@@ -32,83 +32,13 @@
       },
       "latency": {
         "n": 29,
-        "mean_ms": 325.7631793104369,
-        "median_ms": 260.7458000056795,
-        "p95_ms": 356.3748199987458,
-        "max_ms": 1956.830600000103
+        "mean_ms": 415.2657000010769,
+        "median_ms": 399.79130000574514,
+        "p95_ms": 479.8680600011721,
+        "max_ms": 932.7058000199031
       },
-      "cases_identical_to_local": 8,
-      "cases_differing_from_local": {
-        "C01": [
-          "providers"
-        ],
-        "C04": [
-          "specialties",
-          "providers"
-        ],
-        "C05": [
-          "specialties",
-          "providers"
-        ],
-        "C06": [
-          "providers"
-        ],
-        "C07": [
-          "providers"
-        ],
-        "C08": [
-          "providers"
-        ],
-        "C09": [
-          "specialties",
-          "providers"
-        ],
-        "C10": [
-          "providers"
-        ],
-        "C11": [
-          "specialties",
-          "providers"
-        ],
-        "C12": [
-          "providers"
-        ],
-        "C14": [
-          "providers"
-        ],
-        "C16": [
-          "providers"
-        ],
-        "C17": [
-          "specialties",
-          "providers"
-        ],
-        "C19": [
-          "providers"
-        ],
-        "C21": [
-          "providers"
-        ],
-        "C22": [
-          "providers"
-        ],
-        "A01": [
-          "specialties",
-          "providers"
-        ],
-        "A02": [
-          "providers"
-        ],
-        "A03": [
-          "providers"
-        ],
-        "A04": [
-          "providers"
-        ],
-        "R01": [
-          "providers"
-        ]
-      }
+      "cases_identical_to_local": 29,
+      "cases_differing_from_local": {}
     },
     "fr": {
       "n_cases": 29,
@@ -136,113 +66,13 @@
       },
       "latency": {
         "n": 29,
-        "mean_ms": 289.7358965525074,
-        "median_ms": 224.1174000009778,
-        "p95_ms": 229.36808000085875,
-        "max_ms": 2146.6843000016524
+        "mean_ms": 411.096348276699,
+        "median_ms": 408.2150000031106,
+        "p95_ms": 509.8420400056055,
+        "max_ms": 612.38730000332
       },
-      "cases_identical_to_local": 0,
-      "cases_differing_from_local": {
-        "C01": [
-          "providers"
-        ],
-        "C02": [
-          "providers"
-        ],
-        "C03": [
-          "providers"
-        ],
-        "C04": [
-          "specialties",
-          "providers"
-        ],
-        "C05": [
-          "specialties",
-          "providers"
-        ],
-        "C06": [
-          "specialties",
-          "providers"
-        ],
-        "C07": [
-          "providers"
-        ],
-        "C08": [
-          "providers"
-        ],
-        "C09": [
-          "specialties",
-          "providers"
-        ],
-        "C10": [
-          "providers"
-        ],
-        "C11": [
-          "specialties",
-          "providers"
-        ],
-        "C12": [
-          "specialties",
-          "providers"
-        ],
-        "C13": [
-          "providers"
-        ],
-        "C14": [
-          "providers"
-        ],
-        "C15": [
-          "providers"
-        ],
-        "C16": [
-          "providers"
-        ],
-        "C17": [
-          "specialties",
-          "providers"
-        ],
-        "C18": [
-          "providers"
-        ],
-        "C19": [
-          "providers"
-        ],
-        "C20": [
-          "specialties",
-          "providers"
-        ],
-        "C21": [
-          "specialties",
-          "providers"
-        ],
-        "C22": [
-          "providers"
-        ],
-        "A01": [
-          "specialties",
-          "providers"
-        ],
-        "A02": [
-          "specialties",
-          "providers"
-        ],
-        "A03": [
-          "specialties",
-          "providers"
-        ],
-        "A04": [
-          "providers"
-        ],
-        "A05": [
-          "providers"
-        ],
-        "R01": [
-          "providers"
-        ],
-        "R02": [
-          "providers"
-        ]
-      }
+      "cases_identical_to_local": 29,
+      "cases_differing_from_local": {}
     },
     "heldout": {
       "n_cases": 24,
@@ -270,91 +100,13 @@
       },
       "latency": {
         "n": 24,
-        "mean_ms": 226.11306249988652,
-        "median_ms": 222.0041000036872,
-        "p95_ms": 246.0429750030016,
-        "max_ms": 263.98129999870434
+        "mean_ms": 458.1557874977686,
+        "median_ms": 433.56730000232346,
+        "p95_ms": 657.808930009196,
+        "max_ms": 751.5777999942657
       },
-      "cases_identical_to_local": 0,
-      "cases_differing_from_local": {
-        "H01": [
-          "providers"
-        ],
-        "H02": [
-          "providers"
-        ],
-        "H03": [
-          "providers"
-        ],
-        "H04": [
-          "specialties",
-          "providers"
-        ],
-        "H05": [
-          "specialties",
-          "providers"
-        ],
-        "H06": [
-          "providers"
-        ],
-        "H07": [
-          "providers"
-        ],
-        "H08": [
-          "providers"
-        ],
-        "H09": [
-          "specialties",
-          "providers"
-        ],
-        "H10": [
-          "providers"
-        ],
-        "H11": [
-          "providers"
-        ],
-        "H12": [
-          "providers"
-        ],
-        "H13": [
-          "providers"
-        ],
-        "H14": [
-          "providers"
-        ],
-        "H15": [
-          "providers"
-        ],
-        "H16": [
-          "providers"
-        ],
-        "H17": [
-          "providers"
-        ],
-        "H18": [
-          "providers"
-        ],
-        "H19": [
-          "providers"
-        ],
-        "H20": [
-          "specialties",
-          "providers"
-        ],
-        "H21": [
-          "specialties",
-          "providers"
-        ],
-        "H22": [
-          "providers"
-        ],
-        "H23": [
-          "providers"
-        ],
-        "H24": [
-          "providers"
-        ]
-      }
+      "cases_identical_to_local": 24,
+      "cases_differing_from_local": {}
     }
   },
   "local_reference": {
@@ -444,7 +196,7 @@
         "expected_specialty": "Dermatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 1.956830600000103,
+        "seconds": 0.9327058000199031,
         "detected_symptoms": [
           "blackheads",
           "blister",
@@ -467,25 +219,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Khalil Bouzidi",
+            "name": "Dr. Hamza Chebbi",
             "specialty": "Dermatologist",
-            "location": "Bizerte"
-          },
-          {
-            "name": "Dr. Sonia Hamdouni",
-            "specialty": "Dermatologist",
-            "location": "Ben Arous"
+            "location": "Kasserine"
           },
           {
             "name": "Dr. Hamza Trabelsi",
             "specialty": "Dermatologist",
             "location": "Mahdia"
+          },
+          {
+            "name": "Dr. Olfa Boukadida",
+            "specialty": "Dermatologist",
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Dermatologist",
         "predicted": "Dermatologist",
         "top1_strict": true,
@@ -500,7 +250,7 @@
         "expected_specialty": "Allergist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2607458000056795,
+        "seconds": 0.41891449998365715,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -529,7 +279,7 @@
         "expected_specialty": "Otolaryngologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.23336959999869578,
+        "seconds": 0.46434320000116713,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -556,7 +306,7 @@
         "expected_specialty": "Cardiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.3433712000041851,
+        "seconds": 0.37510000000474975,
         "detected_symptoms": [
           "chest_pain",
           "left_arm_pain",
@@ -570,39 +320,36 @@
         "top_specialties": [
           [
             "Cardiologist",
-            60.9
+            67.5
           ],
           [
             "Internal Medicine",
-            14.2
+            11.8
           ],
           [
             "Pulmonologist",
-            10.6
+            8.8
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Ahmed Mansouri",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
-            "location": "Tunis"
+            "location": "Monastir"
           },
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Olfa Khelifi",
+            "name": "Dr. Hamza Saidi",
             "specialty": "Cardiologist",
-            "location": "Tunis"
+            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Cardiologist",
         "predicted": "Cardiologist",
         "top1_strict": true,
@@ -617,7 +364,7 @@
         "expected_specialty": "Pulmonologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.27225569999427535,
+        "seconds": 0.3565553000080399,
         "detected_symptoms": [
           "cough",
           "high_fever",
@@ -634,11 +381,11 @@
         "top_specialties": [
           [
             "Pulmonologist",
-            71.6
+            70.9
           ],
           [
             "Internal Medicine",
-            15.6
+            15.5
           ],
           [
             "Infectiologist",
@@ -647,26 +394,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Olfa Saidi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Tunis"
+            "location": "Mahdia"
           },
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Olfa Khelifi",
+            "name": "Dr. Mehdi Jebali",
             "specialty": "Pulmonologist",
-            "location": "Ariana"
+            "location": "Ben Arous"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pulmonologist",
         "predicted": "Pulmonologist",
         "top1_strict": true,
@@ -681,7 +425,7 @@
         "expected_specialty": "Hematologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2739274999985355,
+        "seconds": 0.4425035000022035,
         "detected_symptoms": [
           "fatigue"
         ],
@@ -710,25 +454,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Khalil Gharbi",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
-            "location": "Sfax"
+            "location": "Monastir"
           },
           {
-            "name": "Dr. Olfa Khelifi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Ariana"
+            "location": "Mahdia"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Internal Medicine",
         "predicted": "Internal Medicine",
         "top1_strict": false,
@@ -743,7 +485,7 @@
         "expected_specialty": "Phlebologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2287367999961134,
+        "seconds": 0.4280968000239227,
         "detected_symptoms": [
           "cramps",
           "swollen_legs"
@@ -766,20 +508,18 @@
             "location": "Kebili"
           },
           {
+            "name": "Dr. Olfa Jebali",
+            "specialty": "Phlebologist",
+            "location": "Kairouan"
+          },
+          {
             "name": "Dr. Rami Mejri",
             "specialty": "Phlebologist",
             "location": "Bizerte"
-          },
-          {
-            "name": "Dr. Sonia Saidi",
-            "specialty": "Phlebologist",
-            "location": "Sfax"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Phlebologist",
         "predicted": "Phlebologist",
         "top1_strict": true,
@@ -794,7 +534,7 @@
         "expected_specialty": "Gastroenterologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.33885300000110874,
+        "seconds": 0.4830906999995932,
         "detected_symptoms": [
           "abdominal_pain",
           "cramps",
@@ -830,20 +570,18 @@
             "location": "Kebili"
           },
           {
-            "name": "Dr. Sonia Ben Ali",
+            "name": "Dr. Amira Khelifi",
             "specialty": "Gastroenterologist",
-            "location": "Sfax"
+            "location": "Siliana"
           },
           {
-            "name": "Dr. Sonia Saidi",
+            "name": "Dr. Olfa Jebali",
             "specialty": "Phlebologist",
-            "location": "Sfax"
+            "location": "Kairouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Phlebologist",
         "predicted": "Phlebologist",
         "top1_strict": false,
@@ -858,7 +596,7 @@
         "expected_specialty": "Hepatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.28286649999790825,
+        "seconds": 0.36780339997494593,
         "detected_symptoms": [
           "dark_urine",
           "fatigue",
@@ -876,22 +614,22 @@
         "top_specialties": [
           [
             "Hepatologist",
-            85.7
+            85.0
+          ],
+          [
+            "Cardiologist",
+            1.7
           ],
           [
             "Internal Medicine",
             1.7
-          ],
-          [
-            "Cardiologist",
-            0.8
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Nasr",
+            "name": "Dr. Anis Selmi",
             "specialty": "Hepatologist",
-            "location": "Tunis"
+            "location": "Sfax"
           },
           {
             "name": "Dr. Meryem Abidi",
@@ -899,16 +637,13 @@
             "location": "Tunis"
           },
           {
-            "name": "Dr. Tarek Dridi",
+            "name": "Dr. Mohamed Chaabane",
             "specialty": "Hepatologist",
-            "location": "Tunis"
+            "location": "Kebili"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Hepatologist",
         "predicted": "Hepatologist",
         "top1_strict": true,
@@ -923,7 +658,7 @@
         "expected_specialty": "Oncologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.3610278999985894,
+        "seconds": 0.4358004000096116,
         "detected_symptoms": [
           "fatigue",
           "sweating"
@@ -955,25 +690,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Khalil Gharbi",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
-            "location": "Sfax"
+            "location": "Monastir"
           },
           {
-            "name": "Dr. Leila Chaabane",
+            "name": "Dr. Dorra Maatoug",
             "specialty": "Infectiologist",
-            "location": "Béja"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Internal Medicine",
         "predicted": "Internal Medicine",
         "top1_strict": false,
@@ -988,7 +721,7 @@
         "expected_specialty": "Pediatrician",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.3493951999989804,
+        "seconds": 0.4707441999926232,
         "detected_symptoms": [
           "abdominal_pain",
           "belly_pain",
@@ -1007,39 +740,36 @@
         "top_specialties": [
           [
             "Pediatrician",
-            64.6
+            66.2
           ],
           [
             "Neurologist",
-            12.5
+            10.3
           ],
           [
             "Gastroenterologist",
-            8.7
+            8.9
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Chebbi",
-            "specialty": "Pediatrician",
-            "location": "Tunis"
-          },
-          {
-            "name": "Dr. Ahmed Hamdi",
-            "specialty": "Neurologist",
-            "location": "Tunis"
-          },
-          {
-            "name": "Dr. Leila Tlili",
+            "name": "Dr. Mehdi Hamdouni",
             "specialty": "Pediatrician",
             "location": "Nabeul"
+          },
+          {
+            "name": "Dr. Fatima Mansouri",
+            "specialty": "Neurologist",
+            "location": "Kebili"
+          },
+          {
+            "name": "Dr. Hana Saidi",
+            "specialty": "Pediatrician",
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pediatrician",
         "predicted": "Pediatrician",
         "top1_strict": true,
@@ -1054,7 +784,7 @@
         "expected_specialty": "Neurologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2392069999987143,
+        "seconds": 0.4067016000044532,
         "detected_symptoms": [
           "slurred_speech"
         ],
@@ -1072,25 +802,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Leila Gharbi",
+            "name": "Dr. Fatima Mansouri",
             "specialty": "Neurologist",
-            "location": "Sousse"
+            "location": "Kebili"
           },
           {
-            "name": "Dr. Walid Abidi",
+            "name": "Dr. Karim Mbarki",
             "specialty": "Neurologist",
             "location": "Tataouine"
           },
           {
-            "name": "Dr. Youssef Nasr",
+            "name": "Dr. Amira Ben Ali",
             "specialty": "Neurologist",
-            "location": "Siliana"
+            "location": "Le Kef"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Neurologist",
         "predicted": "Neurologist",
         "top1_strict": true,
@@ -1105,7 +833,7 @@
         "expected_specialty": "Ophthalmologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2751720000014757,
+        "seconds": 0.3410364000010304,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -1132,7 +860,7 @@
         "expected_specialty": "Psychiatrist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22771389999979874,
+        "seconds": 0.34846860001562163,
         "detected_symptoms": [
           "panic_attacks"
         ],
@@ -1151,25 +879,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Hamza Ben Ali",
-            "specialty": "Psychiatrist",
-            "location": "Tunis"
-          },
-          {
-            "name": "Dr. Fatima Ferchichi",
-            "specialty": "Psychiatrist",
-            "location": "Siliana"
-          },
-          {
             "name": "Dr. Karim Khelifi",
             "specialty": "Psychiatrist",
             "location": "Jendouba"
+          },
+          {
+            "name": "Dr. Nadia Belhaj",
+            "specialty": "Psychiatrist",
+            "location": "Kasserine"
+          },
+          {
+            "name": "Dr. Ahmed Mansouri",
+            "specialty": "Psychiatrist",
+            "location": "Kairouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Psychiatrist",
         "predicted": "Psychiatrist",
         "top1_strict": true,
@@ -1184,7 +910,7 @@
         "expected_specialty": "Rheumatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.24426410000160104,
+        "seconds": 0.3660233000118751,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -1211,7 +937,7 @@
         "expected_specialty": "Orthopedic",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2543684000047506,
+        "seconds": 0.35940709998249076,
         "detected_symptoms": [
           "muscle_spasm"
         ],
@@ -1229,25 +955,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Youssef Jebali",
+            "specialty": "Orthopedic",
+            "location": "Jendouba"
+          },
+          {
             "name": "Dr. Rami Hamdi",
             "specialty": "Orthopedic",
             "location": "Sousse"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Hana Ben Ali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Amira Mansouri",
-            "specialty": "Orthopedic",
-            "location": "Tozeur"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Orthopedic",
         "predicted": "Orthopedic",
         "top1_strict": true,
@@ -1262,7 +986,7 @@
         "expected_specialty": "Infectiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.31690399999934016,
+        "seconds": 0.39979130000574514,
         "detected_symptoms": [
           "high_fever",
           "rash_spreading",
@@ -1282,20 +1006,20 @@
         "top_specialties": [
           [
             "Infectiologist",
-            81.2
+            77.6
           ],
           [
             "Internal Medicine",
-            11.5
+            13.7
           ],
           [
             "Allergist",
-            2.1
+            2.5
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Meryem Khelifi",
+            "name": "Dr. Dorra Maatoug",
             "specialty": "Infectiologist",
             "location": "Tunis"
           },
@@ -1305,16 +1029,13 @@
             "location": "Tunis"
           },
           {
-            "name": "Dr. Leila Chaabane",
+            "name": "Dr. Walid Belhaj",
             "specialty": "Infectiologist",
-            "location": "Béja"
+            "location": "Bizerte"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Infectiologist",
         "predicted": "Infectiologist",
         "top1_strict": true,
@@ -1329,7 +1050,7 @@
         "expected_specialty": "Endocrinologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2620478999961051,
+        "seconds": 0.3256593999976758,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -1358,7 +1079,7 @@
         "expected_specialty": "Gynecologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.24577729999873554,
+        "seconds": 0.3442553000058979,
         "detected_symptoms": [
           "belly_pain",
           "easy_bleeding",
@@ -1389,14 +1110,14 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Leila Tlili",
+            "name": "Dr. Mehdi Hamdouni",
             "specialty": "Pediatrician",
             "location": "Nabeul"
           },
           {
-            "name": "Dr. Karim Tlili",
+            "name": "Dr. Hana Saidi",
             "specialty": "Gynecologist",
-            "location": "Tataouine"
+            "location": "Bizerte"
           },
           {
             "name": "Dr. Anis Abidi",
@@ -1405,9 +1126,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pediatrician",
         "predicted": "Pediatrician",
         "top1_strict": false,
@@ -1422,7 +1141,7 @@
         "expected_specialty": "Urologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2427123000015854,
+        "seconds": 0.38558169998577796,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -1450,7 +1169,7 @@
         "expected_specialty": "Nephrologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.27685689999634633,
+        "seconds": 0.43390740000177175,
         "detected_symptoms": [
           "puffy_face_and_eyes"
         ],
@@ -1471,14 +1190,14 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Hana Belhaj",
             "specialty": "Endocrinologist",
             "location": "Tunis"
           },
           {
-            "name": "Dr. Hana Belhaj",
+            "name": "Dr. Sonia Hamdouni",
             "specialty": "Endocrinologist",
-            "location": "Tunis"
+            "location": "Siliana"
           },
           {
             "name": "Dr. Leila Nasr",
@@ -1487,9 +1206,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Endocrinologist",
         "predicted": "Endocrinologist",
         "top1_strict": false,
@@ -1504,7 +1221,7 @@
         "expected_specialty": "Internal Medicine",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.24707299999863608,
+        "seconds": 0.40814089999184944,
         "detected_symptoms": [
           "headache",
           "high_fever",
@@ -1532,25 +1249,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Leila Maatoug",
+            "specialty": "Internal Medicine",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Amira Khelifi",
+            "specialty": "Gastroenterologist",
+            "location": "Siliana"
+          },
+          {
             "name": "Dr. Walid Hamdouni",
             "specialty": "Internal Medicine",
             "location": "Sfax"
-          },
-          {
-            "name": "Dr. Olfa Jebali",
-            "specialty": "Gastroenterologist",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Bilel Chebbi",
-            "specialty": "Internal Medicine",
-            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Internal Medicine",
         "predicted": "Internal Medicine",
         "top1_strict": true,
@@ -1565,7 +1280,7 @@
         "expected_specialty": "Pulmonologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2586585000026389,
+        "seconds": 0.3354012999916449,
         "detected_symptoms": [
           "breathlessness",
           "chest_pain",
@@ -1579,11 +1294,11 @@
         "top_specialties": [
           [
             "Cardiologist",
-            35.5
+            47.1
           ],
           [
             "Pulmonologist",
-            34.0
+            22.5
           ],
           [
             "Internal Medicine",
@@ -1592,26 +1307,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Ahmed Mansouri",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
-            "location": "Tunis"
+            "location": "Monastir"
           },
           {
-            "name": "Dr. Olfa Saidi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Tunis"
+            "location": "Mahdia"
           },
           {
-            "name": "Dr. Walid Hamdouni",
-            "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "name": "Dr. Hamza Saidi",
+            "specialty": "Cardiologist",
+            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Cardiologist",
         "predicted": "Cardiologist",
         "top1_strict": false,
@@ -1620,13 +1332,13 @@
         "n_providers": 3,
         "provider_top1": false,
         "provider_top3": true,
-        "distinct_specialties_in_top3": 3
+        "distinct_specialties_in_top3": 2
       },
       "A02": {
         "expected_specialty": "Hepatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2685245000029681,
+        "seconds": 0.4750341000035405,
         "detected_symptoms": [
           "belly_pain",
           "nausea",
@@ -1661,20 +1373,18 @@
             "location": "Nabeul"
           },
           {
-            "name": "Dr. Sonia Ben Ali",
+            "name": "Dr. Amira Khelifi",
             "specialty": "Gastroenterologist",
-            "location": "Sfax"
+            "location": "Siliana"
           },
           {
-            "name": "Dr. Leila Tlili",
+            "name": "Dr. Mehdi Chebbi",
             "specialty": "Pediatrician",
-            "location": "Nabeul"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pediatrician",
         "predicted": "Pediatrician",
         "top1_strict": false,
@@ -1689,7 +1399,7 @@
         "expected_specialty": "Neurologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22545009999885224,
+        "seconds": 0.33460279999417253,
         "detected_symptoms": [
           "headache",
           "numbness_tingling"
@@ -1715,14 +1425,14 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Amira Mejri",
+            "name": "Dr. Fatima Mansouri",
             "specialty": "Neurologist",
-            "location": "Monastir"
+            "location": "Kebili"
           },
           {
-            "name": "Dr. Fatima Zouari",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Monastir"
+            "location": "Bizerte"
           },
           {
             "name": "Dr. Karim Mbarki",
@@ -1731,9 +1441,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Neurologist",
         "predicted": "Neurologist",
         "top1_strict": true,
@@ -1748,7 +1456,7 @@
         "expected_specialty": "Urologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.29042029999982333,
+        "seconds": 0.4034342000086326,
         "detected_symptoms": [
           "bladder_discomfort"
         ],
@@ -1771,25 +1479,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Karim Tlili",
+            "name": "Dr. Hana Saidi",
             "specialty": "Gynecologist",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Walid Boukadida",
+            "specialty": "Urologist",
             "location": "Tataouine"
           },
           {
-            "name": "Dr. Sonia Jebali",
-            "specialty": "Urologist",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Mohamed Khelifi",
+            "name": "Dr. Khalil Maatoug",
             "specialty": "Gynecologist",
-            "location": "Siliana"
+            "location": "Sfax"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Gynecologist",
         "predicted": "Gynecologist",
         "top1_strict": false,
@@ -1804,7 +1510,7 @@
         "expected_specialty": "Orthopedic",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22681939999893075,
+        "seconds": 0.3634769000054803,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -1833,7 +1539,7 @@
         "expected_specialty": "Otolaryngologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22068140000192216,
+        "seconds": 0.47335270000621676,
         "detected_symptoms": [
           "throat_irritation"
         ],
@@ -1849,25 +1555,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Walid Trabelsi",
+            "specialty": "Otolaryngologist",
+            "location": "Bizerte"
+          },
+          {
             "name": "Dr. Rami Selmi",
             "specialty": "Otolaryngologist",
             "location": "Monastir"
           },
           {
-            "name": "Dr. Rami Ferchichi",
+            "name": "Dr. Hana Hamdouni",
             "specialty": "Otolaryngologist",
-            "location": "Médenine"
-          },
-          {
-            "name": "Dr. Walid Trabelsi",
-            "specialty": "Otolaryngologist",
-            "location": "Bizerte"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Otolaryngologist",
         "predicted": "Otolaryngologist",
         "top1_strict": true,
@@ -1882,7 +1586,7 @@
         "expected_specialty": "Internal Medicine",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22310140000627143,
+        "seconds": 0.36277249999693595,
         "detected_symptoms": [],
         "spurious_symptoms": [],
         "missed_symptoms": [
@@ -1908,7 +1612,7 @@
         "expected_specialty": "Dermatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2257370999941486,
+        "seconds": 0.33438879999448545,
         "detected_symptoms": [
           "blackheads",
           "blister",
@@ -1934,25 +1638,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Khalil Bouzidi",
+            "name": "Dr. Hamza Chebbi",
             "specialty": "Dermatologist",
-            "location": "Bizerte"
-          },
-          {
-            "name": "Dr. Sonia Hamdouni",
-            "specialty": "Dermatologist",
-            "location": "Ben Arous"
+            "location": "Kasserine"
           },
           {
             "name": "Dr. Hamza Trabelsi",
             "specialty": "Dermatologist",
             "location": "Mahdia"
+          },
+          {
+            "name": "Dr. Olfa Boukadida",
+            "specialty": "Dermatologist",
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Dermatologist",
         "predicted": "Dermatologist",
         "top1_strict": true,
@@ -1967,7 +1669,7 @@
         "expected_specialty": "Allergist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22415979999641422,
+        "seconds": 0.4207905000075698,
         "detected_symptoms": [
           "congestion",
           "continuous_sneezing",
@@ -1994,25 +1696,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Ahmed Tlili",
+            "name": "Dr. Anis Ferchichi",
             "specialty": "Allergist",
+            "location": "Sfax"
+          },
+          {
+            "name": "Dr. Walid Trabelsi",
+            "specialty": "Otolaryngologist",
             "location": "Bizerte"
           },
           {
-            "name": "Dr. Rami Selmi",
-            "specialty": "Otolaryngologist",
-            "location": "Monastir"
-          },
-          {
-            "name": "Dr. Mehdi Hamdi",
+            "name": "Dr. Walid Mejri",
             "specialty": "Allergist",
-            "location": "Tozeur"
+            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Allergist",
         "predicted": "Allergist",
         "top1_strict": true,
@@ -2027,7 +1727,7 @@
         "expected_specialty": "Otolaryngologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22135269999853335,
+        "seconds": 0.42835340002784505,
         "detected_symptoms": [
           "loss_of_smell",
           "spinning_movements",
@@ -2048,14 +1748,14 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Walid Trabelsi",
+            "specialty": "Otolaryngologist",
+            "location": "Bizerte"
+          },
+          {
             "name": "Dr. Rami Selmi",
             "specialty": "Otolaryngologist",
             "location": "Monastir"
-          },
-          {
-            "name": "Dr. Rami Ferchichi",
-            "specialty": "Otolaryngologist",
-            "location": "Médenine"
           },
           {
             "name": "Dr. Hana Hamdouni",
@@ -2064,9 +1764,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Otolaryngologist",
         "predicted": "Otolaryngologist",
         "top1_strict": true,
@@ -2081,7 +1779,7 @@
         "expected_specialty": "Cardiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22049930000503082,
+        "seconds": 0.39390689998981543,
         "detected_symptoms": [
           "chest_pain",
           "chest_tightness",
@@ -2094,39 +1792,36 @@
         "top_specialties": [
           [
             "Cardiologist",
-            97.5
+            98.1
           ],
           [
             "Internal Medicine",
-            0.9
+            0.7
           ],
           [
             "Pulmonologist",
-            0.7
+            0.5
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Ahmed Mansouri",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
-            "location": "Tunis"
+            "location": "Monastir"
+          },
+          {
+            "name": "Dr. Hamza Saidi",
+            "specialty": "Cardiologist",
+            "location": "Sousse"
           },
           {
             "name": "Dr. Olfa Khelifi",
             "specialty": "Cardiologist",
             "location": "Tunis"
-          },
-          {
-            "name": "Dr. Walid Bouzidi",
-            "specialty": "Cardiologist",
-            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Cardiologist",
         "predicted": "Cardiologist",
         "top1_strict": true,
@@ -2141,7 +1836,7 @@
         "expected_specialty": "Pulmonologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2217268000022159,
+        "seconds": 0.5410294000175782,
         "detected_symptoms": [
           "blood_in_sputum",
           "breathlessness",
@@ -2160,39 +1855,36 @@
         "top_specialties": [
           [
             "Pulmonologist",
-            54.5
-          ],
-          [
-            "Internal Medicine",
-            26.9
+            43.2
           ],
           [
             "Cardiologist",
-            17.2
+            34.1
+          ],
+          [
+            "Internal Medicine",
+            21.3
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Olfa Saidi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Tunis"
+            "location": "Mahdia"
           },
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Boukadida",
+            "specialty": "Cardiologist",
+            "location": "Monastir"
+          },
+          {
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
-          },
-          {
-            "name": "Dr. Olfa Khelifi",
-            "specialty": "Pulmonologist",
-            "location": "Ariana"
+            "location": "Bizerte"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pulmonologist",
         "predicted": "Pulmonologist",
         "top1_strict": true,
@@ -2201,13 +1893,13 @@
         "n_providers": 3,
         "provider_top1": true,
         "provider_top3": true,
-        "distinct_specialties_in_top3": 2
+        "distinct_specialties_in_top3": 3
       },
       "C06": {
         "expected_specialty": "Hematologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22556299999996554,
+        "seconds": 0.3656312000239268,
         "detected_symptoms": [
           "bruising",
           "easy_bleeding",
@@ -2222,27 +1914,27 @@
         "top_specialties": [
           [
             "Hematologist",
-            70.0
+            65.2
           ],
           [
             "Oncologist",
-            13.0
+            15.1
           ],
           [
             "Phlebologist",
-            12.3
+            14.3
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Khelifi",
+            "name": "Dr. Anis Abidi",
             "specialty": "Hematologist",
-            "location": "Le Kef"
+            "location": "Tunis"
           },
           {
-            "name": "Dr. Hamza Ferchichi",
+            "name": "Dr. Amira Maatoug",
             "specialty": "Oncologist",
-            "location": "Monastir"
+            "location": "Mahdia"
           },
           {
             "name": "Dr. Dorra Abidi",
@@ -2251,10 +1943,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Hematologist",
         "predicted": "Hematologist",
         "top1_strict": true,
@@ -2269,7 +1958,7 @@
         "expected_specialty": "Phlebologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2221055999980308,
+        "seconds": 0.3427529000036884,
         "detected_symptoms": [
           "cramps",
           "prominent_veins_on_calf",
@@ -2291,20 +1980,18 @@
             "location": "Kebili"
           },
           {
+            "name": "Dr. Olfa Jebali",
+            "specialty": "Phlebologist",
+            "location": "Kairouan"
+          },
+          {
             "name": "Dr. Rami Mejri",
             "specialty": "Phlebologist",
             "location": "Bizerte"
-          },
-          {
-            "name": "Dr. Sonia Saidi",
-            "specialty": "Phlebologist",
-            "location": "Sfax"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Phlebologist",
         "predicted": "Phlebologist",
         "top1_strict": true,
@@ -2319,7 +2006,7 @@
         "expected_specialty": "Gastroenterologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2210653000001912,
+        "seconds": 0.3558010999986436,
         "detected_symptoms": [
           "cramps",
           "diarrhoea",
@@ -2352,20 +2039,18 @@
             "location": "Kebili"
           },
           {
-            "name": "Dr. Sonia Ben Ali",
+            "name": "Dr. Amira Khelifi",
             "specialty": "Gastroenterologist",
-            "location": "Sfax"
+            "location": "Siliana"
           },
           {
-            "name": "Dr. Sonia Saidi",
+            "name": "Dr. Olfa Jebali",
             "specialty": "Phlebologist",
-            "location": "Sfax"
+            "location": "Kairouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Phlebologist",
         "predicted": "Phlebologist",
         "top1_strict": false,
@@ -2380,7 +2065,7 @@
         "expected_specialty": "Hepatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22649700000329176,
+        "seconds": 0.3537942999973893,
         "detected_symptoms": [
           "dark_urine",
           "fatigue",
@@ -2394,22 +2079,22 @@
         "top_specialties": [
           [
             "Hepatologist",
-            96.2
-          ],
-          [
-            "Internal Medicine",
-            0.5
+            95.0
           ],
           [
             "Cardiologist",
-            0.2
+            0.6
+          ],
+          [
+            "Internal Medicine",
+            0.6
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Nasr",
+            "name": "Dr. Anis Selmi",
             "specialty": "Hepatologist",
-            "location": "Tunis"
+            "location": "Sfax"
           },
           {
             "name": "Dr. Meryem Abidi",
@@ -2417,16 +2102,13 @@
             "location": "Tunis"
           },
           {
-            "name": "Dr. Tarek Dridi",
+            "name": "Dr. Mohamed Chaabane",
             "specialty": "Hepatologist",
-            "location": "Tunis"
+            "location": "Kebili"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Hepatologist",
         "predicted": "Hepatologist",
         "top1_strict": true,
@@ -2441,7 +2123,7 @@
         "expected_specialty": "Oncologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22458180000103312,
+        "seconds": 0.4264938999840524,
         "detected_symptoms": [
           "fatigue",
           "fatigue_severe",
@@ -2472,25 +2154,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Hamza Ferchichi",
+            "name": "Dr. Amira Maatoug",
             "specialty": "Oncologist",
-            "location": "Monastir"
+            "location": "Mahdia"
+          },
+          {
+            "name": "Dr. Hamza Belhaj",
+            "specialty": "Oncologist",
+            "location": "Tunis"
           },
           {
             "name": "Dr. Meryem Jebali",
             "specialty": "Oncologist",
             "location": "Tunis"
-          },
-          {
-            "name": "Dr. Nadia Chebbi",
-            "specialty": "Oncologist",
-            "location": "Gafsa"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Oncologist",
         "predicted": "Oncologist",
         "top1_strict": true,
@@ -2505,7 +2185,7 @@
         "expected_specialty": "Pediatrician",
         "ok": true,
         "attempts": 1,
-        "seconds": 2.1466843000016524,
+        "seconds": 0.3714044999796897,
         "detected_symptoms": [
           "abdominal_pain",
           "excessive_crying",
@@ -2524,39 +2204,36 @@
         "top_specialties": [
           [
             "Pediatrician",
-            66.6
+            60.1
           ],
           [
             "Neurologist",
-            11.9
+            10.7
           ],
           [
             "Gastroenterologist",
-            7.7
+            10.4
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Chebbi",
+            "name": "Dr. Mehdi Hamdouni",
             "specialty": "Pediatrician",
-            "location": "Tunis"
+            "location": "Nabeul"
           },
           {
-            "name": "Dr. Ahmed Hamdi",
+            "name": "Dr. Fatima Mansouri",
             "specialty": "Neurologist",
-            "location": "Tunis"
+            "location": "Kebili"
           },
           {
-            "name": "Dr. Ahmed Chaabane",
+            "name": "Dr. Hana Saidi",
             "specialty": "Pediatrician",
             "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pediatrician",
         "predicted": "Pediatrician",
         "top1_strict": true,
@@ -2571,7 +2248,7 @@
         "expected_specialty": "Neurologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22886690000450471,
+        "seconds": 0.36774420001893304,
         "detected_symptoms": [
           "altered_sensorium",
           "facial_drooping",
@@ -2583,35 +2260,32 @@
         "top_specialties": [
           [
             "Neurologist",
-            98.7
+            98.1
           ],
           [
             "Infectiologist",
-            1.3
+            1.9
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Leila Gharbi",
+            "name": "Dr. Fatima Mansouri",
             "specialty": "Neurologist",
-            "location": "Sousse"
+            "location": "Kebili"
           },
           {
-            "name": "Dr. Walid Abidi",
+            "name": "Dr. Karim Mbarki",
             "specialty": "Neurologist",
             "location": "Tataouine"
           },
           {
-            "name": "Dr. Youssef Nasr",
+            "name": "Dr. Amira Ben Ali",
             "specialty": "Neurologist",
-            "location": "Siliana"
+            "location": "Le Kef"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Neurologist",
         "predicted": "Neurologist",
         "top1_strict": true,
@@ -2626,7 +2300,7 @@
         "expected_specialty": "Ophthalmologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22065220000513364,
+        "seconds": 0.61238730000332,
         "detected_symptoms": [
           "flashing_lights",
           "floaters",
@@ -2644,25 +2318,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Fatima Belhaj",
-            "specialty": "Ophthalmologist",
-            "location": "Nabeul"
-          },
-          {
-            "name": "Dr. Sonia Ferchichi",
-            "specialty": "Ophthalmologist",
-            "location": "Sfax"
-          },
-          {
             "name": "Dr. Dorra Chaabane",
             "specialty": "Ophthalmologist",
             "location": "Béja"
+          },
+          {
+            "name": "Dr. Ines Boukadida",
+            "specialty": "Ophthalmologist",
+            "location": "Monastir"
+          },
+          {
+            "name": "Dr. Mehdi Ben Ali",
+            "specialty": "Ophthalmologist",
+            "location": "Sfax"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Ophthalmologist",
         "predicted": "Ophthalmologist",
         "top1_strict": true,
@@ -2677,7 +2349,7 @@
         "expected_specialty": "Psychiatrist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22054670000215992,
+        "seconds": 0.4082150000031106,
         "detected_symptoms": [
           "hallucinations",
           "panic_attacks",
@@ -2696,25 +2368,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Hamza Ben Ali",
-            "specialty": "Psychiatrist",
-            "location": "Tunis"
-          },
-          {
-            "name": "Dr. Fatima Ferchichi",
-            "specialty": "Psychiatrist",
-            "location": "Siliana"
-          },
-          {
             "name": "Dr. Karim Khelifi",
             "specialty": "Psychiatrist",
             "location": "Jendouba"
+          },
+          {
+            "name": "Dr. Nadia Belhaj",
+            "specialty": "Psychiatrist",
+            "location": "Kasserine"
+          },
+          {
+            "name": "Dr. Ahmed Mansouri",
+            "specialty": "Psychiatrist",
+            "location": "Kairouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Psychiatrist",
         "predicted": "Psychiatrist",
         "top1_strict": true,
@@ -2729,7 +2399,7 @@
         "expected_specialty": "Rheumatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2241174000009778,
+        "seconds": 0.4512637000007089,
         "detected_symptoms": [
           "joint_pain",
           "joint_stiffness",
@@ -2758,25 +2428,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Rami Hamdi",
+            "name": "Dr. Youssef Jebali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Jendouba"
           },
           {
-            "name": "Dr. Ines Jebali",
+            "name": "Dr. Hana Ferchichi",
             "specialty": "Rheumatologist",
-            "location": "Monastir"
+            "location": "Manouba"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Hana Ben Ali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Orthopedic",
         "predicted": "Orthopedic",
         "top1_strict": false,
@@ -2791,7 +2459,7 @@
         "expected_specialty": "Orthopedic",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22152240000286838,
+        "seconds": 0.4324027999828104,
         "detected_symptoms": [
           "bone_deformity",
           "joint_stiffness",
@@ -2808,25 +2476,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Youssef Jebali",
+            "specialty": "Orthopedic",
+            "location": "Jendouba"
+          },
+          {
             "name": "Dr. Rami Hamdi",
             "specialty": "Orthopedic",
             "location": "Sousse"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Hana Ben Ali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Mehdi Abidi",
-            "specialty": "Orthopedic",
-            "location": "Béja"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Orthopedic",
         "predicted": "Orthopedic",
         "top1_strict": true,
@@ -2841,7 +2507,7 @@
         "expected_specialty": "Infectiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22077590000117198,
+        "seconds": 0.3612231000151951,
         "detected_symptoms": [
           "chills",
           "high_fever",
@@ -2862,20 +2528,20 @@
         "top_specialties": [
           [
             "Infectiologist",
-            91.2
+            87.3
           ],
           [
             "Internal Medicine",
-            6.0
+            8.6
           ],
           [
             "Allergist",
-            0.7
+            0.9
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Meryem Khelifi",
+            "name": "Dr. Dorra Maatoug",
             "specialty": "Infectiologist",
             "location": "Tunis"
           },
@@ -2885,16 +2551,13 @@
             "location": "Tunis"
           },
           {
-            "name": "Dr. Dorra Mbarki",
+            "name": "Dr. Walid Belhaj",
             "specialty": "Infectiologist",
-            "location": "Tunis"
+            "location": "Bizerte"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Infectiologist",
         "predicted": "Infectiologist",
         "top1_strict": true,
@@ -2909,7 +2572,7 @@
         "expected_specialty": "Endocrinologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2206921000033617,
+        "seconds": 0.40078840000205673,
         "detected_symptoms": [
           "excessive_hunger",
           "excessive_thirst",
@@ -2939,25 +2602,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Rami Mansouri",
+            "name": "Dr. Hana Belhaj",
             "specialty": "Endocrinologist",
-            "location": "Kebili"
+            "location": "Tunis"
           },
           {
-            "name": "Dr. Amira Khelifi",
+            "name": "Dr. Sonia Hamdouni",
             "specialty": "Endocrinologist",
-            "location": "Béja"
+            "location": "Siliana"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Leila Nasr",
             "specialty": "Endocrinologist",
             "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Endocrinologist",
         "predicted": "Endocrinologist",
         "top1_strict": true,
@@ -2972,7 +2633,7 @@
         "expected_specialty": "Gynecologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2297021999984281,
+        "seconds": 0.43361589999403805,
         "detected_symptoms": [
           "dysmenorrhea",
           "menorrhagia",
@@ -2989,25 +2650,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Karim Tlili",
+            "name": "Dr. Hana Saidi",
             "specialty": "Gynecologist",
-            "location": "Tataouine"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Ahmed Abidi",
+            "name": "Dr. Khalil Maatoug",
             "specialty": "Gynecologist",
-            "location": "Tunis"
+            "location": "Sfax"
           },
           {
-            "name": "Dr. Sonia Chaabane",
+            "name": "Dr. Meryem Saidi",
             "specialty": "Gynecologist",
-            "location": "Tunis"
+            "location": "Sidi Bouzid"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Gynecologist",
         "predicted": "Gynecologist",
         "top1_strict": true,
@@ -3022,7 +2681,7 @@
         "expected_specialty": "Urologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2241641000000527,
+        "seconds": 0.42910680000204593,
         "detected_symptoms": [
           "burning_micturition",
           "dysuria",
@@ -3035,35 +2694,32 @@
         "top_specialties": [
           [
             "Urologist",
-            96.7
+            95.1
           ],
           [
             "Nephrologist",
-            3.3
+            4.9
           ]
         ],
         "top_providers": [
+          {
+            "name": "Dr. Walid Boukadida",
+            "specialty": "Urologist",
+            "location": "Tataouine"
+          },
           {
             "name": "Dr. Sonia Jebali",
             "specialty": "Urologist",
             "location": "Sousse"
           },
           {
-            "name": "Dr. Leila Chebbi",
+            "name": "Dr. Tarek Maatoug",
             "specialty": "Urologist",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Fatima Jebali",
-            "specialty": "Urologist",
-            "location": "Siliana"
+            "location": "Médenine"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Urologist",
         "predicted": "Urologist",
         "top1_strict": true,
@@ -3078,7 +2734,7 @@
         "expected_specialty": "Nephrologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2261387000035029,
+        "seconds": 0.338229599990882,
         "detected_symptoms": [
           "ankle_swelling",
           "decreased_urine_output",
@@ -3096,39 +2752,36 @@
         "top_specialties": [
           [
             "Nephrologist",
-            91.0
+            88.6
           ],
           [
             "Rheumatologist",
-            7.0
+            8.6
           ],
           [
-            "Endocrinologist",
-            0.7
+            "Cardiologist",
+            1.0
           ]
         ],
         "top_providers": [
-          {
-            "name": "Dr. Khalil Chebbi",
-            "specialty": "Nephrologist",
-            "location": "Tunis"
-          },
           {
             "name": "Dr. Dorra Selmi",
             "specialty": "Nephrologist",
             "location": "Tozeur"
           },
           {
-            "name": "Dr. Walid Abidi",
+            "name": "Dr. Khalil Chebbi",
+            "specialty": "Nephrologist",
+            "location": "Tunis"
+          },
+          {
+            "name": "Dr. Olfa Nasr",
             "specialty": "Nephrologist",
             "location": "Zaghouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Nephrologist",
         "predicted": "Nephrologist",
         "top1_strict": true,
@@ -3143,7 +2796,7 @@
         "expected_specialty": "Internal Medicine",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2205515000023297,
+        "seconds": 0.4244693999935407,
         "detected_symptoms": [
           "headache",
           "high_fever",
@@ -3170,25 +2823,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Leila Maatoug",
+            "specialty": "Internal Medicine",
+            "location": "Bizerte"
+          },
+          {
             "name": "Dr. Walid Hamdouni",
             "specialty": "Internal Medicine",
             "location": "Sfax"
           },
           {
-            "name": "Dr. Bilel Chebbi",
+            "name": "Dr. Rami Chebbi",
             "specialty": "Internal Medicine",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Anis Saidi",
-            "specialty": "Internal Medicine",
-            "location": "Kairouan"
+            "location": "Mahdia"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Internal Medicine",
         "predicted": "Internal Medicine",
         "top1_strict": true,
@@ -3203,7 +2854,7 @@
         "expected_specialty": "Pulmonologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2203226999990875,
+        "seconds": 0.418004800012568,
         "detected_symptoms": [
           "breathlessness",
           "chest_pain",
@@ -3219,39 +2870,36 @@
         "top_specialties": [
           [
             "Cardiologist",
-            61.4
+            72.2
           ],
           [
             "Pulmonologist",
-            21.3
+            12.6
           ],
           [
             "Internal Medicine",
-            5.5
+            4.8
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Ahmed Mansouri",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
-            "location": "Tunis"
+            "location": "Monastir"
           },
           {
-            "name": "Dr. Olfa Saidi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Tunis"
+            "location": "Mahdia"
           },
           {
-            "name": "Dr. Olfa Khelifi",
+            "name": "Dr. Hamza Saidi",
             "specialty": "Cardiologist",
-            "location": "Tunis"
+            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Cardiologist",
         "predicted": "Cardiologist",
         "top1_strict": false,
@@ -3266,7 +2914,7 @@
         "expected_specialty": "Hepatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22576000000117347,
+        "seconds": 0.42672819999279454,
         "detected_symptoms": [
           "abdominal_pain",
           "loss_of_appetite",
@@ -3279,15 +2927,15 @@
         "top_specialties": [
           [
             "Hepatologist",
-            54.1
+            48.6
           ],
           [
             "Gastroenterologist",
-            27.6
+            30.9
           ],
           [
             "Internal Medicine",
-            10.1
+            11.3
           ]
         ],
         "top_providers": [
@@ -3297,21 +2945,18 @@
             "location": "Sfax"
           },
           {
-            "name": "Dr. Sonia Ben Ali",
+            "name": "Dr. Amira Khelifi",
             "specialty": "Gastroenterologist",
-            "location": "Sfax"
+            "location": "Siliana"
           },
           {
-            "name": "Dr. Meryem Zouari",
+            "name": "Dr. Mohamed Chaabane",
             "specialty": "Hepatologist",
-            "location": "Sfax"
+            "location": "Kebili"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Hepatologist",
         "predicted": "Hepatologist",
         "top1_strict": true,
@@ -3326,7 +2971,7 @@
         "expected_specialty": "Neurologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22434729999804404,
+        "seconds": 0.4533658000000287,
         "detected_symptoms": [
           "diplopia",
           "double_vision",
@@ -3338,39 +2983,36 @@
         "top_specialties": [
           [
             "Ophthalmologist",
-            63.3
+            53.5
           ],
           [
             "Neurologist",
-            17.9
+            22.8
           ],
           [
             "Internal Medicine",
-            10.4
+            13.2
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Mansouri",
+            "name": "Dr. Dorra Chaabane",
             "specialty": "Ophthalmologist",
-            "location": "Monastir"
+            "location": "Béja"
           },
           {
-            "name": "Dr. Amira Mejri",
+            "name": "Dr. Fatima Mansouri",
             "specialty": "Neurologist",
-            "location": "Monastir"
+            "location": "Kebili"
           },
           {
-            "name": "Dr. Hana Selmi",
+            "name": "Dr. Sonia Ferchichi",
             "specialty": "Ophthalmologist",
-            "location": "Gabès"
+            "location": "Sfax"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Ophthalmologist",
         "predicted": "Ophthalmologist",
         "top1_strict": false,
@@ -3385,7 +3027,7 @@
         "expected_specialty": "Urologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2197745000012219,
+        "seconds": 0.3947741000156384,
         "detected_symptoms": [
           "bladder_discomfort",
           "burning_micturition",
@@ -3407,25 +3049,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Karim Tlili",
+            "name": "Dr. Hana Saidi",
             "specialty": "Gynecologist",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Walid Boukadida",
+            "specialty": "Urologist",
             "location": "Tataouine"
           },
           {
-            "name": "Dr. Sonia Jebali",
-            "specialty": "Urologist",
-            "location": "Sousse"
-          },
-          {
-            "name": "Dr. Mohamed Khelifi",
+            "name": "Dr. Khalil Maatoug",
             "specialty": "Gynecologist",
-            "location": "Siliana"
+            "location": "Sfax"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Gynecologist",
         "predicted": "Gynecologist",
         "top1_strict": false,
@@ -3440,7 +3080,7 @@
         "expected_specialty": "Orthopedic",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22485559999768157,
+        "seconds": 0.46306099998764694,
         "detected_symptoms": [
           "hip_joint_pain",
           "joint_stiffness",
@@ -3463,25 +3103,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Rami Hamdi",
+            "name": "Dr. Youssef Jebali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Jendouba"
           },
           {
-            "name": "Dr. Karim Ben Ali",
+            "name": "Dr. Hana Ferchichi",
             "specialty": "Rheumatologist",
-            "location": "Sidi Bouzid"
+            "location": "Manouba"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Hana Ben Ali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Orthopedic",
         "predicted": "Orthopedic",
         "top1_strict": true,
@@ -3496,7 +3134,7 @@
         "expected_specialty": "Otolaryngologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2215695999984746,
+        "seconds": 0.40200499998172745,
         "detected_symptoms": [
           "congestion",
           "throat_irritation"
@@ -3515,25 +3153,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Walid Trabelsi",
+            "specialty": "Otolaryngologist",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Anis Ferchichi",
+            "specialty": "Allergist",
+            "location": "Sfax"
+          },
+          {
             "name": "Dr. Rami Selmi",
             "specialty": "Otolaryngologist",
             "location": "Monastir"
-          },
-          {
-            "name": "Dr. Mehdi Hamdi",
-            "specialty": "Allergist",
-            "location": "Tozeur"
-          },
-          {
-            "name": "Dr. Rami Ferchichi",
-            "specialty": "Otolaryngologist",
-            "location": "Médenine"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Otolaryngologist",
         "predicted": "Otolaryngologist",
         "top1_strict": true,
@@ -3548,7 +3184,7 @@
         "expected_specialty": "Internal Medicine",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22800850000203354,
+        "seconds": 0.37006210000254214,
         "detected_symptoms": [
           "malaise"
         ],
@@ -3566,25 +3202,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Leila Maatoug",
+            "specialty": "Internal Medicine",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Dorra Maatoug",
+            "specialty": "Infectiologist",
+            "location": "Tunis"
+          },
+          {
             "name": "Dr. Walid Hamdouni",
             "specialty": "Internal Medicine",
             "location": "Sfax"
-          },
-          {
-            "name": "Dr. Ahmed Mansouri",
-            "specialty": "Infectiologist",
-            "location": "Kairouan"
-          },
-          {
-            "name": "Dr. Bilel Chebbi",
-            "specialty": "Internal Medicine",
-            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Internal Medicine",
         "predicted": "Internal Medicine",
         "top1_strict": true,
@@ -3601,7 +3235,7 @@
         "expected_specialty": "Dermatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22350900000310503,
+        "seconds": 0.431502499995986,
         "detected_symptoms": [
           "itching",
           "skin_rash"
@@ -3626,25 +3260,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Khalil Bouzidi",
+            "name": "Dr. Hamza Chebbi",
             "specialty": "Dermatologist",
-            "location": "Bizerte"
+            "location": "Kasserine"
           },
           {
-            "name": "Dr. Mehdi Hamdi",
+            "name": "Dr. Anis Ferchichi",
             "specialty": "Allergist",
-            "location": "Tozeur"
+            "location": "Sfax"
           },
           {
-            "name": "Dr. Sonia Hamdouni",
+            "name": "Dr. Hamza Trabelsi",
             "specialty": "Dermatologist",
-            "location": "Ben Arous"
+            "location": "Mahdia"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Dermatologist",
         "predicted": "Dermatologist",
         "top1_strict": true,
@@ -3659,7 +3291,7 @@
         "expected_specialty": "Allergist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2201945999986492,
+        "seconds": 0.43397310000727884,
         "detected_symptoms": [
           "itching",
           "urticaria"
@@ -3685,25 +3317,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Khalil Bouzidi",
+            "name": "Dr. Hamza Chebbi",
             "specialty": "Dermatologist",
-            "location": "Bizerte"
+            "location": "Kasserine"
           },
           {
-            "name": "Dr. Mehdi Hamdi",
+            "name": "Dr. Anis Ferchichi",
             "specialty": "Allergist",
-            "location": "Tozeur"
+            "location": "Sfax"
           },
           {
-            "name": "Dr. Sonia Hamdouni",
+            "name": "Dr. Hamza Trabelsi",
             "specialty": "Dermatologist",
-            "location": "Ben Arous"
+            "location": "Mahdia"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Dermatologist",
         "predicted": "Dermatologist",
         "top1_strict": false,
@@ -3718,7 +3348,7 @@
         "expected_specialty": "Otolaryngologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.21873349999805214,
+        "seconds": 0.6355782000173349,
         "detected_symptoms": [
           "congestion"
         ],
@@ -3739,25 +3369,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Mehdi Hamdi",
+            "name": "Dr. Anis Ferchichi",
             "specialty": "Allergist",
-            "location": "Tozeur"
+            "location": "Sfax"
           },
           {
-            "name": "Dr. Rami Selmi",
+            "name": "Dr. Walid Trabelsi",
             "specialty": "Otolaryngologist",
-            "location": "Monastir"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Hamza Selmi",
+            "name": "Dr. Walid Mejri",
             "specialty": "Allergist",
-            "location": "Monastir"
+            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Allergist",
         "predicted": "Allergist",
         "top1_strict": false,
@@ -3772,7 +3400,7 @@
         "expected_specialty": "Cardiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.23086200000398094,
+        "seconds": 0.4292827000026591,
         "detected_symptoms": [
           "breathlessness",
           "fast_heart_rate",
@@ -3786,11 +3414,11 @@
         "top_specialties": [
           [
             "Cardiologist",
-            92.8
+            93.4
           ],
           [
             "Pulmonologist",
-            3.5
+            2.8
           ],
           [
             "Endocrinologist",
@@ -3799,14 +3427,14 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Khalil Gharbi",
-            "specialty": "Cardiologist",
-            "location": "Sfax"
-          },
-          {
-            "name": "Dr. Karim Chaabane",
+            "name": "Dr. Leila Boukadida",
             "specialty": "Cardiologist",
             "location": "Monastir"
+          },
+          {
+            "name": "Dr. Hamza Saidi",
+            "specialty": "Cardiologist",
+            "location": "Sousse"
           },
           {
             "name": "Dr. Nadia Abidi",
@@ -3815,10 +3443,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Cardiologist",
         "predicted": "Cardiologist",
         "top1_strict": true,
@@ -3833,7 +3458,7 @@
         "expected_specialty": "Pulmonologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.26398129999870434,
+        "seconds": 0.4396802999835927,
         "detected_symptoms": [
           "blood_in_sputum",
           "cough",
@@ -3850,39 +3475,36 @@
         "top_specialties": [
           [
             "Pulmonologist",
-            52.6
+            51.9
           ],
           [
             "Internal Medicine",
-            43.7
+            43.0
           ],
           [
-            "Allergist",
-            0.9
+            "Cardiologist",
+            1.1
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Olfa Saidi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Tunis"
+            "location": "Mahdia"
           },
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Olfa Khelifi",
+            "name": "Dr. Mehdi Jebali",
             "specialty": "Pulmonologist",
-            "location": "Ariana"
+            "location": "Ben Arous"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pulmonologist",
         "predicted": "Pulmonologist",
         "top1_strict": true,
@@ -3897,7 +3519,7 @@
         "expected_specialty": "Hematologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.23161099999560975,
+        "seconds": 0.4269776000001002,
         "detected_symptoms": [
           "bruising",
           "easy_bleeding"
@@ -3918,9 +3540,9 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Tarek Jebali",
+            "name": "Dr. Anis Abidi",
             "specialty": "Hematologist",
-            "location": "Nabeul"
+            "location": "Tunis"
           },
           {
             "name": "Dr. Ahmed Khelifi",
@@ -3934,9 +3556,7 @@
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Hematologist",
         "predicted": "Hematologist",
         "top1_strict": true,
@@ -3951,7 +3571,7 @@
         "expected_specialty": "Phlebologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2189801999993506,
+        "seconds": 0.3995052000100259,
         "detected_symptoms": [
           "swollen_blood_vessels"
         ],
@@ -3972,20 +3592,18 @@
             "location": "Kebili"
           },
           {
-            "name": "Dr. Sonia Saidi",
+            "name": "Dr. Olfa Jebali",
             "specialty": "Phlebologist",
-            "location": "Sfax"
+            "location": "Kairouan"
           },
           {
-            "name": "Dr. Nadia Mansouri",
+            "name": "Dr. Mohamed Saidi",
             "specialty": "Phlebologist",
-            "location": "Jendouba"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Phlebologist",
         "predicted": "Phlebologist",
         "top1_strict": true,
@@ -4000,7 +3618,7 @@
         "expected_specialty": "Gastroenterologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2221447000047192,
+        "seconds": 0.4309619000123348,
         "detected_symptoms": [
           "acidity",
           "bloody_stool",
@@ -4016,25 +3634,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Sonia Ben Ali",
+            "name": "Dr. Amira Khelifi",
             "specialty": "Gastroenterologist",
-            "location": "Sfax"
+            "location": "Siliana"
           },
           {
-            "name": "Dr. Olfa Jebali",
+            "name": "Dr. Anis Bouzidi",
             "specialty": "Gastroenterologist",
             "location": "Sousse"
           },
           {
-            "name": "Dr. Amira Khelifi",
+            "name": "Dr. Meryem Ferchichi",
             "specialty": "Gastroenterologist",
-            "location": "Le Kef"
+            "location": "Kairouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Gastroenterologist",
         "predicted": "Gastroenterologist",
         "top1_strict": true,
@@ -4049,7 +3665,7 @@
         "expected_specialty": "Hepatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2197567999974126,
+        "seconds": 0.46699980000266805,
         "detected_symptoms": [
           "hepatomegaly",
           "itching",
@@ -4062,15 +3678,15 @@
         "top_specialties": [
           [
             "Hepatologist",
-            82.8
+            79.4
           ],
           [
             "Allergist",
-            8.7
+            10.5
           ],
           [
             "Dermatologist",
-            7.8
+            9.4
           ]
         ],
         "top_providers": [
@@ -4080,21 +3696,18 @@
             "location": "Sfax"
           },
           {
-            "name": "Dr. Mehdi Nasr",
+            "name": "Dr. Mohamed Chaabane",
             "specialty": "Hepatologist",
-            "location": "Tunis"
+            "location": "Kebili"
           },
           {
-            "name": "Dr. Youssef Trabelsi",
+            "name": "Dr. Tarek Dridi",
             "specialty": "Hepatologist",
-            "location": "Bizerte"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Hepatologist",
         "predicted": "Hepatologist",
         "top1_strict": true,
@@ -4109,7 +3722,7 @@
         "expected_specialty": "Oncologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.23285480000049574,
+        "seconds": 0.34168909999425523,
         "detected_symptoms": [
           "unexplained_weight_loss",
           "weight_loss"
@@ -4136,25 +3749,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Hamza Ferchichi",
+            "name": "Dr. Amira Maatoug",
             "specialty": "Oncologist",
-            "location": "Monastir"
+            "location": "Mahdia"
+          },
+          {
+            "name": "Dr. Hamza Belhaj",
+            "specialty": "Oncologist",
+            "location": "Tunis"
           },
           {
             "name": "Dr. Meryem Jebali",
             "specialty": "Oncologist",
             "location": "Tunis"
-          },
-          {
-            "name": "Dr. Nadia Chebbi",
-            "specialty": "Oncologist",
-            "location": "Gafsa"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Oncologist",
         "predicted": "Oncologist",
         "top1_strict": true,
@@ -4169,7 +3780,7 @@
         "expected_specialty": "Pediatrician",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.23031809999520192,
+        "seconds": 0.4193371000001207,
         "detected_symptoms": [
           "excessive_crying",
           "failure_to_thrive"
@@ -4191,20 +3802,18 @@
             "location": "Nabeul"
           },
           {
-            "name": "Dr. Leila Tlili",
-            "specialty": "Pediatrician",
-            "location": "Nabeul"
-          },
-          {
             "name": "Dr. Dorra Zouari",
             "specialty": "Pediatrician",
             "location": "Ben Arous"
+          },
+          {
+            "name": "Dr. Mehdi Chebbi",
+            "specialty": "Pediatrician",
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pediatrician",
         "predicted": "Pediatrician",
         "top1_strict": true,
@@ -4219,7 +3828,7 @@
         "expected_specialty": "Neurologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.21972449999884702,
+        "seconds": 0.43622859998140484,
         "detected_symptoms": [
           "memory_loss",
           "seizures",
@@ -4236,25 +3845,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Fatima Mansouri",
+            "specialty": "Neurologist",
+            "location": "Kebili"
+          },
+          {
             "name": "Dr. Karim Mbarki",
             "specialty": "Neurologist",
             "location": "Tataouine"
           },
           {
-            "name": "Dr. Youssef Nasr",
+            "name": "Dr. Amira Ben Ali",
             "specialty": "Neurologist",
-            "location": "Siliana"
-          },
-          {
-            "name": "Dr. Walid Abidi",
-            "specialty": "Neurologist",
-            "location": "Tataouine"
+            "location": "Le Kef"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Neurologist",
         "predicted": "Neurologist",
         "top1_strict": true,
@@ -4269,7 +3876,7 @@
         "expected_specialty": "Ophthalmologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2225070999993477,
+        "seconds": 0.6617320000077598,
         "detected_symptoms": [
           "blurred_and_distorted_vision",
           "photophobia",
@@ -4297,25 +3904,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Fatima Mansouri",
+            "specialty": "Neurologist",
+            "location": "Kebili"
+          },
+          {
+            "name": "Dr. Dorra Chaabane",
+            "specialty": "Ophthalmologist",
+            "location": "Béja"
+          },
+          {
             "name": "Dr. Karim Mbarki",
             "specialty": "Neurologist",
             "location": "Tataouine"
-          },
-          {
-            "name": "Dr. Sonia Ferchichi",
-            "specialty": "Ophthalmologist",
-            "location": "Sfax"
-          },
-          {
-            "name": "Dr. Sonia Jebali",
-            "specialty": "Neurologist",
-            "location": "Mahdia"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Neurologist",
         "predicted": "Neurologist",
         "top1_strict": false,
@@ -4330,7 +3935,7 @@
         "expected_specialty": "Psychiatrist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.24837030000344384,
+        "seconds": 0.3460782000038307,
         "detected_symptoms": [
           "depression",
           "sleep_disturbance"
@@ -4360,20 +3965,18 @@
             "location": "Jendouba"
           },
           {
-            "name": "Dr. Dorra Mejri",
+            "name": "Dr. Nadia Belhaj",
             "specialty": "Psychiatrist",
-            "location": "Kairouan"
+            "location": "Kasserine"
           },
           {
-            "name": "Dr. Fatima Ferchichi",
+            "name": "Dr. Ahmed Mansouri",
             "specialty": "Psychiatrist",
-            "location": "Siliana"
+            "location": "Kairouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Psychiatrist",
         "predicted": "Psychiatrist",
         "top1_strict": true,
@@ -4388,7 +3991,7 @@
         "expected_specialty": "Rheumatologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2215615000022808,
+        "seconds": 0.48946309997700155,
         "detected_symptoms": [
           "swelling_joints"
         ],
@@ -4409,25 +4012,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Karim Ben Ali",
+            "name": "Dr. Hana Ferchichi",
             "specialty": "Rheumatologist",
-            "location": "Sidi Bouzid"
-          },
-          {
-            "name": "Dr. Rami Hamdi",
-            "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Manouba"
           },
           {
             "name": "Dr. Youssef Jebali",
+            "specialty": "Orthopedic",
+            "location": "Jendouba"
+          },
+          {
+            "name": "Dr. Karim Ben Ali",
             "specialty": "Rheumatologist",
-            "location": "Kasserine"
+            "location": "Sidi Bouzid"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Rheumatologist",
         "predicted": "Rheumatologist",
         "top1_strict": true,
@@ -4442,7 +4043,7 @@
         "expected_specialty": "Orthopedic",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2190545999983442,
+        "seconds": 0.4352400000207126,
         "detected_symptoms": [
           "limited_range_of_motion",
           "limping"
@@ -4457,25 +4058,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Rami Hamdi",
+            "name": "Dr. Youssef Jebali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Jendouba"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Hana Ben Ali",
             "specialty": "Orthopedic",
-            "location": "Sousse"
+            "location": "Tunis"
           },
           {
-            "name": "Dr. Amira Mansouri",
+            "name": "Dr. Sonia Jebali",
             "specialty": "Orthopedic",
-            "location": "Tozeur"
+            "location": "Ben Arous"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Orthopedic",
         "predicted": "Orthopedic",
         "top1_strict": true,
@@ -4490,7 +4089,7 @@
         "expected_specialty": "Infectiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2301651000016136,
+        "seconds": 0.4331614999973681,
         "detected_symptoms": [
           "animal_contact",
           "chills",
@@ -4522,25 +4121,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Ahmed Mansouri",
+            "name": "Dr. Dorra Maatoug",
             "specialty": "Infectiologist",
-            "location": "Kairouan"
+            "location": "Tunis"
           },
           {
-            "name": "Dr. Walid Hamdouni",
+            "name": "Dr. Leila Maatoug",
             "specialty": "Internal Medicine",
-            "location": "Sfax"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Leila Chaabane",
+            "name": "Dr. Khalil Abidi",
             "specialty": "Infectiologist",
-            "location": "Béja"
+            "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Infectiologist",
         "predicted": "Infectiologist",
         "top1_strict": true,
@@ -4555,7 +4152,7 @@
         "expected_specialty": "Endocrinologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2218635000026552,
+        "seconds": 0.35553869997966103,
         "detected_symptoms": [
           "cold_intolerance",
           "enlarged_thyroid",
@@ -4580,25 +4177,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Rami Mansouri",
-            "specialty": "Endocrinologist",
-            "location": "Kebili"
-          },
-          {
             "name": "Dr. Hana Belhaj",
             "specialty": "Endocrinologist",
             "location": "Tunis"
           },
           {
-            "name": "Dr. Olfa Chebbi",
+            "name": "Dr. Sonia Hamdouni",
+            "specialty": "Endocrinologist",
+            "location": "Siliana"
+          },
+          {
+            "name": "Dr. Leila Nasr",
             "specialty": "Endocrinologist",
             "location": "Tunis"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Endocrinologist",
         "predicted": "Endocrinologist",
         "top1_strict": true,
@@ -4613,7 +4208,7 @@
         "expected_specialty": "Gynecologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2194376999977976,
+        "seconds": 0.40738199997576885,
         "detected_symptoms": [
           "hot_flashes"
         ],
@@ -4630,25 +4225,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Karim Tlili",
+            "name": "Dr. Hana Saidi",
             "specialty": "Gynecologist",
-            "location": "Tataouine"
+            "location": "Bizerte"
           },
           {
-            "name": "Dr. Mohamed Khelifi",
+            "name": "Dr. Khalil Maatoug",
             "specialty": "Gynecologist",
-            "location": "Siliana"
+            "location": "Sfax"
           },
           {
-            "name": "Dr. Sonia Mejri",
+            "name": "Dr. Meryem Saidi",
             "specialty": "Gynecologist",
-            "location": "Monastir"
+            "location": "Sidi Bouzid"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Gynecologist",
         "predicted": "Gynecologist",
         "top1_strict": true,
@@ -4663,7 +4256,7 @@
         "expected_specialty": "Urologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22162479999678908,
+        "seconds": 0.43276199998217635,
         "detected_symptoms": [
           "cough",
           "dysuria",
@@ -4677,22 +4270,22 @@
         "top_specialties": [
           [
             "Urologist",
-            97.2
+            96.5
           ],
           [
             "Pulmonologist",
-            0.9
+            1.1
           ],
           [
             "Allergist",
-            0.4
+            0.5
           ]
         ],
         "top_providers": [
           {
-            "name": "Dr. Sonia Jebali",
+            "name": "Dr. Walid Boukadida",
             "specialty": "Urologist",
-            "location": "Sousse"
+            "location": "Tataouine"
           },
           {
             "name": "Dr. Fatima Jebali",
@@ -4700,16 +4293,13 @@
             "location": "Siliana"
           },
           {
-            "name": "Dr. Mohamed Saidi",
+            "name": "Dr. Tarek Maatoug",
             "specialty": "Urologist",
-            "location": "Tunis"
+            "location": "Médenine"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Urologist",
         "predicted": "Urologist",
         "top1_strict": true,
@@ -4724,7 +4314,7 @@
         "expected_specialty": "Nephrologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2231536999970558,
+        "seconds": 0.515425099991262,
         "detected_symptoms": [
           "decreased_urine_output",
           "oliguria",
@@ -4738,35 +4328,32 @@
         "top_specialties": [
           [
             "Nephrologist",
-            96.5
+            95.6
           ],
           [
             "Urologist",
-            3.5
+            4.4
           ]
         ],
         "top_providers": [
-          {
-            "name": "Dr. Khalil Chebbi",
-            "specialty": "Nephrologist",
-            "location": "Tunis"
-          },
           {
             "name": "Dr. Dorra Selmi",
             "specialty": "Nephrologist",
             "location": "Tozeur"
           },
           {
-            "name": "Dr. Walid Abidi",
+            "name": "Dr. Khalil Chebbi",
+            "specialty": "Nephrologist",
+            "location": "Tunis"
+          },
+          {
+            "name": "Dr. Olfa Nasr",
             "specialty": "Nephrologist",
             "location": "Zaghouan"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "specialties",
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Nephrologist",
         "predicted": "Nephrologist",
         "top1_strict": true,
@@ -4781,7 +4368,7 @@
         "expected_specialty": "Internal Medicine",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.22687389999919105,
+        "seconds": 0.4342999999935273,
         "detected_symptoms": [
           "headache",
           "high_fever",
@@ -4808,25 +4395,23 @@
         ],
         "top_providers": [
           {
+            "name": "Dr. Leila Maatoug",
+            "specialty": "Internal Medicine",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Amira Khelifi",
+            "specialty": "Gastroenterologist",
+            "location": "Siliana"
+          },
+          {
             "name": "Dr. Walid Hamdouni",
             "specialty": "Internal Medicine",
             "location": "Sfax"
-          },
-          {
-            "name": "Dr. Sonia Ben Ali",
-            "specialty": "Gastroenterologist",
-            "location": "Sfax"
-          },
-          {
-            "name": "Dr. Bilel Chebbi",
-            "specialty": "Internal Medicine",
-            "location": "Sousse"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Internal Medicine",
         "predicted": "Internal Medicine",
         "top1_strict": true,
@@ -4841,7 +4426,7 @@
         "expected_specialty": "Pulmonologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.2205935000019963,
+        "seconds": 0.7515777999942657,
         "detected_symptoms": [
           "cough",
           "phlegm"
@@ -4864,25 +4449,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Olfa Khelifi",
+            "name": "Dr. Mehdi Mejri",
             "specialty": "Pulmonologist",
-            "location": "Ariana"
+            "location": "Mahdia"
           },
           {
-            "name": "Dr. Mehdi Hamdi",
+            "name": "Dr. Anis Ferchichi",
             "specialty": "Allergist",
-            "location": "Tozeur"
+            "location": "Sfax"
           },
           {
-            "name": "Dr. Sara Selmi",
+            "name": "Dr. Mehdi Jebali",
             "specialty": "Pulmonologist",
-            "location": "Siliana"
+            "location": "Ben Arous"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Pulmonologist",
         "predicted": "Pulmonologist",
         "top1_strict": true,
@@ -4897,7 +4480,7 @@
         "expected_specialty": "Cardiologist",
         "ok": true,
         "attempts": 1,
-        "seconds": 0.21883730000263313,
+        "seconds": 0.44136240001535043,
         "detected_symptoms": [
           "dizziness",
           "palpitations",
@@ -4923,25 +4506,23 @@
         ],
         "top_providers": [
           {
-            "name": "Dr. Rami Selmi",
+            "name": "Dr. Walid Trabelsi",
             "specialty": "Otolaryngologist",
+            "location": "Bizerte"
+          },
+          {
+            "name": "Dr. Leila Boukadida",
+            "specialty": "Cardiologist",
             "location": "Monastir"
           },
           {
-            "name": "Dr. Khalil Gharbi",
-            "specialty": "Cardiologist",
-            "location": "Sfax"
-          },
-          {
-            "name": "Dr. Rami Ferchichi",
+            "name": "Dr. Rami Selmi",
             "specialty": "Otolaryngologist",
-            "location": "Médenine"
+            "location": "Monastir"
           }
         ],
         "extraction_status": "ok",
-        "differs_from_local": [
-          "providers"
-        ],
+        "differs_from_local": [],
         "local_predicted": "Otolaryngologist",
         "predicted": "Otolaryngologist",
         "top1_strict": false,
